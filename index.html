@@ -14,7 +14,7 @@ body {
     color: #66ffff;
     font-family: "Noto Sans JP", sans-serif;
     margin: 0;
-    padding-top: 100px; /* ← 160pxから減らす。実際のheaderの高さ＋余裕分くらいでOK */
+    padding-top: 110px;
     padding-bottom: 60px;
     overflow-x: hidden;
 }
@@ -199,12 +199,12 @@ select {
 .shikai-button {
 
   position: fixed;
-  right: 50px;
-  top: 150px;     /* ← 上から150px に配置 */
-  bottom: auto;   /* ← 下からの位置指定を解除 */
+  right: 0px;
+  bottom: 150px;     /* ← 上から150px に配置 */
+  top: auto;   /* ← 下からの位置指定を解除 */
 
   font-family: 'Sawarabi Mincho', serif;
-  font-size: 3em;
+  font-size: 2em;
   color: #66ffff;
   text-decoration: none;
   border: 1px solid #66ffff;
@@ -620,6 +620,12 @@ body .goog-te-banner-frame * {
 
 /* ミニ */
 @media screen and (max-width: 660px) {
+
+  header {
+    top: 30px;}
+    .footer-share {
+    bottom: 30px;}
+
   .author-icon {
     width: 65px;
     height: 65px;
@@ -653,7 +659,7 @@ body .goog-te-banner-frame * {
   .counter {
     transform: scale(0.6);
   }
-  }
+  
   .floating-text{
   display: none;
 }
@@ -676,8 +682,16 @@ body .goog-te-banner-frame * {
     transform: scale(0.5);
     top: 210px;     /* ← ここを追加！！ */
     bottom: auto;   /* ← 同時に bottom 解除 */
-    right: -65px;
+    right: -40px;
   }
+  .scroll-text {
+    padding: 2px 0;
+}
+.scroll-text span {
+    display: inline-block;
+    font-size: 0.9em;
+}
+}
 /* ミニ */
 
 /* CSS */
