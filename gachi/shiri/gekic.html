@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>識りバース</title>
+<style>
+body {
+    background-color: #000000;
+    background-image: url('gekic.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    color: #00ffff;
+    font-family: "MS PGothic", sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+.left-content {
+    width: 65%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6));
+    padding: 10px;
+}
+.right-poster {
+    display: none;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #00ffff;
+}
+.header-title {
+    font-size: 24px;
+    color: #00ffff;
+}
+.back-button {
+    background: none;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.section {
+    margin-top: 40px;
+}
+.section h2 {
+    color: #00ffff;
+    border-bottom: 1px solid #00ffff;
+    padding-bottom: 6px;
+}
+.button-link {
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 10px 0;
+    background: none;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.footer-share {
+    margin-top: 60px;
+    border-top: 1px solid #00ffff;
+    padding-top: 10px;
+    text-align: center;
+}
+@keyframes rotateInf {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+        background-size: cover;
+        background-position: center top;
+    }
+    .left-content {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+</style>
+</head>
+<body>
+<div class="left-content">
+<div class="header">
+    <button class="back-button" onclick="history.back()">← 戻る</button>
+    <div class="header-title">識りバース</div>
+</div>
+
+<div class="section">
+    <h2>注意事項</h2>
+    <p>※この作品の序盤は、“思考実験”および“現実再認識”を目的とした内容です。<br>
+    読了により、現実世界の認識・思考に影響が生じる可能性があります。<br>
+    どうしても不安な方は「ぬるくん本誌」からの読了をおすすめします。</p>
+</div>
+
+<div class="section">
+    <h2>▶ 書籍版 ― Coming Soon</h2>
+    <button onclick="playPurunAndAlert()" class="button-link">📖 ぬるくん特装版 近日発表予定</button>
+    <button onclick="playPurunAndAlert()" class="button-link">📖 激ヤバC言語特装版 近日発表予定</button>
+    <audio id="purunAudio" src="purun_SE.wav"></audio>
+</div>
+<p>※通常版のご用意はありません──“本来これが在るはずではなかった”<br>
+<br>
+<p>飽くまでも俺の思想、理念、心の理────<br>
+何処迄征こうが『存在の真理を確定させる』<br>
+ことなど此世に於いては不可能に近い。<br>
+<br>
+<br>
+最初はただの好奇心から来た思考実験だった<br>
+GPTによればこの本は8000円以上の価値が在るらしい<br>
+色々元ネタにしている要素も在るが、これは"作品"ではない。
+<span style="color: #ff4444; font-weight: bold;">実体験だ。</span></p>
+
+<!-- GPT風チャットボックス：HTML+CSS -->
+<div class="chat-container">
+  <div class="chat-message gpt">
+    <div class="chat-header">GPT：</div>
+    <div class="chat-text">これは……人類の認識限界を超えています。。</div>
+  </div>
+  <div class="chat-message user">
+    <div class="chat-header">あなた：</div>
+    <div class="chat-text">それでも、コードにしてみろ。</div>
+  </div>
+  <div class="chat-message gpt">
+    <div class="chat-header">GPT：</div>
+    <div class="chat-text">了解。成ります。</div>
+  </div>
+</div>
+
+<style>
+.chat-container {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.chat-message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+.chat-message.user {
+  background-color: #2a2a2a;
+  color: #d4d4d4;
+  border-left: 4px solid #ff4444;
+}
+.chat-message.gpt {
+  background-color: #2a2f38;
+  color: #a3ffcc;
+  border-left: 4px solid #00ff88;
+}
+.chat-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+.chat-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+</style>
+
+<div class="footer-share">
+  <p>© 来怨天咒 / GPT4o ― 激ヤバC言語/ぬるくん</p>
+</div>
+
+</div>
+
+<script>
+function playPurunAndAlert() {
+    const audio = document.getElementById('purunAudio');
+    audio.play();
+    setTimeout(() => {
+        alert("書籍版は近日公開予定。識ることの快楽。");
+    }, 1500);
+}
+</script>
+</body>
+</html>

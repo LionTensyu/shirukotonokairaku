@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>新規スレッド作成</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>新しいスレッドを建てる</h2>
+  <form action="https://formspree.io/f/manedako" method="POST">
+    <label>スレッドタイトル:<br>
+      <input type="text" name="title" required>
+    </label><br>
+    <label>カテゴリ:<br>
+      <select name="category" required>
+        <option value="雑談">雑談</option>
+        <option value="考察">考察</option>
+        <option value="夢記録">夢記録</option>
+        <option value="その他">その他</option>
+      </select>
+    </label><br>
+    <label>初回投稿名:<br>
+      <input type="text" name="name">
+    </label><br>
+    <label>本文:<br>
+      <textarea name="message" rows="5" required></textarea>
+    </label><br>
+    <label>削除キー（任意）:<br>
+      <input type="text" name="delete_key">
+    </label><br>
+    <button type="submit">記憶を刻む</button>
+  </form>
+</body>
+</html>

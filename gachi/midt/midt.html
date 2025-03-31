@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANS-IN-DENSE-TRAIN</title>
+<style>
+body {
+    background-color: #000000;
+    background-image: url('midt.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    color: #00ffff;
+    font-family: "MS PGothic", sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+.left-content {
+    width: 65%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6));
+    padding: 10px;
+}
+.right-poster {
+    display: none;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #00ffff;
+}
+.header-title {
+    font-size: 24px;
+    color: #00ffff;
+}
+.back-button {
+    background: none;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.section {
+    margin-top: 40px;
+}
+.section h2 {
+    color: #00ffff;
+    border-bottom: 1px solid #00ffff;
+    padding-bottom: 6px;
+}
+.button-link {
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 10px 0;
+    background: none;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.footer-share {
+    margin-top: 60px;
+    border-top: 1px solid #00ffff;
+    padding-top: 10px;
+    text-align: center;
+}
+@keyframes rotateInf {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+        background-size: cover;
+        background-position: center top;
+    }
+    .left-content {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+</style>
+</head>
+<body>
+<div class="left-content">
+<div class="header">
+    <button class="back-button" onclick="history.back()">← 戻る</button>
+    <div class="header-title">
+      <span class="title-top">MANS-IN-DENSE-TRAIN</span><br/>
+      <span class="title-bottom">─マンインデンストレイン─</span>
+    </div> 
+
+  </div>
+  <div class="section">
+    <h2>⚠ ご注意ください</h2>
+    <p>
+      本作には、以下のような<strong>極端な通勤描写</strong>が含まれます：<br>
+      ・車内密度300%以上の描写<br>
+      ・圧力による人格崩壊<br>
+      ・国家による射梁（シャリョウ）制度の導入例<br><br>
+      <strong>現実の通勤において参考にされないようご注意ください。</strong>
+    </p>
+  </div>
+  
+  <div class="section">
+    <h2>──それは、“社会秩序制御機関”だった。</h2>
+    <p>
+      通勤――それは都市にとっての<strong>血流</strong>。<br>
+      だが、それを流すのは、国家が作った<strong>圧力輸送装置</strong>──<em>射梁（シャリョウ）</em>。<br><br>
+  
+      毎朝、何百万人もの“戦士”たちがこの戦場に身を投じる。<br>
+      戦うのは、時間・距離・社会的地位、そして──<strong>他者の圧力</strong>。<br><br>
+  
+      資格なき者は“弾かれ”、<br>
+      実力なき者は“潰される”。<br>
+      <strong>──遅刻は、死。</strong><br><br>
+  
+      あなたは、<em>この“射梁”を、乗りこなせるか？</em>
+    </p>
+    <p>
+      <strong>圧縮された鉄の檻</strong>。<br>
+      それは単なる交通機関ではない。<br><br>
+  
+  
+      次の駅で、生き残るのは──<br>
+      <strong>お前か、アイツか。</strong>
+    </p>
+  </div>
+  
+
+<div class="section">
+  <h2>▶ 無料公開</h2>
+  <a href="midt_chapter1.html" class="button-link">第一章『オムニバス篇』</a><br>
+</div>
+
+<div class="section">
+    <h2>▶ 書籍版 ― Coming Soon</h2>
+    <button onclick="playPurunAndAlert()" class="button-link">📖 マンインデンストレイン 近日発表予定</button>
+    <audio id="purunAudio" src="purun_SE.wav"></audio>
+</div>
+
+<style>
+.chat-container {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.chat-message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+.chat-message.user {
+  background-color: #2a2a2a;
+  color: #d4d4d4;
+  border-left: 4px solid #ff4444;
+}
+.chat-message.gpt {
+  background-color: #2a2f38;
+  color: #a3ffcc;
+  border-left: 4px solid #00ff88;
+}
+.chat-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+.chat-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+</style>
+
+<div class="footer-share">
+  <p>© 来怨天咒 / GPT4o ― MANS-IN-DENSE-TRAIN─マンインデンストレイン─</p>
+</div>
+
+</div>
+
+<script>
+function playPurunAndAlert() {
+    const audio = document.getElementById('purunAudio');
+    audio.play();
+    setTimeout(() => {
+        alert("書籍版は近日公開予定。太弥が乱れております─。");
+    }, 1500);
+}
+</script>
+</body>
+</html>

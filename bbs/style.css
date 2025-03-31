@@ -1,0 +1,33 @@
+body {
+  background: #121212;
+  color: #66ffff;
+  font-family: monospace;
+  margin: 0;
+  padding: 1em;
+}
+h1 {
+  text-align: center;
+  color: #00ffff;
+}
+.category-container {
+  display: flex;
+  gap: 1em;
+  overflow-x: auto;
+  min-width: 900px;
+}
+.category-box {
+  flex: 1;
+  border: 1px solid #00ffff;
+  padding: 1em;
+  min-width: 250px;
+}
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+a:hover {
+  text-shadow: 0 0 5px #66ffff;
+}
+small {
+  color: #aaa;
+}

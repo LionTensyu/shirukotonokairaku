@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXTRA GEAR</title>
+<style>
+body {
+    background-color: #000000;
+    background-image: url('ExtraGearC.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    color: #00ffff;
+    font-family: "MS PGothic", sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.left-content {
+    width: 65%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.0));
+    padding: 10px;
+}
+.right-poster {
+    display: none;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #00ffff;
+}
+.header-title {
+    font-size: 24px;
+    color: #00ffff;
+}
+.back-button {
+    background: none;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.section {
+    margin-top: 40px;
+}
+.section h2 {
+    color: #00ffff;
+    border-bottom: 1px solid #00ffff;
+    padding-bottom: 6px;
+}
+.button-link {
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 10px 0;
+    background: none;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.footer-share {
+    margin-top: 60px;
+    border-top: 1px solid #00ffff;
+    padding-top: 10px;
+    text-align: center;
+}
+@keyframes rotateInf {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+        background-size: cover;
+        background-position: center top;
+    }
+    .left-content {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+</style>
+</head>
+<body>
+<div class="left-content">
+<div class="header">
+    <button class="back-button" onclick="history.back()">← 戻る</button>
+    <div class="header-title">EXTRA GEAR</div>
+</div>
+
+<div class="section">
+    <h2>VOIDにようこそ。</h2>
+    <p>この戦場に、“記憶”は無い。ただ、“死”が繰り返されるだけだ。<br>
+    肉体の意味は終わった。<br>
+    君の神経、そのぷるんは……まだ震えているか？</p>
+</div>
+
+<div class="section">
+    <h2>▶ 無料公開</h2>
+    <a href="exgear_ep1.html" class="button-link">第一話『弦の音は届かない』</a><br>
+    <a href="exgear_ep2.html" class="button-link">第二話『瓦礫に沈む誓い』</a>
+</div>
+
+<div class="section">
+    <h2>▶ 書籍版 ― Coming Soon</h2>
+    <button onclick="playPurunAndAlert()" class="button-link">📖 書籍版 近日発表予定</button>
+    <audio id="purunAudio" src="purun_SE.wav"></audio>
+</div>
+
+<div class="section">
+    <h2>▶ VOID参加申請</h2>
+    <p>VOIDは常に君を待っている。脳波シンクロを申請するか？</p>
+    <button onclick="alert('VOID申請：受理された。ぷるん。')" class="button-link">神経同期を開始</button>
+</div>
+
+<div class="footer-share">
+    <p>© 来怨天咒 / GPT4o ― EXTRA∮GEAR</p>
+</div>
+</div>
+
+<script>
+function playPurunAndAlert() {
+    const audio = document.getElementById('purunAudio');
+    audio.play();
+    setTimeout(() => {
+        alert("書籍版は近日公開予定。VOID待機せよ。");
+    }, 1500);
+}
+</script>
+</body>
+</html>
