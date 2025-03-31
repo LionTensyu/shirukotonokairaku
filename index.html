@@ -138,11 +138,14 @@ select {
 .glitch-text {
   color: #66ffff;
   font-weight: bold;
-  position: relative;
-  font-size: 2.2em;
-  margin: 0;
   white-space: nowrap;
-   text-shadow:
+  font-size: 2.2em;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; /* ← 長すぎると...で切れるように */
+  text-shadow:
     0 0 5px #66ffff,
     0 0 10px #66ffff,
     0 0 20px #66ffff;
@@ -323,7 +326,7 @@ html[lang="en"] .en-only { display: inline; }
     color: #1a1a1a;
 }
 @media screen and (max-width: 660px) {
-    .site-title { font-size: 1.5em; }
+    .site-title { font-size: 1em; }
     
     .footer-share { flex-direction: column; align-items: center; }
     .footer-share button { width: 100%; max-width: 300px; }
@@ -373,12 +376,13 @@ header {
   flex-grow: 1;
 }
 
-.floating-title {
-  position: fixed;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
+.header-title-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* はみ出し防止 */
+  max-width: 100%;
 }
 
 .category-selector {
@@ -386,6 +390,13 @@ header {
   top: 130px;
   right: 350px;
   z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.13); /* 半透明で奥がぼける */
+  box-shadow: 0 0 10px #66ffff55;
 }
 
 .counter-wrapper {
@@ -631,7 +642,7 @@ body .goog-te-banner-frame * {
   .category-selector {
     transform: scale(0.7);
     position: fixed;
-  top: 46px;
+  top: 90px;
   right: -35px;
   z-index: 1000;
   }
@@ -642,17 +653,14 @@ body .goog-te-banner-frame * {
   }
   .counter-wrapper,
   .counter {
-    display: none;
+    transform: scale(0.6);
+  }
   }
   .shikai-button {
     transform: scale(0.5);
-    position: fixed;
-    right: 20px;
-    bottom: 550px;
-    font-size: 3em;
-    padding: 15px 10px;
-    line-height: 1;
-    z-index: 2000;
+    top: auto;
+    bottom: 180px;
+    right: 0px;
   }
   .floating-text{
   display: none;
