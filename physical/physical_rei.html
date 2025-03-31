@@ -118,25 +118,8 @@
   background-color: #101010;
   border-top: 1px solid #00ffff;
 }
+ 
 
-/* Google翻訳バーを完全に非表示に */
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-
-/* bodyの位置ずれ補正（翻訳バー分のtopマージンが入るのを防ぐ） */
-body {
-  top: 0px !important;
-}
-
-/* 全画面の翻訳スタイル影響を最小にする */
-.goog-logo-link,
-.goog-te-gadget {
-  display: none !important;
-}
-
-
-    
     .rotating-inf {
         animation: rotateInf 60s linear infinite;
     }
@@ -1156,6 +1139,28 @@ document.querySelectorAll('.accordion-title').forEach(btn => {
   src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
   onload="autoTranslateToEnglish()">
 </script>
+
+<script>
+  (function () {
+    const nukeTopElements = () => {
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const z = window.getComputedStyle(el).zIndex;
+  
+        if (rect.top <= 0 && parseInt(z) > 5000 && rect.height < 100) {
+          el.style.display = 'none';
+          console.log('🚨 爆破した要素:', el);
+        }
+      });
+  
+      // bodyのズレ修正も毎回やっておく
+      document.body.style.top = '0px';
+    };
+  
+    setInterval(nukeTopElements, 500);
+  })();
+  </script>
 
 </body>
 </html>

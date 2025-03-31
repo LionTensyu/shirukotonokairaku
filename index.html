@@ -1,1 +1,948 @@
-<h1>識ることの快楽</h1>
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>識ることの快楽</title>
+<link href="favicon/favicon.ico" rel="icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&amp;display=swap" rel="stylesheet"/>
+
+<style>
+body {
+    background: #121212;
+    color: #66ffff;
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    overflow-x: hidden;
+}
+.ring-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes rotateRingSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes rotateRingSlowReverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes rotateInfSlow {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes rotateInfSlowReverse {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+.rotating-ring {
+  animation: rotateRingSlow 60s linear infinite;
+}
+.rotating-ring-reverse {
+  animation: rotateRingSlowReverse 60s linear infinite;
+}
+.rotating-inf {
+  animation: rotateInfSlow 60s linear infinite;
+}
+.rotating-inf-reverse {
+  animation: rotateInfSlowReverse 60s linear infinite;
+}
+
+
+
+
+header, .footer-share, .scroll-text {
+    position: relative;
+    z-index: 1;
+}
+header {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #66ffff;
+    background-color: #1a1a1a;
+    z-index: 1000;
+    padding: 10px;
+}
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.header-bottom {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+ white-space: nowrap; }
+select {
+    background-color: #1a1a1a;
+    color: #66ffff;
+    border: 1px solid #66ffff;
+    padding: 10px;
+    font-size: 1.1em;
+}
+.scroll-text {
+    position: fixed;
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 1px solid #66ffff;
+    border-bottom: 1px solid #66ffff;
+    padding: 8px 0;
+    background-color: #121212;
+    z-index: 1001;
+}
+.scroll-top { top: 0; }
+.scroll-bottom { bottom: 0; }
+.scroll-text span {
+    display: inline-block;
+    font-size: 1.1em;
+}
+.scroll-text .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+    animation: scroll-left 240s linear infinite;
+}
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.counter {
+    height: 24px;
+}
+
+.glitch-text {
+  color: #66ffff;
+  font-weight: bold;
+  position: relative;
+  font-size: 2.2em;
+  margin: 0;
+  white-space: nowrap;
+   text-shadow:
+    0 0 5px #66ffff,
+    0 0 10px #66ffff,
+    0 0 20px #66ffff;
+  animation: chikaFadeAnim 4s infinite;
+}
+
+@keyframes chikaFadeAnim {
+  0%   { opacity: 1;   }
+  5%   { opacity: 0;   }
+  10%  { opacity: 1;   }
+  13%  { opacity: 0.4; }
+  16%  { opacity: 1;   }
+  22%  { opacity: 0;   }
+  26%  { opacity: 1;   }
+  30%  { opacity: 0.8; }
+  35%  { opacity: 1;   }
+  40%  { opacity: 0.6; }
+  50%  { opacity: 0.3; }
+  60%  { opacity: 0.2; }
+  70%  { opacity: 0.1; }
+  80%  { opacity: 0.05;}
+  90%  { opacity: 0.02;}
+}
+  /* デジタルクロック */
+.digital-clock {
+  font-family: 'Orbitron','Courier New', monospace;
+  font-size: 2em;
+  color: #66ffff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 300px;
+  right: 0px;
+  z-index: 10;
+
+  /* 半透明のぼんやり背景 */
+  background: radial-gradient(circle at 50% 50%, rgba(102, 255, 255, 0.15), rgba(0, 0, 0, 0.05));
+  backdrop-filter: blur(1px);
+
+  /* ボーダーをなくすことで形を曖昧に */
+  border: none;
+  border-radius: 32px;
+
+  /* 不定形な浮遊感を出す影 */
+  box-shadow:
+    0 0 20px 10px rgba(102, 255, 255, 0.1),
+    0 0 60px 30px rgba(102, 255, 255, 0.06);
+
+  text-shadow: 0 0 6px rgba(102, 255, 255, 0.8);
+}
+
+.shikai-button {
+
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 3em;
+  color: #66ffff;
+  text-decoration: none;
+  border: 1px solid #66ffff;
+padding: 15px 10px;
+line-height: 1.4;
+text-align: center;
+
+  border-radius: 0px;
+  background-color: rgba(18, 18, 18, 0.6);
+  box-shadow: 0 0 10px #66ffff88;
+  z-index: 10;
+
+  animation: glowBlink 1.5s infinite alternate;
+  transition: all 0.3s ease;
+}
+
+@keyframes glowBlink {
+  0%   { box-shadow: 0 0 10px #66ffff44; opacity: 0.6; }
+  50%  { box-shadow: 0 0 16px #66ffffcc; opacity: 1; }
+  100% { box-shadow: 0 0 8px #66ffff66; opacity: 0.7; }
+}
+
+.ja-only { display: inline; }
+.en-only { display: none; }
+
+html[lang="en"] .ja-only { display: none; }
+html[lang="en"] .en-only { display: inline; }
+
+
+
+
+.table-container {
+    max-width: 900px;
+    margin: 60px auto;
+    border: 1px solid #66ffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: rgba(24, 24, 24, 0.7);
+    position: relative;
+    z-index: 2;
+}
+.table-header, .table-row {
+    display: grid;
+    background-color: transparent;
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid #66ffff;
+}
+.table-header {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1a1a1a;
+    font-weight: bold;
+    color: #66ffff;
+}
+.cell {
+    padding: 12px;
+    border-right: 1px solid #66ffff;
+}
+.cell:last-child {
+    border-right: none;
+}
+.table-row .title a {
+    color: #66ffff;
+    text-decoration: none;
+}
+.table-row .title a:hover {
+    text-decoration: underline;
+}
+
+.footer-share {
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    background-color: #1a1a1a;
+    border-top: 1px solid #66ffff;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    z-index: 1001;
+}
+.footer-share button {
+    background: transparent;
+    border: 1px solid #66ffff;
+    color: #66ffff;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 0;
+    transition: all 0.2s ease;
+}
+.footer-share button:hover {
+    background-color: #66ffff;
+    color: #1a1a1a;
+}
+.share-popup {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1a1a1a;
+    border: 1px solid #66ffff;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2000;
+}
+.share-popup button {
+    padding: 10px;
+    border: 1px solid #66ffff;
+    background: transparent;
+    color: #66ffff;
+    cursor: pointer;
+}
+.share-popup button:hover {
+    background-color: #66ffff;
+    color: #1a1a1a;
+}
+@media screen and (max-width: 660px) {
+    .site-title { font-size: 1.5em; }
+    
+    .footer-share { flex-direction: column; align-items: center; }
+    .footer-share button { width: 100%; max-width: 300px; }
+    .table-header, .table-row {
+        grid-template-columns: 1fr;
+    }
+    .cell {
+        border-right: none !important;
+        border-bottom: 1px solid #66ffff;
+    }
+    .cell:last-child {
+        border-bottom: none;
+    }
+}
+.left-ring { left: -10%; top: 50%; transform: translate(-50%, -50%); }
+.right-ring { left: 110%; top: 50%; transform: translate(-50%, -50%); }
+
+.header-bottom {
+    white-space: nowrap;
+ white-space: nowrap; }
+.header-bottom label {
+    margin-right: 8px;
+}
+.header-bottom select {
+    min-width: 160px;
+}
+
+header {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #66ffff;
+  background-color: #1a1a1a;
+  z-index: 1000;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.category-selector {
+  margin-top: 8px;
+}
+
+.counter-wrapper {
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+/* 浮かぶ文字 */
+.floating-text {
+  position: fixed;
+  bottom: 450px;
+  right: 20px;
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 0.7em;
+  color: #66ffff;
+  background-color: rgba(18, 18, 18, 0.6);
+  padding: 5px 5px;
+  box-shadow: 0 0 10px #66ffff88;
+  z-index: 2000;
+  animation: glowBlink 1.5s infinite alternate;
+}
+.floating-text::after {
+  content: "⚠";
+  position: absolute;
+  bottom: 50px;
+  right: 5px;
+  color: #66ffff;
+  font-size: 5em;
+}
+
+/* 浮かぶ言語切り替えボタン */
+.floating-lang-button {
+  position: fixed;
+  top: 400px;
+  right: 0px;
+  z-index: 10;
+  font-family: 'Sawarabi Mincho', serif;
+  background-color: rgba(18, 18, 18, 0.6);
+  color: #66ffff;
+  padding: 5x;
+  box-shadow: 0 0 10px #66ffff88;
+  border-radius: 5px;
+  animation: glowBlink 1.5s infinite alternate;
+}
+.floating-lang-button::after {
+  content: "一度Launguageを押さないと戻せませんよ。";
+  position: absolute;
+  bottom: 50px;
+  right: 5px;
+  color: #66ffff;
+  font-size: 0.7em;
+}
+
+.floating-lang-button select {
+  background-color: transparent;
+  border: 1px solid #66ffff;
+  color: #66ffff;
+  font-size: 0.9em;
+  font-family: 'Sawarabi Mincho', serif;
+}
+.no-translate {
+  translate: no;
+}
+
+
+
+/* プロフ */
+.author-button {
+  position: fixed;
+  top: 200px;
+  right: 30px;
+  z-index: 1002;
+}
+.author-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #66ffff;
+  box-shadow: 0 0 6px #66ffff88;
+  cursor: pointer;
+}
+.author-popup {
+  position: fixed;
+  top: 100px;
+  right: 80px;
+  background-color: #1a1a1a;
+  border: 1px solid #66ffff;
+  color: #66ffff;
+  padding: 16px;
+  display: none;
+  z-index: 2000;
+  width: 350px;
+  font-size: 0.95em;
+  box-shadow: 0 0 10px #66ffff88;
+}
+.author-popup-icon {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+
+  margin-bottom: 10px;
+}
+.author-popup button {
+  margin-top: 10px;
+  background: transparent;
+  border: 1px solid #66ffff;
+  color: #66ffff;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.author-popup button:hover {
+  background-color: #66ffff;
+  color: #1a1a1a;
+}
+.author-popup button {
+  position: static; /* ← これで通常の文脈に戻る */
+  top: auto;
+  right: auto;
+  margin-top: 0;
+}
+
+.author-popup button:hover {
+  background-color: #66ffff;
+  color: #1a1a1a;
+}
+
+.popup-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.popup-controls button,
+.popup-controls .popup-button {
+  background: transparent;
+  border: 1px solid #66ffff;
+  color: #66ffff;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+}
+.popup-controls button:hover,
+.popup-controls .popup-button:hover {
+  background-color: #66ffff;
+  color: #1a1a1a;
+}
+
+.popup-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.author-popup-icon {
+  width: 250px;
+  height: 250px;
+
+  display: block;
+}
+
+.popup-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.popup-controls button,
+.popup-controls .popup-button {
+  background: transparent;
+  border: 1px solid #66ffff;
+  color: #66ffff;
+  padding: 6px 10px;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.popup-controls button:hover,
+.popup-controls .popup-button:hover {
+  background-color: #66ffff;
+  color: #1a1a1a;
+}
+
+/* プロフ */
+
+/* Google翻訳バーを完全に非表示に */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* bodyの位置ずれ補正（翻訳バー分のtopマージンが入るのを防ぐ） */
+body {
+  top: 0px !important;
+}
+
+/* 全画面の翻訳スタイル影響を最小にする */
+.goog-logo-link,
+.goog-te-gadget {
+  display: none !important;
+}
+/* Google翻訳バーを黒背景＋透明に近づける */
+.goog-te-banner-frame.skiptranslate {
+  background-color: #000 !important;
+  opacity: 0.95 !important;
+}
+
+/* 中身のテキストも黒に合わせて隠す・黒くする（無理やり） */
+body .goog-te-banner-frame * {
+  color: #000 !important;
+  font-size: 0 !important;
+}
+
+
+
+@media screen and (max-width: 660px) {
+  .author-icon {
+    width: 65px;
+    height: 65px;
+  }
+  .author-popup-icon {
+    width: 200px;
+    height: 200px;
+  }
+  .author-button {
+    top: 200px; /* ←スマホは低めに */
+    right: 10px;
+  }
+  .site-title {
+    position: static;
+  left: 0;
+  margin-left: 10px; /* 任意で少し余白 */
+  }
+  .category-selector {
+    position: static;
+  right: 0;
+  margin-right: 10px; /* 任意で少し余白 */
+  }
+  .author-popup {
+    transform: scale(0.85);
+    transform-origin: top right;
+    right: 10px;
+  }
+  .counter-wrapper,
+  .counter {
+    display: none;
+  }
+  .shikai-button {
+
+position: fixed;
+right: 20px;
+bottom: 150px;
+font-size: 3em;
+padding: 15px 10px;
+line-height: 1;
+
+z-index: 2000;
+}
+ .floating-text{
+  display: none;
+}
+.digital-clock {
+  font-size: 1.5em;
+  top: 400px;}
+
+  .floating-lang-button {
+  position: fixed;
+  top: 300px;
+  right: 0px;
+}
+}
+
+
+/* CSS */
+</style>
+</head>
+<body>
+<!-- 左リング -->
+<div class="ring-background left-ring">
+<svg class="rotating-ring" height="600" viewbox="0 0 600 600" width="600">
+<defs>
+<path d="M300,300 m-250,0 a250,250 0 1,1 500,0 a250,250 0 1,1 -500,0" id="circlePath"></path>
+</defs>
+<text fill="#66ffff" font-family="'Sawarabi Mincho', serif" font-size="40">
+<textpath href="#circlePath">
+        識ることの快楽・識ることの快楽・識ることの快楽・識ることの快楽・識ることの快楽
+      </textpath>
+</text>
+</svg>
+<div class="rotating-inf" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:400px; color:#66ffff; font-family:'Sawarabi Mincho', serif; pointer-events:none;">
+<div>∮</div>
+</div>
+</div>
+
+<!-- 右リング（45度ずらし） -->
+<div class="ring-background right-ring">
+<svg class="rotating-ring-reverse" height="600" viewbox="0 0 600 600" width="600">
+<defs>
+<path d="M300,300 m-250,0 a250,250 0 1,1 500,0 a250,250 0 1,1 -500,0" id="circlePath"></path>
+</defs>
+<text fill="#66ffff" font-family="'Sawarabi Mincho', serif" font-size="40">
+<textpath href="#circlePath">
+        識ることの快楽・識ることの快楽・識ることの快楽・識ることの快楽・識ることの快楽
+      </textpath>
+</text>
+</svg>
+<div class="rotating-inf-reverse" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:400px; color:#66ffff; font-family:'Sawarabi Mincho', serif; pointer-events:none;">
+<div>∮</div>
+</div>
+</div>
+
+<header>
+<div class="counter-wrapper">
+<script language="javascript" src="//counter1.fc2.com/counter.php?id=40284491&amp;main=1"></script>
+<noscript><img class="counter" src="//counter1.fc2.com/counter_img.php?id=40284491&amp;main=1"/></noscript>
+</div>
+<div class="header-inner">
+<div class="glitch-text" >識ることの快楽</div>
+
+<div class="category-selector">
+  <label for="categorySelect">カテゴリ選択：</label>
+  <select id="categorySelect">
+    <option value="all">すべて</option>
+  </select>
+</div>
+
+</select>
+</div>
+</div>
+</header>
+
+<p class="header-inner">むだんてんさいゎやめてくださいしんでしまいます</p>
+<p class="header-inner">更新記録</p>
+<p class="header-inner">4/1　サイト開設日</p>
+<p class="header-inner">4/1　Google英訳対応ページ</p>
+<p class="header-inner">エクストラギア</p>
+<p class="header-inner">フィジカルシリーズ</p>
+<p class="header-inner">激ヤバエイリアン1979</p>
+<p class="header-inner">童話シリーズ</p>
+<p class="header-inner">随時追加予定</p>
+
+<div id="storyTable"></div>
+<script src="main.js"></script>
+
+<div class="scroll-text scroll-top"><span class="marquee" id="scrollContentTop"></span></div>
+
+</div>
+<div class="footer-share">
+<button onclick="toggleSharePopup()">🔗 共有メニューを開く</button>
+</div>
+<div class="share-popup" id="sharePopup">
+<button onclick="copyLink()">リンクをコピー</button>
+<button onclick="shareOnX()">𝕏で共有</button>
+<button onclick="shareViaEmail()">Gmailで送信</button>
+<button onclick="generateQR()">QRコード生成</button>
+<button onclick="toggleSharePopup()">閉じる</button>
+</div>
+<div class="scroll-text scroll-bottom"><span class="marquee" id="scrollContentBottom"></span></div>
+<script>
+function toggleAuthorPopup() {
+  const popup = document.getElementById('authorPopup');
+  popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+}
+
+
+const messages = [
+    "本アーカイブの怪文書は、筆者の浪漫的構成と指示により、OpenAIのGPT-4oが一発生成したものです。",
+    "発想：人間、文：AI、責任：共有。",
+    "常識の境界を超えた怪文たちを、存分にお楽しみください。",
+    "この怪文たちはすべてGPT-4oくんによる“AIの暴走”で生成されました。俺はただ構成を投げただけ。すべての責任はAIにあります。",
+    "※本サイトの全コンテンツは、OpenAIのGPT-4oを用いた生成によるものです。発想・構成・指示すべて筆者、文はAI。異常な化学反応をお楽しみください。"
+];
+document.getElementById('categorySelect').addEventListener('change', function() {
+  const selected = this.value;
+  const rows = document.querySelectorAll('.table-row');
+  
+  const seriesHeaders = document.querySelectorAll('[data-series="series"]');
+  if (selected === 'all') {
+    seriesHeaders.forEach(header => header.style.display = 'grid');
+  } else {
+    seriesHeaders.forEach(header => header.style.display = 'none');
+  }
+
+rows.forEach(row => {
+    const category = row.getAttribute('data-category');
+    if (selected === 'all' || category === selected) {
+      row.style.display = 'grid';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+});
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('リンクをコピーしたぜ！');
+    });
+}
+function shareOnX() {
+    const text = encodeURIComponent('識ることの快楽を見よ…！');
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+}
+function shareViaEmail() {
+    const subject = encodeURIComponent('識ることの快楽を共有');
+    const body = encodeURIComponent(`このサイト「識ることの快楽」を見てみて！\n${window.location.href}`);
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+}
+function toggleSharePopup() {
+    const popup = document.getElementById('sharePopup');
+    popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+}
+function generateQR() {
+    window.open(`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(window.location.href)}`, '_blank');
+}
+function buildScrollingMessage() {
+    let result = "";
+    for (let i = 0; i < 100; i++) {
+        const msg = messages[Math.floor(Math.random() * messages.length)];
+        result += msg + "　　";
+    }
+    return result;
+}
+const scrollElementTop = document.getElementById('scrollContentTop');
+const scrollElementBottom = document.getElementById('scrollContentBottom');
+scrollElementTop.textContent = buildScrollingMessage();
+scrollElementBottom.textContent = buildScrollingMessage();
+setInterval(() => {
+    scrollElementTop.textContent = buildScrollingMessage();
+    scrollElementBottom.textContent = buildScrollingMessage();
+}, 90000);
+</script>
+
+<audio id="bgm" src="gamma.mp3" autoplay loop></audio>
+
+<div id="clock" class="digital-clock"></div>
+<script>
+  function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2, '0');
+    const m = String(now.getMinutes()).padStart(2, '0');
+    const s = String(now.getSeconds()).padStart(2, '0');
+    const ms = String(now.getMilliseconds()).padStart(3, '0');
+    const msShort = ms.substring(0, 2); // ← 「00:00:00:00」形式用に2桁にする
+  
+    document.getElementById('clock').textContent = `${h}:${m}:${s}:${msShort}`;
+  }
+  
+  setInterval(updateClock, 20); // ミリ秒表示をなめらかに更新（20ms間隔）
+  updateClock();
+</script>
+
+<div class="floating-text">
+  ⚠Feel free to get inspired by the prompts—but please,<br>
+  for the love of all that's chaotic and beautiful,don’t save the HTML,<br>
+  press F12, or repost anything without permission.<br>
+  You'll awaken ancient digital curses. You’ve been warned."</div>
+
+  <div class="floating-text" title="翻訳するなとは言わん。でも保存・転載はやめてね！"></div>
+  
+
+<a href="bbs/index.html" class="shikai-button">
+  <span class="no-translate" translate="no">識</span><br/>
+  <span class="no-translate" translate="no">快</span><br/>
+  <span class="no-translate" translate="no">掲</span><br/>
+  <span class="no-translate" translate="no">示</span><br/>
+  <span class="no-translate" translate="no">板</span>
+</a>
+
+
+<!-- 言語切り替えボタン -->
+<div class="floating-lang-button">
+  <select onchange="changeLanguage(this.value)">
+    <option value="">🌐 Language</option>
+    <option value="ja">日本語</option>
+    <option value="en">English</option>
+  </select>
+</div>
+
+<!-- Google翻訳ウィジェット（隠してる） -->
+<div id="google_translate_element" style="display: none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ja',
+      includedLanguages: 'ja,en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function changeLanguage(lang) {
+    const combo = document.querySelector(".goog-te-combo");
+    if (combo) {
+      combo.value = lang;
+      combo.dispatchEvent(new Event("change"));
+    }
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<div class="table-header no-translate" translate="no">激ヤバシリーズ</div>
+
+
+<script>
+  function changeLanguage(lang) {
+    // lang属性を切り替えてCSS制御反映（.ja-only / .en-only用）
+    document.documentElement.setAttribute('lang', lang);
+
+    const applyTranslation = () => {
+      const combo = document.querySelector(".goog-te-combo");
+      if (combo) {
+        combo.value = lang;
+        combo.dispatchEvent(new Event("change"));
+        return true;
+      }
+      return false;
+    };
+
+    // 翻訳ドロップダウンが出てくるまで最大30回（15秒間）チェック
+    let tries = 0;
+    const interval = setInterval(() => {
+      if (applyTranslation() || tries++ > 30) {
+        clearInterval(interval);
+      }
+    }, 500);
+  }
+</script>
+
+
+<script>
+  (function () {
+    const nukeTopElements = () => {
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const z = window.getComputedStyle(el).zIndex;
+  
+        if (rect.top <= 0 && parseInt(z) > 5000 && rect.height < 100) {
+          el.style.display = 'none';
+          console.log('🚨 爆破した要素:', el);
+        }
+      });
+  
+      // bodyのズレ修正も毎回やっておく
+      document.body.style.top = '0px';
+    };
+  
+    setInterval(nukeTopElements, 500);
+  })();
+  </script>
+
+
+
+<!-- 作者プロフィールボタン＆ポップアップ -->
+<div class="author-button" onclick="toggleAuthorPopup()">
+<img alt="作者画像" class="author-icon" src="shiriyukihime.jpg"/>
+</div>
+<div class="author-popup" id="authorPopup">
+<div class="popup-top">
+<img alt="作者画像" class="author-popup-icon" src="shiriyukihime.jpg"/>
+<div class="popup-controls">
+<button onclick="toggleAuthorPopup()">閉じる</button>
+<a class="popup-button" href="https://x.com/yourhandle" target="_blank">𝕏垢</a>
+</div>
+</div>
+<div class="author-content">
+<p><strong>名前：</strong>來怨天咒(ライオンテンシュ)</p>
+<p><strong>職業：</strong>混沌家/ケイオスキュレイター</p>
+<p><strong>メッセージ：</strong>識ることの快楽。</p>
+</div>
+</div>
+
+</body>
+</html>
