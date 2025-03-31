@@ -14,7 +14,7 @@ body {
     color: #66ffff;
     font-family: "Noto Sans JP", sans-serif;
     margin: 0;
-    padding-top: 160px;
+    padding-top: 80px; /* ← 160pxから減らす。実際のheaderの高さ＋余裕分くらいでOK */
     padding-bottom: 120px;
     overflow-x: hidden;
 }
@@ -28,6 +28,8 @@ body {
     z-index: 0;
     pointer-events: none;
 }
+
+
 
 @keyframes rotateRingSlow {
   0% { transform: rotate(0deg); }
@@ -58,8 +60,14 @@ body {
   animation: rotateInfSlowReverse 60s linear infinite;
 }
 
-
-
+.page-info {
+  margin: 10px auto;
+  max-width: 800px;
+  font-size: 1.1em;
+  line-height: 1.8;
+  text-align: left;
+  padding: 0 20px;
+}
 
 header, .footer-share, .scroll-text {
     position: relative;
@@ -703,16 +711,16 @@ z-index: 2000;
 </div>
 </div>
 </header>
-
-<p class="header-inner">むだんてんさいゎやめてくださいしんでしまいます</p>
-<p class="header-inner">更新記録</p>
-<p class="header-inner">4/1　サイト開設日</p>
-<p class="header-inner">4/1　Google英訳対応ページ</p>
-<p class="header-inner">エクストラギア</p>
-<p class="header-inner">フィジカルシリーズ</p>
-<p class="header-inner">激ヤバエイリアン1979</p>
-<p class="header-inner">童話シリーズ</p>
-<p class="header-inner">随時追加予定</p>
+<!-- 修正後の本文 -->
+<p class="page-info">むだんてんさいゎやめてくださいしんでしまいます</p>
+<p class="page-info">更新記録</p>
+<p class="page-info">4/1 サイト開設日</p>
+<p class="page-info">Google英訳対応ページ</p>
+<p class="page-info">エクストラギア</p>
+<p class="page-info">フィジカルシリーズ</p>
+<p class="page-info">随時追加予定</p>
+<p class="page-info">激ヤバエイリアン1979</p>
+<p class="page-info">童話シリーズ</p>
 
 <div id="storyTable"></div>
 <script src="main.js"></script>
