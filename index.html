@@ -373,8 +373,19 @@ header {
   flex-grow: 1;
 }
 
+.floating-title {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
 .category-selector {
-  margin-top: 8px;
+  position: fixed;
+  top: 100px;
+  right: 50px;
+  z-index: 1000;
 }
 
 .counter-wrapper {
@@ -609,15 +620,20 @@ body .goog-te-banner-frame * {
     top: 200px; /* ←スマホは低めに */
     right: 10px;
   }
-  .site-title {
-    position: static;
-  left: 0;
-  margin-left: 10px; /* 任意で少し余白 */
+  .glitch-text {
+    white-space: normal;
+    text-align: center;
+    word-break: keep-all;
+    font-size: 1.4em;
+    transform: scale(0.9);
+    transform-origin: top center;
   }
   .category-selector {
-    position: static;
-  right: 0;
-  margin-right: 10px; /* 任意で少し余白 */
+    transform: scale(0.5);
+    position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
   }
   .author-popup {
     transform: scale(0.85);
@@ -632,7 +648,7 @@ body .goog-te-banner-frame * {
     transform: scale(0.5);
     position: fixed;
     right: 20px;
-    bottom: 150px;
+    bottom: 550px;
     font-size: 3em;
     padding: 15px 10px;
     line-height: 1;
@@ -695,9 +711,9 @@ body .goog-te-banner-frame * {
 <script language="javascript" src="//counter1.fc2.com/counter.php?id=40284491&amp;main=1"></script>
 <noscript><img class="counter" src="//counter1.fc2.com/counter_img.php?id=40284491&amp;main=1"/></noscript>
 </div>
-<div class="header-inner">
-<div class="glitch-text" >識ることの快楽</div>
-
+<div class="floating-title">
+  <div class="glitch-text" >識ることの快楽</div>
+</div>
 <div class="category-selector">
   <label for="categorySelect">カテゴリ選択：</label>
   <select id="categorySelect">
