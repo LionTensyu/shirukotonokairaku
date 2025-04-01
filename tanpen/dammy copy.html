@@ -45,7 +45,7 @@
     }
     .content {
         margin: 80px 20px 20px 20px;
-        white-space: pre-wrap;
+        white-space: normal; 
         border: 1px solid #00ffff;
         padding: 20px;
     }
@@ -88,7 +88,36 @@
         margin: 5px 0;
         width: 100%;
     }
-    
+
+    .accordion {
+  margin: 10px 0;
+  border: 1px solid #00ffff;
+}
+
+.accordion-title {
+  width: 100%;
+  background-color: #000;
+  color: #00ffff;
+  font-size: 1em;
+  font-family: "MS PGothic", sans-serif;
+  padding: 12px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+.accordion-title:hover {
+  background-color: #002222;
+}
+
+.accordion-content {
+  display: none;
+  padding: 12px 16px;
+  background-color: #101010;
+  border-top: 1px solid #00ffff;
+}   
     .rotating-inf {
         animation: rotateInf 60s linear infinite;
     }
@@ -113,8 +142,28 @@
       </div>      
     </div>
 <div class="content">
-<p>ここに文章
-</p>
+
+
+
+    <div class="accordion">
+        <button class="accordion-title">▼ 前編</button>
+        <div class="accordion-content">
+
+
+        </div>
+      </div>
+      
+      <div class="accordion">
+        <button class="accordion-title">▼ 後編</button>
+        <div class="accordion-content">
+
+          
+
+        </div>
+      </div>
+
+      
+
 </div>
 <div class="footer-share">
 <button onclick="toggleSharePopup()">🔗 共有メニューを開く</button>
@@ -176,6 +225,80 @@ function updateInfPosition() {
 window.addEventListener('load', updateInfPosition);
 window.addEventListener('resize', updateInfPosition);
 </script>
+
+<script>
+document.querySelectorAll('.accordion-title').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const allContents = document.querySelectorAll('.accordion-content');
+
+    // すべて閉じる
+    allContents.forEach(content => {
+      if (content !== btn.nextElementSibling) {
+        content.style.display = 'none';
+      }
+    });
+
+    // 自分のだけ開閉切り替え
+    const current = btn.nextElementSibling;
+    current.style.display = (current.style.display === 'block') ? 'none' : 'block';
+  });
+});
+</script>
+    
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ja',
+      includedLanguages: 'en', // 英語だけ表示対象
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function autoTranslateToEnglish() {
+    const interval = setInterval(function () {
+      const frame = document.querySelector('iframe.goog-te-banner-frame');
+      if (frame) {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = 'en';
+          select.dispatchEvent(new Event('change'));
+          clearInterval(interval);
+        }
+      }
+    }, 500);
+  }
+</script>
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  onload="autoTranslateToEnglish()">
+</script>
+
+<script>
+  (function () {
+    const nukeTopElements = () => {
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const z = window.getComputedStyle(el).zIndex;
+  
+        if (rect.top <= 0 && parseInt(z) > 5000 && rect.height < 100) {
+          el.style.display = 'none';
+          console.log('🚨 爆破した要素:', el);
+        }
+      });
+  
+      // bodyのズレ修正も毎回やっておく
+      document.body.style.top = '0px';
+    };
+  
+    setInterval(nukeTopElements, 500);
+  })();
+  </script>
+  
 
 </body>
 </html>

@@ -202,5 +202,60 @@ function playPurunAndAlert() {
     }, 1500);
 }
 </script>
+
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ja',
+      includedLanguages: 'en', // 英語だけ表示対象
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function autoTranslateToEnglish() {
+    const interval = setInterval(function () {
+      const frame = document.querySelector('iframe.goog-te-banner-frame');
+      if (frame) {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = 'en';
+          select.dispatchEvent(new Event('change'));
+          clearInterval(interval);
+        }
+      }
+    }, 500);
+  }
+</script>
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  onload="autoTranslateToEnglish()">
+</script>
+
+<script>
+  (function () {
+    const nukeTopElements = () => {
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const z = window.getComputedStyle(el).zIndex;
+  
+        if (rect.top <= 0 && parseInt(z) > 5000 && rect.height < 100) {
+          el.style.display = 'none';
+          console.log('🚨 爆破した要素:', el);
+        }
+      });
+  
+      // bodyのズレ修正も毎回やっておく
+      document.body.style.top = '0px';
+    };
+  
+    setInterval(nukeTopElements, 500);
+  })();
+  </script>
+
 </body>
 </html>
