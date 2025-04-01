@@ -1,0 +1,793 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>新MARVELヒーロー『MOMOTAROU』</title>
+<link href="../favicon/favicon.ico" rel="icon"/>
+<style>
+    body {
+        background-color: #000000;
+        color: #00ffff;
+        font-family: "MS PGothic", sans-serif;
+        margin: 0;
+        padding-bottom: 100px;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #000000;
+        border-bottom: 2px solid #00ffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+    .header-title {
+        font-size: 24px;
+        color: #00ffff;
+        margin-right: 0;
+    }
+    .back-button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .content {
+        margin: 80px 20px 20px 20px;
+        white-space: normal; 
+        border: 1px solid #00ffff;
+        padding: 20px;
+    }
+    .footer-share {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        border-top: 1px solid #66ffff;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        z-index: 1001;
+        box-shadow: 0 -2px 5px rgba(0, 255, 255, 0.2);
+    }
+    .footer-share button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    .share-popup {
+        display: none;
+        position: fixed;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        border: 1px solid #00ffff;
+        padding: 10px;
+        z-index: 1002;
+    }
+    .share-popup button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 5px 10px;
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .accordion {
+  margin: 10px 0;
+  border: 1px solid #00ffff;
+}
+
+.accordion-title {
+  width: 100%;
+  background-color: #000;
+  color: #00ffff;
+  font-size: 1em;
+  font-family: "MS PGothic", sans-serif;
+  padding: 12px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+.accordion-title:hover {
+  background-color: #002222;
+}
+
+.accordion-content {
+  display: none;
+  padding: 12px 16px;
+  background-color: #101010;
+  border-top: 1px solid #00ffff;
+}   
+    .rotating-inf {
+        animation: rotateInf 60s linear infinite;
+    }
+    @keyframes rotateInf {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @media screen and (max-width: 660px) {
+        .header-title{
+            font-size: 18px;
+            position: absolute;
+            right: 0;
+        }
+    }
+    </style>
+    </head>
+    <body><div class="rotating-inf" style="position: fixed; top: -10px; left: 0px; transform: translateX(-50%); font-size: 60px; color: #00ffff; z-index: 1001; font-family: 'MS PGothic', sans-serif;">∮</div>
+    <div class="header"><button class="back-button" onclick="history.back()">← 戻る</button>
+        <div class="header-title">
+        <span class="title-top">新MARVELヒーロー</span><br/>
+        <span class="title-bottom">『MOMOTAROU』</span>
+      </div>      
+    </div>
+<div class="content">
+
+
+  <img src="/shirukotonokairaku/contents/kobetu/marvels_momotarou.png">  
+
+  <br>新ヒーロー モモタロウ4o</br>
+  <br>LT</br>
+  <br>PLUS</br>
+  <br>PLUS</br>
+  <br>あなた:</br>
+  <br>新MARVELヒーロー『モモタロウ』</br>
+  <br>特徴:ヒューマン型ミュータント</br>
+  <br>成長が通常の人類より異様に早く、桃から誕生する。その時点でまともな人類ではない</br>
+
+    <div class="accordion">
+        <button class="accordion-title">▼ 初期設定/MOMOTARO: THE PEACH WARRIOR</button>
+        <div class="accordion-content">
+
+
+          <br>ChatGPT:</br>
+          <br>MARVELヒーロー『モモタロウ』</br>
+          <br>本名: 不明（コードネーム：MOMOTARO）</br>
+          <br>種族: ヒューマン型ミュータント（Class-Ω相当の変異体）</br>
+          <br>所属: X-MEN（暫定）、S.H.I.E.L.D.観察対象</br>
+          <br>出身: 不明（発見場所：日本、岡山県）</br>
+          <br>能力: 超成長促進、超人的身体能力、戦闘適応、遺伝子変異</br>
+          <br>オリジン</br>
+          <br>宇宙から飛来した謎の**「桃型生命体」が地球の日本・岡山県に落下。その内部から誕生したのが「モモタロウ」**と呼ばれるミュータントだった。誕生した瞬間から彼はすでに少年の姿をしており、驚異的な成長速度を見せた。わずか数日で成人へと変化し、圧倒的な身体能力を発揮する。</br>
+          <br>発見当初、彼は言葉を知らず、理性を持たない獣のような存在だったが、わずか数週間で人間の言語を習得。現在はX-MENの支援のもと、自己のアイデンティティを探る旅をしている。</br>
+          <br>能力・スキル</br>
+          <br>1. 超成長促進</br>
+          <br>異常な成長速度を誇る。通常の人間なら十数年かかる成長を数日で遂げる。</br>
+          <br>怪我を負っても細胞が驚異的な速度で再生し、自己進化を遂げる。</br>
+          <br>ただし、老化速度も異常に早いため、寿命が極端に短い可能性がある。</br>
+          <br>2. 超人的身体能力</br>
+          <br>キャプテン・アメリカを超える身体スペックを持つ。</br>
+          <br>100メートルを1秒未満で走破し、ヘリコプターを片手で持ち上げるほどの怪力を持つ。</br>
+          <br>敵との戦闘中に適応し、ダメージを受けるたびに戦闘能力が進化する。</br>
+          <br>3. 戦闘適応</br>
+          <br>**「経験」ではなく「進化」**によって戦闘技術を取得する。</br>
+          <br>一度見た戦闘スタイルを即座にコピーし、相手を上回る戦術を形成。</br>
+          <br>強敵と戦うほど成長するが、戦闘を続けすぎると暴走し、理性を失う可能性がある。</br>
+          <br>4. 遺伝子変異</br>
+          <br>桃型生命体の影響で、人間とは異なる未知のDNAを持つ。</br>
+          <br>彼の遺伝子を解析したS.H.I.E.L.D.は「これは地球の生命体ではない」と警告を発している。</br>
+          <br>彼自身が「人間」なのか「異星生命体」なのかは未だ不明。</br>
+          <br>敵対関係</br>
+          <br>ヴィラン</br>
+          <br>「オニ」 - 不死身のエイリアンハンター</br>
+          <br>桃型生命体を執拗に追う謎の種族。地球にはモモタロウを**「狩るために来た」**らしい。</br>
+          <br>彼らは「鬼」として伝承されており、実際には太古から人類を監視していた。</br>
+          <br>S.H.I.E.L.D.ブラックセクション</br>
+          <br>モモタロウの存在を地球にとっての脅威と判断し、彼の拘束を目論む。</br>
+          <br>「このまま成長を続ければ、地球の生態系が崩壊する」と警戒されている。</br>
+          <br>ストーリーライン</br>
+          <br>『モモタロウ：覚醒』</br>
+          <br>モモタロウが岡山県で発見される。</br>
+          <br>自衛隊とS.H.I.E.L.D.に確保されそうになるが、X-MENの介入により脱出。</br>
+          <br>彼は自分の正体を知るため、桃型生命体の起源を追う旅に出る。</br>
+          <br>『モモタロウ：対鬼戦争』</br>
+          <br>宇宙からの侵略者「オニ」が襲来。</br>
+          <br>彼らの目的は「モモタロウのDNAを回収し、新たな進化を遂げること」。</br>
+          <br>X-MEN、アベンジャーズと共闘しながら、地球を守るために戦う。</br>
+          <br>『モモタロウ：終焉の刻』</br>
+          <br>モモタロウの急速成長が止まらず、彼の寿命が尽きる可能性が高まる。</br>
+          <br>彼は「進化の果て」に何があるのかを知るため、人類を超えた存在へと変貌する道を選ぶのか、それとも人として生きるのかの決断を迫られる。</br>
+          <br>結論</br>
+          <br>モモタロウは、**「異質な進化」の象徴としてMARVEL世界に登場する新たなミュータント。</br>
+          <br>彼の物語は、「成長しすぎる者は、いずれ制御できなくなる」**というテーマを軸に展開される。</br>
+          <br>そして、彼が選ぶ未来は「ヒーロー」か「破滅」か――？</br>
+          <br>あなた:</br>
+          <br>まずはコラボ無しのモモタロウの話をマーベライズしてください</br>
+          <br>『MOMOTARO: THE PEACH WARRIOR"（モモタロウ：ザ・ピーチ・ウォリアー）』</br>
+          <br>ChatGPT:</br>
+          <br>MOMOTARO: THE PEACH WARRIOR</br>
+          <br>（モモタロウ：ザ・ピーチ・ウォリアー）</br>
+          <br>ジャンル:</br>
+          <br>SF・アクション・ミュータントヒーロー</br>
+          <br>出版社:</br>
+          <br>MARVEL COMICS</br>
+          <br>オリジン</br>
+          <br>**「桃」**が割れたとき、彼はすでに戦士だった。</br>
+          <br>近未来の日本。政府の極秘研究機関**「霊峰計画」が、太古の遺跡から奇妙な有機体――「神種（カムイシード）」を発見する。研究の結果、それは地球外の生命体の一部であると判明。しかし、研究施設で実験が行われた瞬間、巨大な桃のような繭が生まれ、そこから「モモタロウ」**と名付けられた少年が現れた。</br>
+          <br>彼は異常な速度で成長し、数時間で言語を習得し、数日で成人の肉体を得た。 その肉体は常人の数十倍の力を持ち、並の兵士では彼を抑えることすらできなかった。</br>
+          <br>しかし、モモタロウが誕生した瞬間から、地球に災厄が訪れる。</br>
+          <br>彼の存在を察知した**「オニ」**と呼ばれる侵略者が宇宙から降り立ち、彼を狩るために動き出したのだ。</br>
+          <br>「オニは来る。モモタロウよ、お前が地球の未来を決める。」</br>
+          <br>政府に追われ、宇宙の脅威に狙われ、モモタロウは孤独な戦士として戦いに身を投じる――。</br>
+          <br>キャラクター</br>
+          <br>MOMOTARO（モモタロウ）</br>
+          <br>本名: 不明</br>
+          <br>種族: ヒューマン型ミュータント（「神種」の遺伝子を持つ）</br>
+          <br>年齢: 不明（誕生から数ヶ月で青年に成長）</br>
+          <br>身長: 198cm（成長中）</br>
+          <br>能力:</br>
+          <br>超人的身体能力（怪力・俊敏性・耐久力）</br>
+          <br>細胞再生能力（通常の100倍の速度で自己修復）</br>
+          <br>「戦闘適応」（戦うほど成長し、相手の戦術を瞬時に学習）</br>
+          <br>「オニ」特攻モード（鬼滅の刃的な解放形態）</br>
+          <br>武器: 桃刃（ピーチブレード）</br>
+          <br>モモタロウの骨から生成される自己再生武器。</br>
+          <br>切った傷口が「閉じず」、相手の肉体を蝕む特性を持つ。</br>
+          <br>性格:</br>
+          <br>初めは感情を持たないが、戦いを通じて人間の情を学んでいく。</br>
+          <br>「何者かになりたい」という欲望を抱くが、自分が地球のための戦士であることを理解している。</br>
+          <br>オニ</br>
+          <br>「モモタロウ、目覚めたか。我らの戦いは運命だ。」</br>
+          <br>宇宙より来た侵略種族。彼らは神話に登場する鬼の原型であり、太古の地球に一度来訪していた。モモタロウと同じ「神種」の因子を持つが、彼らはそれを完全に制御し、圧倒的な戦闘能力を誇る。</br>
+          <br>主な幹部</br>
+          <br>イバラキ（伊吹丸）</br>
+          <br>**「赤鬼」**とも呼ばれる。手にした大斧で空間を断ち切る。</br>
+          <br>シュテン（酒呑童子）</br>
+          <br>**「青鬼」**とも呼ばれ、毒液のような体を持つ変異体。</br>
+          <br>キシン（鬼神）</br>
+          <br>「オニ」の長。1000年以上生きる古代兵器であり、地球を滅ぼす力を持つ。</br>
+          <br>ストーリーライン</br>
+          <br>第一章：「桃より生まれし者」</br>
+          <br>政府の研究施設からの脱出。</br>
+          <br>モモタロウが初めての戦闘を経験し、自分の力に驚愕する。</br>
+          <br>「オニ」の襲撃。最初の対決は敗北に終わる。</br>
+          <br>第二章：「オニ討伐の旅」</br>
+          <br>地球に隠された「神種」の真実を求め、日本各地を旅する。</br>
+          <br>かつて「桃太郎」と呼ばれた伝説の戦士の残骸を発見する。</br>
+          <br>宇宙に広がる「オニ」の本拠地への手がかりを得る。</br>
+          <br>第三章：「鬼王キシンとの決戦」</br>
+          <br>最終決戦。「オニ」の帝王キシンと対峙する。</br>
+          <br>人類のために戦うか、それとも「神種」として覚醒するか。</br>
+          <br>モモタロウの選択が、地球の未来を決める。</br>
+          <br>テーマ</br>
+          <br>「人とは何か？」</br>
+          <br>モモタロウは人間ではないが、人として生きたいと願う。</br>
+          <br>しかし、彼が成長し続ける限り、人類とは違う存在になってしまう。</br>
+          <br>「進化か、共存か」</br>
+          <br>人類はモモタロウを受け入れられるのか？</br>
+          <br>それとも、モモタロウは地球を超えた存在として旅立つのか？</br>
+          <br>「戦士としての宿命」</br>
+          <br>戦うために生まれた者に、自由はあるのか？</br>
+          <br>彼が戦い続けることでしか生きられないなら、それは幸せなのか？</br>
+          <br>シリーズ展開</br>
+          <br>シーズン1『MOMOTARO: THE PEACH WARRIOR』</br>
+          <br>モモタロウ誕生～オニとの初戦</br>
+          <br>彼の成長と旅、仲間たちとの出会い</br>
+          <br>シーズン2『MOMOTARO: WAR OF DEMONS』</br>
+          <br>宇宙のオニ軍勢との全面戦争</br>
+          <br>桃刃の覚醒、新たな進化形態</br>
+          <br>地球の存亡をかけた最終決戦</br>
+          <br>シーズン3『MOMOTARO: THE LEGACY』</br>
+          <br>未来の地球で彼の遺産を継ぐ者たち</br>
+          <br>神種の秘密が解き明かされ、新たな世代へ</br>
+          <br>結論</br>
+          <br>『MOMOTARO: THE PEACH WARRIOR』は、孤独な戦士が世界を救うために戦うダークSFヒーロー作品。</br>
+          <br>彼は地球の救世主か、それとも「オニ」そのものなのか？</br>
+          <br>その答えを知るのは、戦いの果てにある。</br>
+          <br>あなた:</br>
+          <br>モモタロウを脱走させたおじいさん(研究員)とおばあさん(研究員)が居ます。彼等は完全な味方であり、モモタロウに様々なアイテムを与えます。</br>
+          <br>キビ・ダガー(丸い形の投擲武器。相手を一時的に催眠状態にし支配できる)</br>
+          <br>マペ・トモ(イヌ/サル/キジの3形態に変形出来る相棒ロボット。普段は丸い形で懐に仕舞われているが、展開すると各動物型のサイズは2mほどにまでなり、モモタロウは彼に乗ることができる。</br>
+          <br>また偵察/撹乱用の小型デコイ(それぞれ3変形可能)を2体出すことも出来る。</br>
+          <br>イヌ形態は噛みつき攻撃と直線的な素早さに特化</br>
+          <br>サル形態は周りのものを扱い投擲するトリックスター(キビダガーを持たせるということも可能)</br>
+          <br>キジ形態はドローンのように偵察することができ、両翼についているファンにより風圧の塊を飛ばし敵を吹き飛ばすことができる)</br>
+          <br>ChatGPT:</br>
+          <br>MOMOTARO: THE PEACH WARRIOR</br>
+          <br>（モモタロウ：ザ・ピーチ・ウォリアー）</br>
+          <br>追加キャラクター</br>
+          <br>おじいさん & おばあさん（Dr. ハナワ & Dr. クレナイ）</br>
+          <br>本名:</br>
+          <br>花輪博士（Dr. ハナワ）（男性 / 60代 / 技術者）</br>
+          <br>紅博士（Dr. クレナイ）（女性 / 50代 / 生物学者）</br>
+          <br>役割:</br>
+          <br>政府の極秘研究機関「霊峰計画」に所属していたが、モモタロウを実験体として扱うことに疑問を抱き、彼を脱走させた恩人。</br>
+          <br>彼らはモモタロウの育ての親のような存在であり、彼に**「人間とは何か」を教えようとする。**</br>
+          <br>Dr. ハナワ: メカニクスと戦闘装備の開発者。マペ・トモを設計。</br>
+          <br>Dr. クレナイ: モモタロウの身体を研究し、**「キビ・ダガー」**を開発。</br>
+          <br>彼らはモモタロウに知識を授け、旅の途中で遠隔通信を通じて支援する。</br>
+          <br>ただし、政府や「オニ」に追われる身のため、いつ敵の手に落ちるかわからない。</br>
+          <br>装備</br>
+          <br>1. キビ・ダガー（KIBI DAGGER）</br>
+          <br>形状: 小型で丸い投擲武器。</br>
+          <br>効果: 命中した相手を短時間催眠状態にし、一時的に支配できる。</br>
+          <br>特徴:</br>
+          <br>「モモタロウ自身が意識を集中することで、対象を操ることが可能。」</br>
+          <br>「完全なコントロールではなく、意識をぼやけさせ、簡単な命令に従わせる。」</br>
+          <br>「動物型・機械型の敵にも一定の影響を与えるが、強力な精神力を持つ相手には効果が薄い。」</br>
+          <br>「一度に2つまでしか持てないが、回収すれば何度でも使える。」</br>
+          <br>戦略:</br>
+          <br>逃げる際に敵を混乱させる。</br>
+          <br>相手を操り、仲間割れを誘発。</br>
+          <br>「サル形態のマペ・トモに持たせることで、より精密な投擲が可能。」</br>
+          <br>2. マペ・トモ（MAPE-TOMO）</br>
+          <br>形状: 普段はモモタロウの懐に仕舞われている小さな球体（直径15cm）。</br>
+          <br>展開すると、イヌ・サル・キジの3形態に変形する 多機能サポートロボット。</br>
+          <br>本体: 内部にAIが搭載されており、簡単な意思疎通が可能。</br>
+          <br>サイズ: 各形態時は約2mの大きさとなり、モモタロウが騎乗可能。</br>
+          <br>特殊機能: 小型デコイを2体展開でき、それぞれが3つの動物形態を再現。</br>
+          <br>各形態の特徴</br>
+          <br>イヌ形態（DOG MODE）</br>
+          <br>「直線的なスピードと攻撃力に特化」</br>
+          <br>時速200kmでのダッシュが可能。</br>
+          <br>強化顎で鋼鉄を噛み砕く。</br>
+          <br>高速移動しながら攻撃することで、敵を翻弄。</br>
+          <br>モモタロウが背に乗れば「騎馬戦法」が可能。</br>
+          <br>サル形態（MONKEY MODE）</br>
+          <br>「トリックスター。周囲の環境を利用して戦う。」</br>
+          <br>あらゆるものを拾い、投擲可能。</br>
+          <br>「キビ・ダガー」を持たせると、超精密に投げることが可能。</br>
+          <br>壁や障害物を利用した「パルクール戦闘」が得意。</br>
+          <br>敵の攻撃を受け流し、カウンターを狙う。</br>
+          <br>キジ形態（PHEASANT MODE）</br>
+          <br>「空中戦・偵察・風圧攻撃に特化。」</br>
+          <br>高度3000mまで飛行可能。</br>
+          <br>両翼のファンから「衝撃波」を飛ばし、敵を吹き飛ばす。</br>
+          <br>偵察・索敵が可能。夜間のサーモグラフィ機能あり。</br>
+          <br>デコイを展開し、敵の注意をそらすことができる。</br>
+          <br>特殊機能</br>
+          <br>「マペ・トモ本体の制御AIは、学習型で戦闘スタイルをアップデートできる。」</br>
+          <br>「偵察用の小型デコイは、それぞれ独立行動が可能。」</br>
+          <br>「完全に破壊されない限り、自動修復機能を持つ。」</br>
+          <br>物語での役割</br>
+          <br>モモタロウの「相棒」として行動し、彼の意思をサポート。</br>
+          <br>**「おじいさん・おばあさんの研究成果」**として、政府やオニから狙われる。</br>
+          <br>「キビ・ダガー」との連携戦術により、多様な戦い方が可能。</br>
+          <br>ストーリーでの活躍</br>
+          <br>第一章：「脱出」</br>
+          <br>おじいさん＆おばあさんがモモタロウを施設から脱出させる際に**「マペ・トモ」と「キビ・ダガー」を授ける。**</br>
+          <br>初めての敵「オニ・スカウト」との戦闘で、サル形態の投擲能力を活かして撃退。</br>
+          <br>第二章：「旅の始まり」</br>
+          <br>キジ形態で偵察を行いながら、「オニ」の本拠地を探る。</br>
+          <br>マペ・トモのデコイを使い、政府の追跡を撒く。</br>
+          <br>イヌ形態の騎乗戦闘を活用し、超高速戦闘を展開。</br>
+          <br>第三章：「戦士としての決断」</br>
+          <br>キビ・ダガーを使い、オニの兵士を操る。</br>
+          <br>サル形態で「敵の武器」を奪い、利用する戦法を編み出す。</br>
+          <br>追い詰められたモモタロウを、おじいさん＆おばあさんが最終兵器を持って助けに来る。</br>
+          <br>テーマ</br>
+          <br>「人は一人では戦えない。」</br>
+          <br>「血の繋がりではなく、絆が家族を作る。」</br>
+          <br>「機械と生身の共存。」</br>
+          <br>結論</br>
+          <br>モモタロウの力だけでは勝てない。</br>
+          <br>彼の**「おじいさん・おばあさん」、そして「マペ・トモ」**の存在が、戦いを支える。</br>
+          <br>この物語は、「一人の戦士」ではなく、「家族」と「仲間」による壮絶な戦いの物語である。</br>
+
+        </div>
+      </div>
+      
+      <div class="accordion">
+        <button class="accordion-title">▼ MARVEL'S MOMOTARO: THE LAST KAMUI</button>
+        <div class="accordion-content">
+
+          <br>あなた:</br>
+<br>-</br>
+<br>**「モモタロウ」という名称が、海外市場にとってわかりにくい可能性がある。**</br>
+<br>- 「Momotaro」は日本では有名だが、**英語圏では知名度が低い**。</br>
+<br>- 例：「シャン・チー」も海外では知名度が低かったが、「Marvel's Shang-Chi」というブランドを前面に押し出すことで成功した。</br>
+<br>- **→ 「MARVEL'S MOMOTARO」や「THE PEACH WARRIOR」などのタイトル変更を検討すべき。**</br>
+<br>-</br>
+<br>**「オニ」というヴィランの概念が、MCUの既存ヴィランと差別化できるか？**</br>
+<br>- MCUにはすでに「宇宙からの侵略者」が多数登場している。</br>
+<br>- 例：</br>
+<br>- サノス（タイタン星出身）</br>
+<br>- クリー帝国（キャプテン・マーベル）</br>
+<br>- スクラル（シークレット・インベージョン）</br>
+<br>- 「オニ」は単なる宇宙人ではなく、「神種（カムイシード）」という独自の起源を持つが、これがどれだけ差別化できるかがポイント。</br>
+<br>-</br>
+<br>**「マペ・トモ」がMARVEL世界観に合うか？**</br>
+<br>- 「ロボットサポートユニット」というコンセプトは良いが、MCUは「AIメカ＝ヴィラン化する傾向」が強い（例：ウルトロン）。</br>
+<br>- **「戦闘補助ユニット」というより、「人工生命体」にする方がMARVELらしいかもしれない。**</br>
+<br>- 例：マペ・トモが「霊峰計画で生まれた生体兵器の一部」であり、「オニ」と同じ進化を遂げる可能性を持つ。</br>
+<br>-</br>
+<br>**「キビ・ダガー」の戦闘スタイルが、MCUのアクションに適合するか？**</br>
+<br>- **「投擲武器で精神操作」というコンセプトは新しいが、MCUの戦闘シーンで映えるかどうかが鍵。**</br>
+<br>- **「催眠能力」よりも、「敵の動きを一時的に封じるエネルギー兵器」とする方が視覚的にわかりやすいかもしれない。**</br>
+<br>### **📌 3️⃣ 「通るために必要な調整点」**</br>
+<br>**これを通すなら、以下の点を再検討するとさらに強くなる。**</br>
+<br>1️⃣ **「MOMOTARO」という名称のグローバル化**</br>
+<br>- **「MARVEL'S MOMOTARO: THE PEACH WARRIOR」**のように、MARVELブランドとセットにする。</br>
+<br>- **「MOMOTARO」の名前に英語圏でも通じるサブネームを追加する。**</br>
+<br>- 例：「MOMOTARO: THE LAST KAMUI」など。</br>
+<br>2️⃣ **「オニ」のヴィラン設定をより独自性のあるものにする。**</br>
+<br>- 「宇宙侵略者」ではなく、「異次元の存在」「封印されていた神々」などにすることで、MARVELの他ヴィランと差別化。</br>
+<br>- 「神種（カムイシード）」の設定を掘り下げて、地球外生命体と神話的要素を結びつける。</br>
+<br>3️⃣ **「マペ・トモ」の役割を「単なるメカ」から「生体兵器」寄りにする。**</br>
+<br>- 「人工生命体」として、モモタロウとともに成長する要素を強調。</br>
+<br>- 例：マペ・トモがオニの遺伝子を持つが、モモタロウと違い自我を持たない…など。</br>
+<br>4️⃣ **「キビ・ダガー」の戦闘スタイルを視覚的に派手にする。**</br>
+<br>- 投擲武器として「対象の動きを封じるエネルギーブレード」的な効果を持たせる。</br>
+<br>- 例：キビ・ダガーが敵に刺さると「エネルギー鎖」で拘束する…など。</br>
+<br>ChatGPT:</br>
+<br>MARVEL'S MOMOTARO: THE LAST KAMUI</br>
+<br>（マーベルズ・モモタロウ：ザ・ラスト・カムイ）</br>
+<br>🔹タイトル変更の理由</br>
+<br>**「MARVEL'S MOMOTARO」**とすることで、ブランド力を活かす。</br>
+<br>「THE PEACH WARRIOR」ではピーチ＝フルーツのイメージが強く、戦士としての印象が薄い。</br>
+<br>**「THE LAST KAMUI（最後の神種）」**とすることで、日本神話的な雰囲気と独自の神秘性を強調。</br>
+<br>🔹新たなヴィラン設定：「オニ」＝封印されし“神種（カムイシード）”</br>
+<br>「オニ」は宇宙侵略者ではなく、次元封印された“古代の神々”</br>
+<br>宇宙起源ではなく、**「神の遺伝子を持つ存在」**として再設定。</br>
+<br>地球には太古に「オニ」と呼ばれる存在が封印され、彼らは日本神話の「鬼」として伝えられた。</br>
+<br>霊峰計画の実験によって、その封印が解かれつつある。</br>
+<br>モモタロウは、その“最後の神種（カムイシード）”であり、オニと同じ力を持つ存在。</br>
+<br>→ 既存の宇宙侵略者（サノス、クリー帝国）との差別化を図る。</br>
+<br>→ 「オニ」は単なる戦闘種族ではなく、**「封印された神々」「旧世界の支配者」**としての神秘性を持つ。</br>
+<br>🔹マペ・トモの再設定：「生体AI」</br>
+<br>マペ・トモは「オニの技術で生み出された人工生命体」</br>
+<br>単なるロボットではなく、**オニの遺伝子と人間の技術が融合した「生体AI」**とする。</br>
+<br>モモタロウと共に進化し、自己学習を続ける。</br>
+<br>そのため、敵側の「オニ」からも狙われている。</br>
+<br>形態の設定変更</br>
+<br>1️⃣ イヌ形態 → 「神速の影狼」</br>
+<br>直線的な移動速度が光速に迫る。</br>
+<br>モモタロウが騎乗することで、「空間跳躍」を可能にする。</br>
+<br>2️⃣ サル形態 → 「戦闘適応の叡智」</br>
+<br>周囲の環境を即座にスキャンし、あらゆる物を武器として利用。</br>
+<br>キビ・ダガーを精密に扱い、連鎖的な攻撃を可能にする。</br>
+<br>3️⃣ キジ形態 → 「天空を制する暴風」</br>
+<br>風圧攻撃が「斬撃」レベルにまで強化。</br>
+<br>偵察だけでなく、敵の攻撃を無効化する防壁を発生可能。</br>
+<br>🔹キビ・ダガーの再設定</br>
+<br>催眠武器ではなく、敵の動きを封じるエネルギー兵器へ</br>
+<br>「エネルギー鎖」を生み出し、対象を一時的に拘束する」</br>
+<br>投擲時には、標的の四肢にエネルギーの糸が絡みつき、敵の行動を制限する。</br>
+<br>ダガー自体が「カムイシード」と共鳴し、進化する可能性を持つ。」</br>
+<br>🔹メインストーリー</br>
+<br>第一章：「封印されし神種（カムイシード）」</br>
+<br>研究施設から脱走したモモタロウは、自分の起源を求めて旅に出る。</br>
+<br>しかし、その動きが「オニ」の封印を解く鍵となってしまう。</br>
+<br>第二章：「オニの目覚め」</br>
+<br>モモタロウは、「オニ」と同じ血を持つことを知る。</br>
+<br>マペ・トモのデータによれば、「自分の進化が進めば、自分もまたオニになるかもしれない」</br>
+<br>彼は、自分が「救世主」なのか、「災厄」なのかを問われる。</br>
+<br>第三章：「最後の神種」</br>
+<br>地球を滅ぼそうとする「オニ」たち。</br>
+<br>モモタロウは、自らの力を制御し、「人間として生きる」か、「神として覚醒する」かの選択を迫られる。</br>
+<br>🔹MARVELの世界観に適応するポイント</br>
+<br>✅ 日本神話とマーベル宇宙の融合</br>
+<br>「オニ」を「封印された神々」とすることで、アスガルドやエターナルズと並ぶ「神話的存在」と位置づける。</br>
+<br>「神種（カムイシード）」を、「地球に古代から存在した異世界の遺産」とすることで、MARVELの他作品と接続可能。</br>
+<br>✅ マペ・トモ＝生体AIとしての進化</br>
+<br>MARVELの世界では「AI＝危険」という設定が多いが、マペ・トモは「制御可能な生体AI」として新たな立ち位置を作る。</br>
+<br>アイアンマンの「J.A.R.V.I.S.」とは異なり、自ら成長し、感情を持つ存在にすることで独自性を出す。</br>
+<br>✅ 視覚的に派手なバトルスタイル</br>
+<br>「キビ・ダガー」のエネルギー鎖アクションは、映像映えする。</br>
+<br>「オニ」との戦闘は、異次元の力を駆使したド派手なアクションに。</br>
+<br>「マペ・トモの変形と連携戦闘」は、ロボット＋獣型という唯一無二の戦闘システムを構築。</br>
+<br>🔹まとめ</br>
+<br>変更前	変更後（MARVEL適応版）</br>
+<br>タイトル：MOMOTARO: THE PEACH WARRIOR	MARVEL'S MOMOTARO: THE LAST KAMUI</br>
+<br>オニ＝宇宙侵略者	オニ＝封印された神々（異次元の存在）</br>
+<br>マペ・トモ＝サポートロボット	マペ・トモ＝生体AI（オニの技術）</br>
+<br>キビ・ダガー＝催眠武器	キビ・ダガー＝エネルギー鎖で拘束する武器</br>
+<br>🔹結論</br>
+<br>この設定変更により、</br>
+<br>「MARVELの世界観にフィットする独自の神話的要素」</br>
+<br>「視覚的に映える戦闘スタイル」</br>
+<br>「オリジナル性の高いヴィランと相棒の設定」</br>
+<br>を兼ね備えた、新たなMARVELヒーローが誕生する。</br>
+<br>**「最後の神種」**として、モモタロウは</br>
+<br>「人類を救うか、それとも神として覚醒するのか？」</br>
+<br>その選択が、物語の鍵となる――。</br>
+<br>あなた:</br>
+<br>キビダガーがエネルギー武器であるならば、リパルサーレイのような掌につける小型アイテムにしてください。弾其物は球状です</br>
+<br>ChatGPT:</br>
+<br>MARVEL'S MOMOTARO: THE LAST KAMUI</br>
+<br>（マーベルズ・モモタロウ：ザ・ラスト・カムイ）</br>
+<br>🔹キビ・ダガーの再設定</br>
+<br>分類: 高出力エネルギー武器（掌装着型）</br>
+<br>名称: 「KIBI-CORE（キビ・コア）」</br>
+<br>機能: 掌に装着する小型エネルギー兵器</br>
+<br>攻撃方法: 球状のエネルギー弾（KIBI-SPHERE）を射出し、敵を拘束する。</br>
+<br>エネルギー源: 「カムイシード」と呼ばれるモモタロウ自身の遺伝子エネルギー</br>
+<br>🔹キビ・コア（掌装着型エネルギー兵器）</br>
+<br>アイアンマンの「リパルサーレイ」に近いが、単なる攻撃兵器ではない。</br>
+<br>モモタロウの両掌に装着されており、手の動きに応じてエネルギー弾を生成・射出できる。</br>
+<br>エネルギー弾（KIBI-SPHERE）は、敵の動きを封じる特殊効果を持つ。</br>
+<br>球状の弾体は、モモタロウの「カムイシード」とリンクし、強化・変化する。</br>
+<br>🔹KIBI-SPHERE（エネルギー弾）の3種類</br>
+<br>1️⃣ KIBI-BIND（バインドモード）</br>
+<br>機能:</br>
+<br>球状のエネルギーが敵に当たると、エネルギーの鎖が四肢に巻き付き、一時的に動きを封じる。</br>
+<br>物理的な鎖ではなく、エネルギーの束縛フィールドを形成する。</br>
+<br>強靭な敵には数秒しか持たないが、戦術的な活用が可能。</br>
+<br>連続使用により、敵を完全に拘束できる。</br>
+<br>戦略:</br>
+<br>逃げる際に敵の足を止める。</br>
+<br>空中の敵を落とす。</br>
+<br>敵の武器を無力化する。</br>
+<br>2️⃣ KIBI-SHACKLE（シャックルモード）</br>
+<br>機能:</br>
+<br>敵にヒットすると、球状のエネルギーが「手枷・足枷」となり、一時的に重力を加える。</br>
+<br>1つのKIBI-SHACKLEで敵の動きを鈍らせ、複数命中で完全拘束。</br>
+<br>空間中に留まり、「ワイヤーフレーム状の足場」を作ることも可能。</br>
+<br>味方にも使用でき、空中戦での足場や、回避の補助として活用可能。</br>
+<br>戦略:</br>
+<br>敵の移動を制限し、的確な攻撃を加える。</br>
+<br>逃走経路を塞ぐ。</br>
+<br>空中の移動補助として、空間に「足場」を作る。</br>
+<br>3️⃣ KIBI-BURST（バーストモード）</br>
+<br>機能:</br>
+<br>敵にヒットすると、爆縮型のエネルギーフィールドを発生させ、内部の敵を圧縮し動きを封じる。</br>
+<br>短時間ながら、敵の意識を奪い、完全に動きを止める。</br>
+<br>強敵には「数秒間のスタン」として作用し、モモタロウが攻撃する隙を作る。</br>
+<br>時間差で起動する「トラップ」も可能。</br>
+<br>戦略:</br>
+<br>強敵相手の「足止め」や「攻撃チャンス」を作る。</br>
+<br>壁や地面に仕掛け、迎撃用の罠を作る。</br>
+<br>連続使用で、集団戦を有利に進める。</br>
+<br>🔹KIBI-COREの進化</br>
+<br>モモタロウの「カムイシード」が覚醒するごとに、KIBI-SPHEREの性能が進化する。</br>
+<br>後半では、モモタロウがエネルギー鎖を自在に操り、より大規模な戦闘に対応できるようになる。</br>
+<br>🔹ストーリーでの活躍</br>
+<br>第一章：「逃亡と覚醒」</br>
+<br>研究所脱出時に、おじいさん＆おばあさんから託される。</br>
+<br>初戦で「KIBI-BIND」を使用し、敵を一時的に拘束して逃走。</br>
+<br>第二章：「オニの目覚め」</br>
+<br>「KIBI-SHACKLE」を応用し、敵を空中で動けなくする戦術を開発。</br>
+<br>「マペ・トモ」のサル形態と連携し、敵の武器を無力化。</br>
+<br>第三章：「カムイの覚醒」</br>
+<br>「KIBI-BURST」が強化され、敵集団の行動を完全に封じるレベルに進化。</br>
+<br>ラスボス戦で「KIBI-CORE」が覚醒し、モモタロウ自身がエネルギー鎖を展開する「神種の力」に目覚める。</br>
+<br>🔹まとめ</br>
+<br>変更前	変更後（MARVEL適応版）</br>
+<br>キビ・ダガー＝投擲武器	キビ・コア＝掌装着型エネルギー兵器</br>
+<br>投げて当てることで催眠効果	エネルギー弾で敵を拘束・足止めする</br>
+<br>単発の投擲攻撃	複数のモードを持ち、戦略的に使用可能</br>
+<br>🔹結論</br>
+<br>「KIBI-CORE」はリパルサーレイに近いが、より戦術的な使い方ができる。</br>
+<br>球状のエネルギーを射出し、束縛や足場生成、爆縮などの多様な効果を持たせることで、視覚的にもMARVELらしいアクションが可能。</br>
+<br>モモタロウ自身の「カムイシード」とリンクし、進化する武器として、物語の鍵を握る。</br>
+<br>🔥 「モモタロウの力＝カムイの封印を解く鍵」</br>
+<br>🔥 「キビ・コアの覚醒＝モモタロウの進化」</br>
+<br>これにより、単なる武器ではなく、物語の中心となる重要なギミックとして機能する。</br>
+<br>あなた:</br>
+<br>​MCU映画版 → "MARVEL’S MOMOTARO: LEGENDS OF THE ONI"（マーベルズ・モモタロウ：レジェンズ・オブ・ジ・オニ）</br>
+<br>ChatGPT:</br>
+<br>🎬 MARVEL’S MOMOTARO: LEGENDS OF THE ONI</br>
+<br>（マーベルズ・モモタロウ：レジェンズ・オブ・ジ・オニ）</br>
+<br>監督: ルッソ兄弟 or デスティン・ダニエル・クレットン（『シャン・チー』監督）</br>
+<br>脚本: マイケル・ウォルドロン（『ロキ』『ドクター・ストレンジ: MoM』脚本）</br>
+<br>主演:</br>
+<br>モモタロウ: 日本人俳優（新進気鋭のアクションスター）</br>
+<br>Dr. 花輪（おじいさん）: 真田広之</br>
+<br>Dr. 紅（おばあさん）: 夏木マリ</br>
+<br>オニの王「キシン」: ケン・ワタナベ（またはハリウッド日本系俳優）</br>
+<br>🎥 ストーリー概要</br>
+<br>🟥 フェーズ5の新たな神話</br>
+<br>舞台: 現代の日本 & MARVEL世界</br>
+<br>ジャンル: スーパーヒーロー・神話ファンタジー・SFアクション</br>
+<br>MCUフェーズ5・6と接続: 「マルチバースの神話系キャラクター（オニ）が関わる。」</br>
+<br>🔹物語の流れ</br>
+<br>第1幕：「覚醒」（約40分）</br>
+<br>秘密組織 「霊峰計画」 の研究所。</br>
+<br>超古代の遺物「カムイシード」 を研究中、桃のような繭が誕生。</br>
+<br>研究員の Dr. 花輪 & Dr. 紅 が繭を保護し、内部から**「モモタロウ」** が出現。</br>
+<br>モモタロウは生まれたばかりの青年で、異常な成長速度を持つ。</br>
+<br>彼は数日で言葉を理解し、驚異的な身体能力を発揮する。</br>
+<br>「オニの封印」が解かれ、現代に災厄が訪れる。」</br>
+<br>霊峰計画が暴走し、モモタロウを実験兵器にしようとする。</br>
+<br>おじいさん & おばあさんがモモタロウを脱出させる。</br>
+<br>第2幕：「オニの復活」（約50分）</br>
+<br>オニは単なる異星人ではなく、封印されていた“旧き神々”。</br>
+<br>モモタロウは旅をしながら「カムイシード」の力を制御しようとする。</br>
+<br>戦闘補助AI「マペ・トモ」（生体兵器）と共に行動。</br>
+<br>オニの幹部 「イバラキ」「シュテン」 が襲来。</br>
+<br>モモタロウ vs. イバラキ（鬼の斧使い）→ 苦戦するが「KIBI-CORE（エネルギー兵器）」を覚醒。</br>
+<br>KIBI-COREは、エネルギー鎖を生み出し敵を拘束する。</br>
+<br>しかし、オニの王 「キシン」 の封印が解けつつある……。</br>
+<br>第3幕：「神殺し」（約50分）</br>
+<br>キシンが完全復活し、東京の中心に神の領域を展開。</br>
+<br>「これは単なる侵略ではなく、世界の再構築」</br>
+<br>モモタロウの中に眠る「オニの血」が目覚める。</br>
+<br>彼は「人間として戦うか、それともオニの神となるか」の選択を迫られる。</br>
+<br>ラストバトル：モモタロウ vs. キシン</br>
+<br>KIBI-COREが最終進化し、オニの神を封印する力を得る。</br>
+<br>マペ・トモも最終形態になり、戦闘AIとして進化。</br>
+<br>モモタロウがキシンを打ち倒し、カムイシードを封印。</br>
+<br>しかし、最後のシーンで……</br>
+<br>キシンの遺骸から「もう一つのカムイシード」が現れ、どこかへ消える。</br>
+<br>「新たな神が目覚める前に、俺は戦い続ける……。」</br>
+<br>🎭 主要キャスト</br>
+<br>役	俳優候補	役割</br>
+<br>モモタロウ	山崎賢人 / 鈴木亮平	主人公。覚醒した神種。</br>
+<br>Dr. 花輪（おじいさん）	真田広之	技術者。モモタロウを守る。</br>
+<br>Dr. 紅（おばあさん）	夏木マリ	生物学者。KIBI-COREを開発。</br>
+<br>イバラキ（赤鬼）	浅野忠信	オニの戦士。巨大な斧を持つ。</br>
+<br>シュテン（青鬼）	松田翔太	毒を操る鬼。</br>
+<br>キシン（鬼神）	渡辺謙 / 真田広之（二役）	最終ボス。「神の王」。</br>
+<br>🎞 MCUとの接続要素</br>
+<br>関連キャラ	関連映画・ドラマ	接続要素</br>
+<br>カムイシード	エターナルズ	「オニ」は地球の神話に関わっていた。</br>
+<br>封印された神々	シャン・チー	神話的な力が現代に蘇る。</br>
+<br>異次元の王・キシン	ロキ / カーン・ダイナスティ	マルチバースの神々と関連？</br>
+<br>🎵 音楽</br>
+<br>メインテーマ: 坂本龍一（過去作:『ラストエンペラー』）or 川井憲次（『GHOST IN THE SHELL』）</br>
+<br>挿入歌: 和楽器バンド（アクションシーン）</br>
+<br>🎬 映像スタイル</br>
+<br>要素	参考作品	演出イメージ</br>
+<br>アクション	『シャン・チー』	肉弾戦＋エネルギー武器</br>
+<br>神話的要素	『エターナルズ』	古代の封印が現代に蘇る</br>
+<br>ビジュアル	『ドクター・ストレンジ』	神の領域＝異次元世界</br>
+<br>🔹 まとめ</br>
+<br>✅ **「MARVEL’S MOMOTARO: LEGENDS OF THE ONI」**は、</br>
+<br>✅ 日本神話 × MCU × スーパーヒーローアクション の融合作品！</br>
+<br>✅ キビ・コア & マペ・トモとの連携バトルがMCU最高峰のアクションに！</br>
+<br>✅ オニは単なる敵ではなく、「人類の未来を決める存在」！</br>
+<br>🎬 「この戦いが終わる時、モモタロウは伝説になる。」</br>
+
+        </div>
+      </div>
+
+      
+
+</div>
+<div class="footer-share">
+<button onclick="toggleSharePopup()">🔗 共有メニューを開く</button>
+</div>
+<div class="share-popup" id="sharePopup">
+<button onclick="copyLink()">リンクをコピー</button>
+<button onclick="shareOnX()">𝕏で共有</button>
+<button onclick="shareViaEmail()">Gmailで送る</button>
+<button onclick="generateQR()">QRコード生成</button>
+</div>
+<script>
+        function toggleSharePopup() {
+            var popup = document.getElementById('sharePopup');
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('リンクをコピーしました');
+        }
+        function shareOnX() {
+            var url = encodeURIComponent(window.location.href);
+            var text = encodeURIComponent(document.title);
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+        function shareViaEmail() {
+            var subject = encodeURIComponent(document.title);
+            var body = encodeURIComponent(window.location.href);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+        function generateQR() {
+            window.open(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${window.location.href}`, '_blank');
+        }
+    </script>
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+    if (e.ctrlKey && ['a', 'c', 's', 'p'].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+    }
+});
+</script>
+<script>
+function updateInfPosition() {
+    const backBtn = document.querySelector('.back-button');
+    const titleEl = document.querySelector('.header-title');
+    const infEl = document.querySelector('.rotating-inf');
+
+    if (!backBtn || !titleEl || !infEl) return;
+
+    const backRect = backBtn.getBoundingClientRect();
+    const titleRect = titleEl.getBoundingClientRect();
+
+    const midpoint = backRect.right + (titleRect.left - backRect.right) / 2;
+    infEl.style.left = `${midpoint}px`;
+}
+
+window.addEventListener('load', updateInfPosition);
+window.addEventListener('resize', updateInfPosition);
+</script>
+
+<script>
+document.querySelectorAll('.accordion-title').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const allContents = document.querySelectorAll('.accordion-content');
+
+    // すべて閉じる
+    allContents.forEach(content => {
+      if (content !== btn.nextElementSibling) {
+        content.style.display = 'none';
+      }
+    });
+
+    // 自分のだけ開閉切り替え
+    const current = btn.nextElementSibling;
+    current.style.display = (current.style.display === 'block') ? 'none' : 'block';
+  });
+});
+</script>
+    
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ja',
+      includedLanguages: 'en', // 英語だけ表示対象
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function autoTranslateToEnglish() {
+    const interval = setInterval(function () {
+      const frame = document.querySelector('iframe.goog-te-banner-frame');
+      if (frame) {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = 'en';
+          select.dispatchEvent(new Event('change'));
+          clearInterval(interval);
+        }
+      }
+    }, 500);
+  }
+</script>
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  onload="autoTranslateToEnglish()">
+</script>
+
+<script>
+  (function () {
+    const nukeTopElements = () => {
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const z = window.getComputedStyle(el).zIndex;
+  
+        if (rect.top <= 0 && parseInt(z) > 5000 && rect.height < 100) {
+          el.style.display = 'none';
+          console.log('🚨 爆破した要素:', el);
+        }
+      });
+  
+      // bodyのズレ修正も毎回やっておく
+      document.body.style.top = '0px';
+    };
+  
+    setInterval(nukeTopElements, 500);
+  })();
+  </script>
+  
+
+</body>
+</html>
