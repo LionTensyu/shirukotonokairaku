@@ -388,8 +388,8 @@ header {
 
 .category-selector {
   position: fixed;
-  top: 130px;
-  right: 350px;
+  top: 112px;
+  right: 0px;
   z-index: 1000;
   display: inline-flex;
   align-items: center;
@@ -618,6 +618,29 @@ body .goog-te-banner-frame * {
 }
 
 
+.update-box {
+  max-height: 100px;
+  overflow-y: auto;
+  padding: 5px 10px;
+  background-color: #101010;
+  color: #00ffff;
+  border: 4px solid #00ffff;
+  border-radius: 1px;
+  font-size: 13px;
+  max-width: 400px;
+  line-height: 1.4;
+  font-family: 'MS PGothic', sans-serif;
+  margin: 10px auto;
+}
+
+.update-box .page-info {
+  margin: 2px 0;
+  padding: 0;
+  line-height: 1.3;
+  font-size: 13px;
+}
+
+
 /* ミニ */
 @media screen and (max-width: 660px) {
 
@@ -751,16 +774,20 @@ body .goog-te-banner-frame * {
 </div>
 </div>
 </header>
-<!-- 修正後の本文 -->
+<p> </p>
 <p class="page-info">むだんてんさいゎやめてくださいしんでしまいます</p>
-<p class="page-info">更新記録</p>
-<p class="page-info">4/1 サイト開設日</p>
-<p class="page-info">Google英訳対応ページ</p>
-<p class="page-info">エクストラギア</p>
-<p class="page-info">フィジカルシリーズ</p>
-<p class="page-info">随時追加予定</p>
-<p class="page-info">激ヤバエイリアン1979</p>
-<p class="page-info">童話シリーズ</p>
+<div class="update-box">
+  <p class="page-info">更新記録</p>
+  <p class="page-info">4/2 コンテンツ追加</p>
+  <p class="page-info">筋法少女ふぃじかる☆れい</p>
+  
+  <p class="page-info">4/1 サイト開設日</p>
+  <p class="page-info">Google英訳対応ページ</p>
+  <p class="page-info">エクストラギア</p>
+  <p class="page-info">フィジカルシリーズ</p>
+  <p class="page-info">随時追加予定</p>
+  <p class="page-info">童話シリーズ</p>
+</div>
 
 <div id="storyTable"></div>
 <script src="main.js"></script>
