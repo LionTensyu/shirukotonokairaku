@@ -134,6 +134,32 @@
             right: 0;
         }
     }
+
+    .img-lyrics-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* スマホ対応 */
+  margin-bottom: 20px;
+}
+
+.lyrics-box {
+  max-height: 300px;       /* 高さを制限 */
+  overflow-y: auto;        /* 垂直スクロールを有効化 */
+  padding-right: 10px;     /* スクロールバーに被らないように余白 */
+  background-color: #101010;
+  color: #00ffff;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 14px;
+  max-width: 400px;
+  white-space: pre-wrap;
+  line-height: 1;
+  font-family: 'MS PGothic', sans-serif;
+}
+
     </style>
     </head>
     <body>
@@ -156,8 +182,59 @@
       </div>      
     </div>
 <div class="content">
+  <div class="img-lyrics-container">
+    <img src="../contents/kobetu/rei.webp" style="width:100%; max-width:500px;">
+    
+    <div class="lyrics-box">
+    筋法少女ふぃじかる☆れい
 
-  <img src="../contents/kobetu/rei.webp" style="width:100%;max-width:500px;">  
+    [Verse]
+    眩しい朝日 (Rise up!) 目を覚ませ
+    揺るぎなき力 (Feel it!) その手に宿せ
+    鍛えた拳が (Bang!) 未来を拓く
+    マナなんていらない 
+    
+    [Chorus]
+    フィジカル☆パワー解き放て！
+    きんぽうのチカラが このよを救う
+    超えていけ！ リミットの向こうへ
+    風神(かぜ)のごとく 駆け抜けろ
+    きんぽう少女！ふぃじかるれい！
+    
+    [Verse2]
+    ひるがぬ想い (Never give up!) 高鳴る鼓動
+    鍛え抜いたカラダ(Burning up!) それが私の魔法
+    どんな困難(トラブル)も (Crash!) 砕いてみせる
+    迷いは捨てて 前を向け！
+    
+    [Chorus]
+    フィジカル☆パワー解き放て！
+    きんぽうのチカラが このよを救う
+    超えていけ！ リミットの向こうへ
+    風神(かぜ)のごとく 駆け抜けろ
+    きんぽう少女！ふぃじかるれい！
+    
+    [Bridge]
+    闘え！ 負けるな！ 拳(こぶし)に誓え！
+    涙も汗も力に変えて
+    マナなしだろうと関係ないさ
+    この身ひとつで 全てを壊せ！！
+    
+    [Verse3]
+    鼓動が叫ぶ (Wake up!) 次のステージへ
+    燃える筋肉(ちから) (Go on!) 宿命(さだめ)に挑め
+    最後の敵が (Boom!) 立ち塞がる
+    でも私の魂は 揺るがない！
+    
+    [Chorus]
+    フィジカル☆パワー解き放て！
+    きんぽうのチカラが このよを救う
+    超えていけ！ リミットの向こうへ
+    風神(かぜ)のごとく 駆け抜けろ
+    きんぽう少女！ふぃじかるれい！
+  </div>  </div>
+
+
   <audio controls>
     <source src="../contents/kobetu/physical_rei.mp3" type="audio/mpeg">
     お使いのブラウザはaudio要素に対応していません。
