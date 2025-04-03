@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>マジヤバガンダムSEED</title>
+<link href="../favicon/favicon.ico" rel="icon"/>
+<style>
+    body {
+        background-color: #000000;
+        color: #00ffff;
+        font-family: "MS PGothic", sans-serif;
+        margin: 0;
+        padding-bottom: 100px;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #000000;
+        border-bottom: 2px solid #00ffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+    .header-title {
+        font-size: 24px;
+        color: #00ffff;
+        margin-right: 0;
+    }
+    .back-button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .content {
+        margin: 80px 20px 20px 20px;
+        white-space: normal; 
+        border: 1px solid #00ffff;
+        padding: 20px;
+    }
+    .footer-share {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        border-top: 1px solid #66ffff;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        z-index: 1001;
+        box-shadow: 0 -2px 5px rgba(0, 255, 255, 0.2);
+    }
+    .footer-share button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    .share-popup {
+        display: none;
+        position: fixed;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        border: 1px solid #00ffff;
+        padding: 10px;
+        z-index: 1002;
+    }
+    .share-popup button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 5px 10px;
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .accordion {
+  margin: 10px 0;
+  border: 1px solid #00ffff;
+}
+
+.accordion-title {
+  width: 100%;
+  background-color: #000;
+  color: #00ffff;
+  font-size: 1em;
+  font-family: "MS PGothic", sans-serif;
+  padding: 12px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+.accordion-title:hover {
+  background-color: #002222;
+}
+
+.accordion-content {
+  display: none;
+  padding: 12px 16px;
+  background-color: #101010;
+  border-top: 1px solid #00ffff;
+}   
+    .rotating-inf {
+        animation: rotateInf 60s linear infinite;
+    }
+    @keyframes rotateInf {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @media screen and (max-width: 660px) {
+        .header-title{
+            font-size: 18px;
+            position: absolute;
+            right: 0;
+        }
+    }
+    </style>
+    </head>
+    <div class="rotating-inf" style="
+    position: fixed;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    color: #00ffff;
+    z-index: 1001;
+    font-family: 'MS PGothic', sans-serif;">
+  ∮
+</div>
+<div class="header">
+    <button onclick="location.href='../index.html'">← トップに戻る</button>
+     <div class="header-title">
+        <span class="title-top">マジヤバ</span><br/>
+        <span class="title-bottom">ガンダムSEED</span>
+      </div>      
+    </div>
+<div class="content">
+
+  <br>あなた:</br>
+  <br>全てがなんかわかんないけどなんか激ヤバいガンダムSEED(登場人物全員の事態把握能力が壊滅的)(なんかヤバいことだけは分かる)(ヤバいことが誇張されて起こるけど概ねいい感じにモノゴトは運ぶ)(文明の利器はある)(でもぜんぶ"なんかマジヤバい分かんない")(全キャラクターの掘り下げ方が全員別ベクトルですげーヤバくなる)(なんかすごいことが起こるのは確か)(一人だけINTが65535なヤツがいる)</br>
+  <br>ChatGPT:</br>
+  <br>『機動戦士ガンダムSEED：マジヤバ伝説』</br>
+  <br>プロローグ</br>
+  <br>C.E.71、ザフトと地球連合の戦争が激化する中、ヘリオポリスに突如として襲いかかるザフト軍。地球連合の最新鋭ガンダムが奪取されそうになり、巻き込まれた少年たちは否応なく戦場へ放り出される。しかし、この世界の住人たちは全員、「なんかヤバいことが起きてる」ことしか理解できない のだった……。</br>
+  <br>登場人物（なんかヤバいVer.）</br>
+  <br>キラ・ヤマト（INT：65535）</br>
+  <br>「なんかめっちゃヤバいことが起こってるのは分かる。ていうか、あれヤバくない？ いや、たぶんマジでヤバいな」</br>
+  <br>何が起きているかを完全に理解している唯一の人物。だが、「周囲に説明する能力」が壊滅的 で、伝え方が壊滅的に下手。</br>
+  <br>「あれはヤバい」しか言えないので、とにかくヤバいことが伝わるが、何がどうヤバいのかは誰も分からない。</br>
+  <br>結果として、彼の忠告を聞いた仲間たちは「なんかわかんないけど直感的に動く」と、結果オーライでピンチを乗り越える。</br>
+  <br>アスラン・ザラ（情緒：ヤバい）</br>
+  <br>「お前がヤバいなら、俺だってヤバいさ！」</br>
+  <br>「ヤバいことが起きてる」のは分かるが、「ヤバい」の意味が全く噛み合ってない。</br>
+  <br>「キラがヤバい！」と叫びながら常に何かと戦っている。</br>
+  <br>勝手に脳内で因果を作り上げて大暴走 するので、誰にも止められない。</br>
+  <br>何も理解していないのに、偶然正しい選択をし続けてしまうため戦争が加速する。</br>
+  <br>カガリ・ユラ・アスハ（感情：ヤバい）</br>
+  <br>「うおおおお！！ なんかヤバいけど行くしかねええええ！！」</br>
+  <br>ヤバいことしか分からないが、考える前に動くことで概ねいい感じになる。</br>
+  <br>事態を一切理解しないまま「この戦争はヤバすぎる！」と言い続けているが、結果的に大義名分が通りがち。</br>
+  <br>ヤバい場面ではとりあえず爆発を起こす。</br>
+  <br>ラクス・クライン（概念：ヤバい）</br>
+  <br>「すべてを受け入れるのが、ヤバい人間の役目ですわ」</br>
+  <br>どんなヤバい状況でも動じない。「ヤバいわね……」と静かに呟く。</br>
+  <br>だが、ヤバさの度合いが尋常ではないため、知らぬ間にすべてを計画通りに進めてしまう。</br>
+  <br>周囲が「ヤバいヤバい」とパニックを起こしている間に、いつの間にかヤバい兵器を手に入れ、ヤバいほどに革命を成功させてしまう。</br>
+  <br>本人にその自覚がないのがヤバい。</br>
+  <br>ムウ・ラ・フラガ（状況把握：壊滅的）</br>
+  <br>「やべえええええええ！！！」</br>
+  <br>何も理解していないが、とにかくすごい速度で動くので勝手に伝説を作る。</br>
+  <br>直感で動くが、ヤバい方向に動いてしまうため、結果として神がかった戦闘能力を発揮。</br>
+  <br>どう考えても死ぬような局面でも、「なんかわかんないけどヤバいから避けたら当たらなかった！」と生還する。</br>
+  <br>レイ・ザ・バレル（超常現象：ヤバい）</br>
+  <br>「僕が……ヤバい……？」</br>
+  <br>彼だけは「なんかヤバい」という感覚がないが、周囲から見ると最もヤバい存在。</br>
+  <br>一切のヤバさを感じていないため、どんな状況でも冷静に振る舞うが、それがさらにヤバさを加速させる。</br>
+  <br>戦場（全体的にヤバい）</br>
+  <br>戦争の様相がなぜか常に爆発オチに向かう。</br>
+  <br>敵味方全員「ヤバい」という感覚だけは共有している ので、普通の戦争とは違い、「ヤバい」と言った者が正義になる。</br>
+  <br>一度ヤバいことが起こると、それを止める手段が誰にも分からないため、どんどん事態がエスカレートする。</br>
+  <br>だが、なんか結果的に良い方向に進むことが多い。</br>
+  <br>エピソード（ヤバいシーン例）</br>
+  <br>1話：ヘリオポリス陥落</br>
+  <br>ヘリオポリスが襲撃されるが、全員が「なんかヤバい！」としか言えない。</br>
+  <br>キラ「いや、マジでヤバいんだって！」</br>
+  <br>それを聞いたカガリが「ヤバいならやるしかない！」と叫びながら爆弾を投げる。</br>
+  <br>その爆弾がなぜかヘリオポリス崩壊を防ぐ奇跡の一撃になる。</br>
+  <br>12話：ストライクVSイージス</br>
+  <br>アスラン「お前がヤバいって言うなら俺もヤバい！」</br>
+  <br>キラ「いや、本当にヤバいって！」</br>
+  <br>お互いに「ヤバい」という感情だけで戦い、結果的に両者が生存する奇跡の戦闘になる。</br>
+  <br>25話：フリーダム降臨</br>
+  <br>ラクス「これが、ヤバい力ですわ」</br>
+  <br>フリーダムを見た全員が「ヤバい」としか言えなくなる。</br>
+  <br>あまりにもヤバすぎて、敵も味方も全員戦意喪失する。</br>
+  <br>最終話：ヤバい戦争の終結</br>
+  <br>キラ「いや、ヤバいって！」</br>
+  <br>アスラン「お前がヤバいなら、俺だってヤバい！」</br>
+  <br>ヤバさのあまり、戦争そのものが崩壊し、なぜか平和が訪れる。</br>
+  <br>ラクスがヤバすぎるまとめ役になり、全人類が「ヤバいけどなんかいい感じに収まった」ことに納得する。</br>
+  <br>エンディングテーマ：「なんかヤバいけど大丈夫」</br>
+  <br>（作詞・作曲：ラクス・クライン）</br>
+  <br>なんかヤバい でも分かんない</br>
+  <br>でもみんな たぶん平和に向かってる</br>
+  <br>だって、ヤバいって思う心が</br>
+  <br>世界を救うって……信じてるから……！！</br>
+  <br>総評</br>
+  <br>「ガンダムSEED：マジヤバ伝説」――それは、全員がヤバいと言い続けた末に、奇跡の連続で戦争を終結させた物語である。</br>
+  <br>あなた:</br>
+  <br>なんかヤバいけどイイヤツなアズラエル(イケメン)</br>
+  <br>ChatGPT:</br>
+  <br>"なんかヤバいけどイイヤツなアズラエル（イケメン）"</br>
+  <br>ムルタ・アズラエル（INT：そこそこ高い / 感情：ヤバい / 外見：イケメン）</br>
+  <br>「いや～、ヤバいねぇ！！ でも大丈夫、僕に任せてよ！ なんかイイヤツだからさ！！」</br>
+  <br>キャラクター設定</br>
+  <br>なんかイケメンになったせいで、周囲の人間に妙に好かれる。</br>
+  <br>性格は相変わらずヤバいけど、なぜか悪意がない。</br>
+  <br>戦争のことも「ヤバいけど、まぁどうにかなるんじゃない？」と楽観視している。</br>
+  <br>だが、実際にどうにかしてしまう天才的なムーブを繰り返す。</br>
+  <br>地球連合を支援するが、もはや戦争というよりは「なんかヤバいけど面白いイベント」を主催するノリ。</br>
+  <br>兵器開発にはノリノリで関わるが、目的が「人類を守るため」なので結果的にめちゃくちゃ有益なことをしてしまう。</br>
+  <br>周囲からの評価</br>
+  <br>地球連合</br>
+  <br>「アズラエル様ってマジでヤバい人だけど、なんかイイヤツなんだよな……」</br>
+  <br>「よく分からんが、あの人に任せると物事が全部いい感じになる」</br>
+  <br>ブルーコスモス</br>
+  <br>「……え？ え？？ え？？？」</br>
+  <br>「確かに地球連合を支援してるのに、なぜかザフトとの和平交渉とかしてるぞ……？？？」</br>
+  <br>「な、なんかヤバいけど、でも結果的に人類にとってめっちゃ良いことになってない？？」</br>
+  <br>ザフト</br>
+  <br>「ヤバいヤツだと思ったら、なんかこっちの言い分も聞いてくれるんだけど……？」</br>
+  <br>「地球連合の敵ってわけじゃないのか？」</br>
+  <br>「いや、でも核搭載MSは普通に開発してるぞ！？ なんで？？？」</br>
+  <br>キラ・ヤマト</br>
+  <br>「……いや、普通にヤバいけど、なんか信用できる気がするのは何故だ？」</br>
+  <br>「え？ 僕らの戦争を止めようとしてる？ でもヤバいものはヤバいよな？」</br>
+  <br>ラクス・クライン</br>
+  <br>「アズラエル様……貴方のこと、私、分かりませんわ……でも、とても良い方なのですね」</br>
+  <br>「ですが、そのヤバさがいつか大変なことにならないか、心配ですわ」</br>
+  <br>エピソード</br>
+  <br>1話：ムルタ・アズラエル（イケメン）、登場</br>
+  <br>地球連合の首脳会議に登場し、「ヤバいってことは分かる。でも大丈夫、僕がなんとかするよ！」と発言。</br>
+  <br>なぜか会議の流れが完全に彼のペースになる。</br>
+  <br>「あ、そうだ、僕が指揮するね！」と勝手に決定するが、みんな異論がないのがヤバい。</br>
+  <br>10話：核搭載MS開発！？ でも……</br>
+  <br>「いやぁ、核ってヤバいけど、抑止力としては最高だよね！」となんかいい笑顔で話す。</br>
+  <br>「でも使ったらマズいから、核ミサイルの代わりに、めっちゃカッコいいAI兵器を作ろう！」</br>
+  <br>結果、核を搭載しないが、なぜか戦争終結にめっちゃ貢献するスーパーメカが誕生。</br>
+  <br>25話：ザフトとの会談</br>
+  <br>「僕、地球連合だけど、そっちの話も聞きたいな～」と軽いノリでザフトと交渉しに行く。</br>
+  <br>当然、ザフト側は警戒するが、彼がイケメンなのでなぜか和やかな雰囲気になる。</br>
+  <br>「いや～、戦争ってヤバいよね～。やめない？」と言っただけで、なぜかザフトが戦争の方向性を見直す。</br>
+  <br>最終話：ヤバいけど平和</br>
+  <br>「ヤバいな～。でもこれ、どうにかなるっしょ！」と根拠なく言うが、なぜかどうにかなる。</br>
+  <br>最終的に戦争が終結し、ラクスに「アズラエル様、ヤバい方ですが、素晴らしいお方ですわね……」と評される。</br>
+  <br>でもやっぱりヤバいので、そのままAI兵器の開発に没頭する。</br>
+  <br>エンディング</br>
+  <br>どんなにヤバい状況でも、なんかイイヤツだから許されるアズラエル。</br>
+  <br>結果として「戦争の真実を知る超有能な平和主義者」になってしまい、全人類から尊敬される。</br>
+  <br>なお、ブルーコスモスの幹部たちは「えっ……？」と混乱していた。</br>
+  <br>総評</br>
+  <br>「ヤバい」と「イイヤツ」のバランスを極限まで高めた結果、最も危険な平和主義者が誕生した。</br>
+  <br>あなた:</br>
+  <br>ロードジブリールのINTは2</br>
+  <br>パトリックザラのINTが5</br>
+  <br>ChatGPT:</br>
+  <br>ロード・ジブリール（INT：2）とパトリック・ザラ（INT：5）</br>
+  <br>～ガンダムSEED：マジヤバ伝説 外伝～</br>
+  <br>ロード・ジブリール（INT：2）</br>
+  <br>「うぉおおおおおおおおおおお！！！！！！！！（意味不明）」</br>
+  <br>地球連合の上層部なのにIQが2しかない。</br>
+  <br>何を言っているのか誰にも分からないが、なぜかカリスマ性がある。</br>
+  <br>兵士たちは「なんか分かんないけど勢いがヤバい！」とついていく。</br>
+  <br>しかし、発言が全て無意味なので、実質的に彼の命令は誰にも理解できない。</br>
+  <br>「核を撃て！ いや待て！ やっぱ撃て！ いや待て！」と全戦場で混乱を引き起こす。</br>
+  <br>なお、最終的に自分で「なんかヤバい！」と言って逃げる。</br>
+  <br>【名言（？）】</br>
+  <br>「ぐわっはっはっは！！ 俺は最強だ！！！！！！（IQ：2）」</br>
+  <br>「この世の全てをブルーにしてやる！！！」（意味不明）</br>
+  <br>「え、核？ 何それうまいの？」（本当に知らない）</br>
+  <br>パトリック・ザラ（INT：5）</br>
+  <br>「ぐぬぬ……これはヤバい……」</br>
+  <br>INT：5というギリギリ「馬鹿ではない」ライン だが、論理的思考力はほぼ皆無。</br>
+  <br>「なんかよく分からんけどコーディネイターすげえ！」という感覚だけで生きている。</br>
+  <br>「ナチュラルは敵！ だから敵！」という脳筋思想のまま、勢いでザフトのリーダーになった。</br>
+  <br>実際、戦争がヤバい方向に進んでいることは理解しているが、</br>
+  <br>「どうしてヤバいのか」が分かっていないため止められない。</br>
+  <br>「とにかくナチュラルを滅ぼせば万事解決！」と考えているが、</br>
+  <br>そのせいでザフトがめちゃくちゃになる。</br>
+  <br>そして最終的に「俺が間違っているはずがない！！！」と開き直る。</br>
+  <br>【名言】</br>
+  <br>「くそっ！ なぜナチュラルはナチュラルなんだ！」（？）</br>
+  <br>「ナチュラルは敵！ だから敵！」（やはりIQ5）</br>
+  <br>「うわぁ！？ ヤバい！！！」（最後の言葉）</br>
+  <br>名場面</br>
+  <br>1話：出会い</br>
+  <br>ジブリール「ぶわぁっはっはっは！ 核！ 撃て！」</br>
+  <br>パトリック「ぐぬぬ……撃つしかないのか……？」</br>
+  <br>ここで核が発射されるも、キラ（INT：65535）が即座に迎撃する。</br>
+  <br>パトリック「ヤバい！ 核が防がれた！」</br>
+  <br>ジブリール「やべえ、逃げよ！！！」</br>
+  <br>逃走中にジブリールが爆発に巻き込まれそうになるが、謎の運で生存。</br>
+  <br>20話：最高会議</br>
+  <br>ジブリール「ぐわっはっはっは！ ナチュラル最高！ いや、コーディネイター？ いやナチュラル？」</br>
+  <br>パトリック「なんかヤバいな……よし、滅ぼそう」</br>
+  <br>誰も話を理解できず、議論が全く進まない。</br>
+  <br>だが、アズラエル（イケメン）が「ちょっと待って！」と割り込む。</br>
+  <br>アズラエル「いや、普通に和平しない？」</br>
+  <br>ジブリールとパトリック「え、何それ？」</br>
+  <br>知性が足りず、和平の概念を理解できないまま戦争が続く。</br>
+  <br>最終話：運命の邂逅</br>
+  <br>戦争が最高潮に達した時、ジブリールとパトリックが逃げ場を求めて宇宙をさまよう。</br>
+  <br>二人は無人のコロニーに漂着し、対話を始める。</br>
+  <br>ジブリール「……俺たち、なんで戦争してたんだっけ？」</br>
+  <br>パトリック「え？ ……知らん！」</br>
+  <br>なぜか意気投合して仲良くなる。</br>
+  <br>そのまま二人で行方不明になるが、数年後、どこかの小さな惑星で謎のバーを経営している姿が目撃される。</br>
+  <br>総評</br>
+  <br>「IQの低さが戦争を引き起こす」ことを極限まで突き詰めた結果、</br>
+  <br>「地球連合とザフトのトップが両方バカすぎて戦争が泥沼化した」 というヤバい事態が発生。</br>
+  <br>しかし、最終的に戦争は終結し、二人はバーを開いたのでめでたしめでたし（？）。</br>
+      
+
+</div>
+<div class="footer-share">
+<button onclick="toggleSharePopup()">🔗 共有メニューを開く</button>
+</div>
+<div class="share-popup" id="sharePopup">
+<button onclick="copyLink()">リンクをコピー</button>
+<button onclick="shareOnX()">𝕏で共有</button>
+<button onclick="shareViaEmail()">Gmailで送る</button>
+<button onclick="generateQR()">QRコード生成</button>
+</div>
+<script>
+        function toggleSharePopup() {
+            var popup = document.getElementById('sharePopup');
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('リンクをコピーしました');
+        }
+        function shareOnX() {
+            var url = encodeURIComponent(window.location.href);
+            var text = encodeURIComponent(document.title);
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+        function shareViaEmail() {
+            var subject = encodeURIComponent(document.title);
+            var body = encodeURIComponent(window.location.href);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+        function generateQR() {
+            window.open(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${window.location.href}`, '_blank');
+        }
+    </script>
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+    if (e.ctrlKey && ['a', 'c', 's', 'p'].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+    }
+});
+</script>
+<script>
+function updateInfPosition() {
+    const backBtn = document.querySelector('.back-button');
+    const titleEl = document.querySelector('.header-title');
+    const infEl = document.querySelector('.rotating-inf');
+
+    if (!backBtn || !titleEl || !infEl) return;
+
+    const backRect = backBtn.getBoundingClientRect();
+    const titleRect = titleEl.getBoundingClientRect();
+
+    const midpoint = backRect.right + (titleRect.left - backRect.right) / 2;
+    infEl.style.left = `${midpoint}px`;
+}
+
+window.addEventListener('load', updateInfPosition);
+window.addEventListener('resize', updateInfPosition);
+</script>
+
+<script>
+document.querySelectorAll('.accordion-title').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const allContents = document.querySelectorAll('.accordion-content');
+
+    // すべて閉じる
+    allContents.forEach(content => {
+      if (content !== btn.nextElementSibling) {
+        content.style.display = 'none';
+      }
+    });
+
+    // 自分のだけ開閉切り替え
+    const current = btn.nextElementSibling;
+    current.style.display = (current.style.display === 'block') ? 'none' : 'block';
+  });
+});
+</script>
+    
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ja',
+      includedLanguages: 'en', // 英語だけ表示対象
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function autoTranslateToEnglish() {
+    const interval = setInterval(function () {
+      const frame = document.querySelector('iframe.goog-te-banner-frame');
+      if (frame) {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = 'en';
+          select.dispatchEvent(new Event('change'));
+          clearInterval(interval);
+        }
+      }
+    }, 500);
+  }
+</script>
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  onload="autoTranslateToEnglish()">
+</script>
+
+<script>
+  (function () {
+    const nukeTopElements = () => {
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const z = window.getComputedStyle(el).zIndex;
+  
+        if (rect.top <= 0 && parseInt(z) > 5000 && rect.height < 100) {
+          el.style.display = 'none';
+          console.log('🚨 爆破した要素:', el);
+        }
+      });
+  
+      // bodyのズレ修正も毎回やっておく
+      document.body.style.top = '0px';
+    };
+  
+    setInterval(nukeTopElements, 500);
+  })();
+  </script>
+  
+
+</body>
+</html>
