@@ -619,17 +619,20 @@ body .goog-te-banner-frame * {
 
 
 .update-box {
+  position: relative; /* ← 追加 */
   max-height: 100px;
   overflow-y: auto;
   padding: 5px 10px;
-  background-color: #d4c3c333;
-  color: #00ffff;
+  background-color: #e6e6e6a4;
+  color:  #00ffff;
   border: 4px solid #00ffff;
   border-radius: 1px;
   font-size: 13px;
   max-width: 400px;
   line-height: 1.4;
   font-family: 'MS PGothic', sans-serif;
+
+  z-index: 400;
   margin: 10px auto;
 }
 
