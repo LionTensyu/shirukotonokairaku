@@ -238,24 +238,37 @@ window.addEventListener('resize', updateInfPosition);
 </script>
 
 <script>
-document.querySelectorAll('.accordion-title').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const allContents = document.querySelectorAll('.accordion-content');
-
-    // すべて閉じる
-    allContents.forEach(content => {
-      if (content !== btn.nextElementSibling) {
-        content.style.display = 'none';
-      }
+  document.addEventListener("DOMContentLoaded", function() {
+    const accordions = document.querySelectorAll(".accordion-title");
+  
+    accordions.forEach(title => {
+      title.addEventListener("click", function() {
+        const allContents = document.querySelectorAll(".accordion-content");
+  
+        // 他を閉じる
+        allContents.forEach(content => {
+          if (content !== this.nextElementSibling) {
+            content.style.display = "none";
+          }
+        });
+  
+        // 自分の開閉
+        const content = this.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        content.style.display = isVisible ? "none" : "block";
+  
+        // スクロール（開いたときだけ）
+        if (!isVisible) {
+          setTimeout(() => {
+            this.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 100);
+        }
+      });
     });
-
-    // 自分のだけ開閉切り替え
-    const current = btn.nextElementSibling;
-    current.style.display = (current.style.display === 'block') ? 'none' : 'block';
   });
-});
-</script>
-    
+  </script>
+  
+
 <div id="google_translate_element" style="display:none;"></div>
 
 <script type="text/javascript">
