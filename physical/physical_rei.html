@@ -190,8 +190,11 @@ timer_button
 <div class="content">
 
   <button onclick="playChime()">TV風時報</button>
+  <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+  <label for="volumeSlider">音量</label>
+  
   <script>
-    function playTone(freq, duration, when, isFade = false) {
+    function playTone(freq, duration, when, isFade = false, volume = 0.5) {
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
@@ -203,9 +206,10 @@ timer_button
       const start = ctx.currentTime + when;
       const end = start + duration / 1000;
   
-      // フェードアウト処理（最後の音だけ）
+      gain.gain.setValueAtTime(volume, start);
+  
+      // フェードアウト（最後の音だけ）
       if (isFade) {
-        gain.gain.setValueAtTime(1, start);
         gain.gain.linearRampToValueAtTime(0, end);
       }
   
@@ -214,16 +218,17 @@ timer_button
     }
   
     function playChime() {
-      const intervals = [0, 1, 2, 3]; // 秒単位
-      const freqs = [500, 500, 500, 1000]; // 最後だけ高め
-      const durations = [0.2, 0.2, 0.2, 3]; // 最後だけ長め
+      const volume = parseFloat(document.getElementById("volumeSlider").value);
+      const intervals = [0, 1, 2, 3]; // 秒
+      const freqs = [500, 500, 500, 1000];
+      const durations = [0.2, 0.2, 0.2, 3];
   
       intervals.forEach((delay, i) => {
         const isLast = (i === intervals.length - 1);
-        playTone(freqs[i], durations[i] * 1000, delay, isLast);
+        playTone(freqs[i], durations[i] * 1000, delay, isLast, volume);
       });
     }
-  </script>  
+  </script>
 
   <audio controls>
     <source src="../contents/kobetu/physical_rei.mp3" type="audio/mpeg">
