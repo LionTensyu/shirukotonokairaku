@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>犬夜叉奈落倒すRTA</title>
+<link href="../favicon/favicon.ico" rel="icon"/>
+<style>
+    body {
+        background-color: #000000;
+        color: #00ffff;
+        font-family: "MS PGothic", sans-serif;
+        margin: 0;
+        padding-bottom: 100px;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #000000;
+        border-bottom: 2px solid #00ffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+    .header-title {
+        font-size: 24px;
+        color: #00ffff;
+        margin-right: 0;
+    }
+    .back-button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .content {
+        margin: 80px 20px 20px 20px;
+        white-space: normal; 
+        border: 1px solid #00ffff;
+        padding: 20px;
+    }
+    .footer-share {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        border-top: 1px solid #66ffff;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        z-index: 1001;
+        box-shadow: 0 -2px 5px rgba(0, 255, 255, 0.2);
+    }
+    .footer-share button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    .share-popup {
+        display: none;
+        position: fixed;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        border: 1px solid #00ffff;
+        padding: 10px;
+        z-index: 1002;
+    }
+    .share-popup button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 5px 10px;
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .accordion {
+  margin: 10px 0;
+  border: 1px solid #00ffff;
+}
+
+.accordion-title {
+  width: 100%;
+  background-color: #000;
+  color: #00ffff;
+  font-size: 1em;
+  font-family: "MS PGothic", sans-serif;
+  padding: 12px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+.accordion-title:hover {
+  background-color: #002222;
+}
+
+.accordion-content {
+  display: none;
+  padding: 12px 16px;
+  background-color: #101010;
+  border-top: 1px solid #00ffff;
+}   
+    .rotating-inf {
+        animation: rotateInf 60s linear infinite;
+    }
+    @keyframes rotateInf {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @media screen and (max-width: 660px) {
+        .header-title{
+            font-size: 18px;
+            position: absolute;
+            right: 0;
+        }
+    }
+    </style>
+    </head>
+    <div class="rotating-inf" style="
+    position: fixed;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    color: #00ffff;
+    z-index: 1001;
+    font-family: 'MS PGothic', sans-serif;">
+  ∮
+</div>
+<div class="header">
+    <button onclick="location.href='../index.html'">← トップに戻る</button>
+     <div class="header-title">
+        <span class="title-top">犬夜叉</span><br/>
+        <span class="title-bottom">奈落倒すRTA</span>
+      </div>      
+    </div>
+<div class="content">
+
+
+
+    <div class="accordion">
+        <button class="accordion-title">▼ Any%RTA</button>
+        <div class="accordion-content">
+
+          <br>犬夜叉奈落倒すRTA4o</br>
+          <br>あなた:</br>
+          <br>犬夜叉/奈落倒すRTA(biimシステム)</br>
+          <br>範囲:原作</br>
+          <br>ルール:原作</br>
+          <br>サポート:四魂の玉が無事であれば行使可能</br>
+          <br>最後に完走した感想</br>
+          <br>ChatGPT:</br>
+          <br>犬夜叉/奈落倒すRTA(biimシステム)</br>
+          <br>【計測開始】</br>
+          <br>開始地点は桔梗が死んだ後の現代から戦国時代へ飛ぶ瞬間。</br>
+          <br>リセマラ要素は特になし。</br>
+          <br>【序盤：装備と仲間集め】</br>
+          <br>・鉄砕牙入手RTAを並行進行。</br>
+          <br>・殺生丸戦を最速で突破し、鉄砕牙を確保。</br>
+          <br>・この時点で弥勒・珊瑚・七宝加入。（パーティ安定）</br>
+          <br>【中盤：四魂の玉集めと奈落探し】</br>
+          <br>・途中、四魂の玉を守るかごめ監視作戦を発動。（犬夜叉の暴走防止）</br>
+          <br>・桔梗イベントはスルー不可だが、奈落の正体判明イベントを最短ルートで回収。</br>
+          <br>・瘴気耐性を強化するため紅玉（四魂の玉のかけら）を早めに使用。</br>
+          <br>・白童子ルートをスキップすることで奈落の変異フラグを最小限に抑える。</br>
+          <br>・この時点で爆流破開放ルートを進め、討伐速度を向上。</br>
+          <br>【終盤：奈落討伐】</br>
+          <br>・四魂の玉を完全な状態で**「かごめの意志制御」を発動可能にするRNG操作**。</br>
+          <br>・最後の戦いではかごめの「消えろ奈落」コマンドにより、耐久フェーズをスキップ。</br>
+          <br>・奈落戦に入って約30分で討伐完了。</br>
+          <br>・四魂の玉の浄化を成功させ、消滅エンドへ進行。</br>
+          <br>【計測終了】</br>
+          <br>エンディング突入時点でRTA完走とする。</br>
+          <br>最終記録：5時間42分32秒（自己ベスト更新）</br>
+          <br>【感想】</br>
+          <br>・今回は四魂の玉が完全体のまま維持できたため、かごめの強制介入スキップが成功。</br>
+          <br>・「爆流破ルート」を進めたことで犬夜叉のDPSが大幅に向上し、奈落戦がスムーズに。</br>
+          <br>・不確定要素の多い奈落の「逃げルート」が、事前のルート操作でほぼ排除できたのが大きい。</br>
+          <br>・今後は「桔梗イベントカットルート」も検討したいが、ストーリー進行上の制約が大きいため、まだ未確定。</br>
+          <br>次回目標：5時間30分切り！</br>
+          <br>あなた:</br>
+          <br>犬夜叉/奈落倒すAny%ルート開拓(biimシステム)</br>
+          <br>範囲:原作 ルール:原作</br>
+          <br>目的:屍舞烏戦で四魂の玉を破砕せずに確保する大幅ルート短縮</br>
+          <br>サポート:四魂の玉</br>
+          <br>最後に完走した感想</br>
+          <br>ChatGPT:</br>
+          <br>犬夜叉/奈落倒すAny%ルート開拓 (biimシステム)</br>
+          <br>【計測開始】</br>
+          <br>開始地点は桔梗が死んだ後の現代から戦国時代へ飛ぶ瞬間。</br>
+          <br>【新ルート方針】</br>
+          <br>目的:</br>
+          <br>屍舞烏戦で四魂の玉を破砕せずに確保することで、奈落戦までの大幅ルート短縮を狙う。</br>
+          <br>従来のルートでは、四魂の玉が砕けることで欠片回収イベントが発生し、結果として奈落の進化フラグが多く発生してしまう。</br>
+          <br>新ルートではこれをスキップし、奈落を初期形態のまま討伐することを目指す。</br>
+          <br>【序盤：屍舞烏スキップ】</br>
+          <br>・桔梗復活イベントは強制なのでスキップ不可。</br>
+          <br>・かごめが四魂の玉を持ったまま戦国時代へ移動。</br>
+          <br>・屍舞烏戦の「玉破砕フラグ」を回避するため、犬夜叉の風の傷を最速で習得。</br>
+          <br>・「屍舞烏の撃破判定を四魂の玉の浄化前に処理する」ことで、イベントスキップに成功。</br>
+          <br>【中盤：奈落の進化フラグ回避】</br>
+          <br>・四魂の玉を完全体のまま維持できるため、奈落が蜘蛛の妖怪に頼るフラグが消滅。</br>
+          <br>・神楽・白童子イベントが発生しないため、奈落が半妖進化しない。</br>
+          <br>・無駄な分岐を削ることで、奈落の城へ直行可能に。</br>
+          <br>【終盤：奈落戦】</br>
+          <br>・四魂の玉が完全体のため、かごめの「消えろ奈落」コマンドを即時発動可能。</br>
+          <br>・奈落の耐久フェーズが発生せず、1フェーズ目の撃破が確定。</br>
+          <br>・ラスボス戦開始から約15分で奈落消滅を確認。</br>
+          <br>【計測終了】</br>
+          <br>エンディング突入時点でRTA完走とする。</br>
+          <br>最終記録：3時間58分12秒（大幅更新！）</br>
+          <br>【感想】</br>
+          <br>・屍舞烏戦の「四魂の玉破砕回避」に成功し、約2時間のルート短縮を実現。</br>
+          <br>・奈落の進化フラグを回避したことで最終戦が大幅に簡略化され、討伐時間が大きく削減。</br>
+          <br>・現時点では**「風の傷」習得が必須となるため、さらなる短縮のためには他の代替攻撃手段の開発が課題。</br>
+          <br>・新ルートは理論上3時間30分台も狙える**ため、さらなる短縮を模索する価値あり。</br>
+          <br>次回目標：3時間30分台達成！</br>
+          <br>あなた:</br>
+          <br>犬夜叉/奈落倒すAny%ルート開拓(biimシステム)</br>
+          <br>範囲:原作 ルール:原作</br>
+          <br>目的:屍舞烏戦で四魂の玉を破砕せずに確保する大幅ルート短縮/本体である櫛を確保し、逆髪の結羅を脅迫して強引に仲間にする(最終的に悪くない感じにさせる)</br>
+          <br>サポート:四魂の玉/逆髪の結羅</br>
+          <br>最後に完走した感想</br>
+          <br>ChatGPT:</br>
+          <br>犬夜叉/奈落倒すAny%ルート開拓 (biimシステム)</br>
+          <br>【計測開始】</br>
+          <br>開始地点は桔梗が死んだ後の現代から戦国時代へ飛ぶ瞬間。</br>
+          <br>【新ルート方針】</br>
+          <br>目的:</br>
+          <br>屍舞烏戦で四魂の玉を破砕せずに確保し、奈落の進化フラグを回避することで大幅短縮。</br>
+          <br>逆髪の結羅（くろがみのゆら）を仲間にするルートを開拓し、戦力増強＆ルート短縮を実現。</br>
+          <br>【序盤：屍舞烏スキップ】</br>
+          <br>・四魂の玉が完全な状態で保持できるように風の傷を最速取得し、屍舞烏戦を短時間で決着。</br>
+          <br>・屍舞烏の「玉破砕フラグ」を回避するため、四魂の玉をかごめが「念じる」ことで制御可能とするイベントを発生させる。</br>
+          <br>・「屍舞烏の撃破判定を四魂の玉の浄化前に処理する」ことで、イベントスキップに成功し、玉を完全体のまま確保。</br>
+          <br>【中盤：逆髪の結羅を脅迫ルートへ】</br>
+          <br>・四魂の玉の完全体を利用して、逆髪の結羅を「四魂の玉の力で強制制御できる」というブラフをかけて交渉。</br>
+          <br>・結羅の本体である櫛を確保し、さらに「奈落に捨て駒にされる未来」を提示することで、半強制的に仲間化。</br>
+          <br>・結羅が「悪くない感じ」に納得するために、桔梗の霊力と四魂の玉の浄化能力を利用して奈落の影響から離脱させる。</br>
+          <br>・ここで新規ルート分岐：「逆髪の結羅が奈落の城の道を案内する」というショートカットが可能に！</br>
+          <br>【終盤：奈落戦】</br>
+          <br>・四魂の玉完全体を維持したまま突入できるため、奈落が半妖進化しないまま最終戦へ。</br>
+          <br>・逆髪の結羅の「糸操作」で奈落の動きを制限し、通常よりも2倍速で体力を削れる。</br>
+          <br>・最終局面では、かごめの「消えろ奈落」コマンドを即時発動可能。</br>
+          <br>・ラスボス戦開始から約12分で奈落消滅を確認。</br>
+          <br>【計測終了】</br>
+          <br>エンディング突入時点でRTA完走とする。</br>
+          <br>最終記録：3時間32分56秒（自己ベスト更新！）</br>
+          <br>【感想】</br>
+          <br>・逆髪の結羅ルートの開拓により、奈落の城へのルート短縮＋戦力強化に成功！</br>
+          <br>・屍舞烏スキップ＋結羅の「糸操作」で奈落戦が大幅短縮され、理論値で3時間30分切りが視野に。</br>
+          <br>・結羅の性格的に「お前ら、私をこき使うつもりだろ？」とか言いつつ、最終的には「まあ…悪くないか」と納得している感じが良い。</br>
+          <br>・今後の最適化ポイントとして「屍舞烏スキップを完全に固定化」「結羅加入のさらなる短縮」が課題。</br>
+          <br>次回目標：3時間30分切り！</br>
+          <br>あなた:</br>
+          <br>犬夜叉/奈落倒すAny%ルート開拓(biimシステム)</br>
+          <br>範囲:原作 ルール:原作</br>
+          <br>目的:前回の開拓+殺生丸一行を全員味方にする</br>
+          <br>最後に完走した感想</br>
+          <br>ChatGPT:</br>
+          <br>犬夜叉/奈落倒すAny%ルート開拓 (biimシステム)</br>
+          <br>【計測開始】</br>
+          <br>開始地点は桔梗が死んだ後の現代から戦国時代へ飛ぶ瞬間。</br>
+          <br>【新ルート方針】</br>
+          <br>目的:</br>
+          <br>屍舞烏戦で四魂の玉を破砕せずに確保し、奈落の進化フラグを回避（前回成功済み）</br>
+          <br>逆髪の結羅を仲間化し、奈落の城のルート短縮＆戦闘補助（前回成功済み）</br>
+          <br>殺生丸一行（殺生丸・邪見・りん・阿吽）を全員味方にし、戦闘力強化＆ルート短縮を狙う</br>
+          <br>【序盤：屍舞烏スキップ】</br>
+          <br>・前回同様に風の傷習得＋四魂の玉の念じる制御で玉を完全体のまま保持。</br>
+          <br>・「屍舞烏の撃破判定を四魂の玉の浄化前に処理する」ことでイベントスキップ。</br>
+          <br>【中盤①：逆髪の結羅を勧誘】</br>
+          <br>・前回同様に結羅の本体「櫛」を確保し、四魂の玉の制御能力をブラフとして交渉。</br>
+          <br>・結羅の「奈落に捨て駒にされる未来」を示し、仲間化に成功。</br>
+          <br>・結羅の「糸操作」により、奈落の城への最短ルートが開通。</br>
+          <br>【中盤②：殺生丸一行を味方にする】</br>
+          <br>課題:</br>
+          <br>・殺生丸はプライドが高く、犬夜叉に協力する可能性が低い。</br>
+          <br>・邪見は殺生丸の意志次第だが、りんの影響を受けやすい。</br>
+          <br>・りんは基本的に友好的なので問題なし。</br>
+          <br>・阿吽は特に条件なし（自動的に同行）。</br>
+          <br>解決策:</br>
+          <br>りん経由で交渉</br>
+          <br>りんは犬夜叉一行に好意的であるため、彼女を利用して殺生丸を動かす。</br>
+          <br>りんの安否を口実にし、「奈落を放置すると戦火が広がり、りんも巻き込まれる」と説得。</br>
+          <br>逆髪の結羅を交渉材料に使う</br>
+          <br>結羅が「四魂の玉の制御」をブラフにしたことで、殺生丸が興味を示す。</br>
+          <br>殺生丸は「四魂の玉の力には興味がない」と言いつつも、結羅の「糸操作」や奈落の存在を警戒。</br>
+          <br>「奈落を討つのに手を貸すが、貴様の指図は受けん」と条件付きで協力。</br>
+          <br>ここで「殺生丸ルート」が確立し、戦闘面の大幅な強化が可能に！</br>
+          <br>【終盤：奈落戦】</br>
+          <br>・四魂の玉完全体＆結羅の糸操作＋殺生丸参戦により、奈落の行動が大幅制限。</br>
+          <br>・犬夜叉＋殺生丸の連携により、耐久フェーズが発生せずに即座に最終戦へ突入。</br>
+          <br>・殺生丸が「爆砕牙」で奈落の逃走阻止、犬夜叉が「爆流破」でトドメ。</br>
+          <br>・かごめの「消えろ奈落」コマンドを即時発動し、奈落の消滅完了！</br>
+          <br>・ラスボス戦開始から約9分で奈落討伐完了！</br>
+          <br>【計測終了】</br>
+          <br>エンディング突入時点でRTA完走とする。</br>
+          <br>最終記録：3時間21分47秒（自己ベスト更新！）</br>
+          <br>【感想】</br>
+          <br>・殺生丸を味方にすることで奈落戦の時間短縮に成功し、3時間30分の壁を突破！</br>
+          <br>・逆髪の結羅と殺生丸の連携により、奈落の「逃げフェーズ」を完全封殺できたのが大きい。</br>
+          <br>・殺生丸は最初こそツンツンしていたが、戦闘中に犬夜叉と連携するシーンが増え、最後には「貴様の力を借りるつもりはなかったが…まあ悪くはなかった」とコメント。</br>
+          <br>・邪見は最初は不満そうだったが、りんが楽しそうだったため最終的に納得。</br>
+          <br>・りんは「みんなで奈落を倒せてよかった！」と無邪気に喜び、和やかな雰囲気に。</br>
+          <br>次回目標：3時間15分切り！</br>
+
+        </div>
+      </div>
+      
+      <div class="accordion">
+        <button class="accordion-title">▼ 散魂鉄爪縛り</button>
+        <div class="accordion-content">
+
+          <br>あなた:</br>
+          <br>犬夜叉/奈落倒す/散魂鉄爪縛り(biimシステム)</br>
+          <br>範囲:原作 ルール:原作</br>
+          <br>目的:奈落の撃破/散魂鉄爪しか使っちゃダメ</br>
+          <br>最後に完走した感想</br>
+          <br>ChatGPT:</br>
+          <br>犬夜叉 / 奈落倒す / 散魂鉄爪縛り (biimシステム)</br>
+          <br>【計測開始】</br>
+          <br>開始地点はかごめが戦国時代へ向かうタイミング（第1話）。</br>
+          <br>縛り内容：「散魂鉄爪（さんこんてっそう）以外の攻撃技・武器・補助スキルすべて禁止」</br>
+          <br>※鉄砕牙・爆流破・風の傷・紅蓮の火炎など一切使用不可。</br>
+          <br>【ルール詳細】</br>
+          <br>犬夜叉以外の攻撃は禁止（パーティメンバーの補助・回復のみ可）</br>
+          <br>妖力強化・四魂の玉バフによる散魂鉄爪の威力強化はOK</br>
+          <br>イベントバトルでスキル使用が強制される場面ではタイムロス扱い＋即リセット対象</br>
+          <br>【序盤：最初の山場は…】</br>
+          <br>・屍舞烏戦：苦行</br>
+          <br>→通常なら風の傷で一掃するところを、一発15ダメージの散魂鉄爪で地道に削る展開</br>
+          <br>→四魂の玉のバフを最大限活用してようやく突破</br>
+          <br>→かごめの弓も封印されているため、玉の浄化フラグに慎重対応</br>
+          <br>【中盤：殺生丸戦（第1回）】</br>
+          <br>→鉄砕牙の入手フラグはスルー不可のため、入手して即封印する謎展開に</br>
+          <br>→ここで**「鉄砕牙を捨てて爪で挑む犬夜叉」ムーブが殺生丸の逆鱗に触れ、難易度激増**</br>
+          <br>→邪見とりんによる乱入で何とかフェーズ突破</br>
+          <br>→「散魂鉄爪で挑む貴様に、一度だけ見逃してやろう」的な殺生丸の演出が入る</br>
+          <br>【終盤：奈落戦】</br>
+          <br>→ここが最大の修羅場</br>
+          <br>→奈落は瘴気フィールド展開＋分身体召喚×3</br>
+          <br>→分身体を倒すのに散魂鉄爪で1体ごとにリアル5分以上かかる</br>
+          <br>→四魂の玉の浄化フラグが途中で入るため、かごめに指示を出すタイミングが重要</br>
+          <br>→最終局面で、かごめの「消えろ奈落」コマンド発動が成功し、</br>
+          <br>→犬夜叉の**「これが…俺の全力だ！」散魂鉄爪連打（約37発）でトドメ**</br>
+          <br>【計測終了】</br>
+          <br>エンディング突入時点でRTA完走とする。</br>
+          <br>最終記録：6時間14分49秒（死闘）</br>
+          <br>【感想】</br>
+          <br>・爪だけでやるもんじゃねえ！！（リアル犬夜叉）</br>
+          <br>・散魂鉄爪縛りは原作でもほぼ中盤以降空気だったため、技演出の作り込みが逆に新鮮だった</br>
+          <br>・奈落戦で一発30ダメージ出た時は「強化されてるじゃん！」ってちょっと感動</br>
+          <br>・それでも最終戦、犬夜叉が奈落をガチで引き裂いて終わるのは最高に熱かった</br>
+          <br>・殺生丸が途中「爪一本でここまで来たか…フッ」と微笑むシーンは、完全にご褒美</br>
+          <br>・結論：この縛り、マゾ向け。でも魂は熱い。</br>
+          
+
+        </div>
+      </div>
+
+      
+
+</div>
+<div class="footer-share">
+<button onclick="toggleSharePopup()">🔗 共有メニューを開く</button>
+</div>
+<div class="share-popup" id="sharePopup">
+<button onclick="copyLink()">リンクをコピー</button>
+<button onclick="shareOnX()">𝕏で共有</button>
+<button onclick="shareViaEmail()">Gmailで送る</button>
+<button onclick="generateQR()">QRコード生成</button>
+</div>
+<script>
+        function toggleSharePopup() {
+            var popup = document.getElementById('sharePopup');
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('リンクをコピーしました');
+        }
+        function shareOnX() {
+            var url = encodeURIComponent(window.location.href);
+            var text = encodeURIComponent(document.title);
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+        function shareViaEmail() {
+            var subject = encodeURIComponent(document.title);
+            var body = encodeURIComponent(window.location.href);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+        function generateQR() {
+            window.open(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${window.location.href}`, '_blank');
+        }
+    </script>
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+    if (e.ctrlKey && ['a', 'c', 's', 'p'].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+    }
+});
+</script>
+<script>
+function updateInfPosition() {
+    const backBtn = document.querySelector('.back-button');
+    const titleEl = document.querySelector('.header-title');
+    const infEl = document.querySelector('.rotating-inf');
+
+    if (!backBtn || !titleEl || !infEl) return;
+
+    const backRect = backBtn.getBoundingClientRect();
+    const titleRect = titleEl.getBoundingClientRect();
+
+    const midpoint = backRect.right + (titleRect.left - backRect.right) / 2;
+    infEl.style.left = `${midpoint}px`;
+}
+
+window.addEventListener('load', updateInfPosition);
+window.addEventListener('resize', updateInfPosition);
+</script>
+
+<script>
+document.querySelectorAll('.accordion-title').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const allContents = document.querySelectorAll('.accordion-content');
+
+    // すべて閉じる
+    allContents.forEach(content => {
+      if (content !== btn.nextElementSibling) {
+        content.style.display = 'none';
+      }
+    });
+
+    // 自分のだけ開閉切り替え
+    const current = btn.nextElementSibling;
+    current.style.display = (current.style.display === 'block') ? 'none' : 'block';
+  });
+});
+</script>
+    
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ja',
+      includedLanguages: 'en', // 英語だけ表示対象
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function autoTranslateToEnglish() {
+    const interval = setInterval(function () {
+      const frame = document.querySelector('iframe.goog-te-banner-frame');
+      if (frame) {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = 'en';
+          select.dispatchEvent(new Event('change'));
+          clearInterval(interval);
+        }
+      }
+    }, 500);
+  }
+</script>
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  onload="autoTranslateToEnglish()">
+</script>
+
+<script>
+  (function () {
+    const nukeTopElements = () => {
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const z = window.getComputedStyle(el).zIndex;
+  
+        if (rect.top <= 0 && parseInt(z) > 5000 && rect.height < 100) {
+          el.style.display = 'none';
+          console.log('🚨 爆破した要素:', el);
+        }
+      });
+  
+      // bodyのズレ修正も毎回やっておく
+      document.body.style.top = '0px';
+    };
+  
+    setInterval(nukeTopElements, 500);
+  })();
+  </script>
+  
+
+</body>
+</html>
