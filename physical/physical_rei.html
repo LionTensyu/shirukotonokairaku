@@ -192,7 +192,6 @@ timer_button
   <button onclick="playChime()">TV風時報</button>
   <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
   <label for="volumeSlider">音量</label>
-  
   <script>
     function playTone(freq, duration, when, isFade = false, volume = 0.5) {
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -212,7 +211,6 @@ timer_button
       if (isFade) {
         gain.gain.linearRampToValueAtTime(0, end);
       }
-  
       osc.start(start);
       osc.stop(end);
     }
