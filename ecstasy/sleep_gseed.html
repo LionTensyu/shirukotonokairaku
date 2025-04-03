@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ガンダムSEED SLEEPING</title>
+<link href="../favicon/favicon.ico" rel="icon"/>
+<style>
+    body {
+        background-color: #000000;
+        color: #00ffff;
+        font-family: "MS PGothic", sans-serif;
+        margin: 0;
+        padding-bottom: 100px;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #000000;
+        border-bottom: 2px solid #00ffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+    .header-title {
+        font-size: 24px;
+        color: #00ffff;
+        margin-right: 0;
+    }
+    .back-button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .content {
+        margin: 80px 20px 20px 20px;
+        white-space: normal; 
+        border: 1px solid #00ffff;
+        padding: 20px;
+    }
+    .footer-share {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        border-top: 1px solid #66ffff;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        z-index: 1001;
+        box-shadow: 0 -2px 5px rgba(0, 255, 255, 0.2);
+    }
+    .footer-share button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    .share-popup {
+        display: none;
+        position: fixed;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        border: 1px solid #00ffff;
+        padding: 10px;
+        z-index: 1002;
+    }
+    .share-popup button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 5px 10px;
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .accordion {
+  margin: 10px 0;
+  border: 1px solid #00ffff;
+}
+
+.accordion-title {
+  width: 100%;
+  background-color: #000;
+  color: #00ffff;
+  font-size: 1em;
+  font-family: "MS PGothic", sans-serif;
+  padding: 12px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+.accordion-title:hover {
+  background-color: #002222;
+}
+
+.accordion-content {
+  display: none;
+  padding: 12px 16px;
+  background-color: #101010;
+  border-top: 1px solid #00ffff;
+}   
+    .rotating-inf {
+        animation: rotateInf 60s linear infinite;
+    }
+    @keyframes rotateInf {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @media screen and (max-width: 660px) {
+        .header-title{
+            font-size: 18px;
+            position: absolute;
+            right: 0;
+        }
+    }
+    </style>
+    </head>
+    <div class="rotating-inf" style="
+    position: fixed;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    color: #00ffff;
+    z-index: 1001;
+    font-family: 'MS PGothic', sans-serif;">
+  ∮
+</div>
+<div class="header">
+    <button onclick="location.href='../index.html'">← トップに戻る</button>
+     <div class="header-title">
+        <span class="title-top">ガンダムSEED</span><br/>
+        <span class="title-bottom">SLEEPING</span>
+      </div>      
+    </div>
+<div class="content">
+
+
+  <br>IFSS</br>
+  <br>ガンダムSEED Sleeping4o</br>
+  <br>あなた:</br>
+  <br>機動戦士ガンダムSEED(睡眠がめっちゃ気持ちよすぎるアズラエル)</br>
+  <br>ChatGPT:</br>
+  <br>【機動戦士ガンダムSEED：睡眠がめっちゃ気持ちよすぎるアズラエル】</br>
+  <br>地球連合軍のブルーコスモス盟主、ムルタ・アズラエル。彼は普段、ナチュラル至上主義を掲げ、コーディネイター殲滅を訴えている冷酷な指導者……のはずだった。</br>
+  <br>だが、この世界線では――</br>
+  <br>「ん～～～～～～～～、これはッ……ッ！ 実に、心地よいッッ！！！」</br>
+  <br>彼は、異常なまでの快眠を手に入れてしまった。</br>
+  <br>◆開戦前夜、オペレーション・スピットブレイク司令室にて</br>
+  <br>「アズラエル様、敵艦隊の動きが活発化しております！」</br>
+  <br>「むにゃ……あぁ……報告は後で……今が……最高なんでねぇ……」</br>
+  <br>「アズラエル様！？ しっかりしてください！」</br>
+  <br>「いや……このマットレス……最高なんだよ……重力に逆らわず沈み込むような……くぅ～～～……」</br>
+  <br>（※アズラエルは軍事機密費で高級メモリーフォームベッドを導入済み）</br>
+  <br>◆戦闘中、ドミニオン艦橋にて</br>
+  <br>ナタル「敵機、急速接近！ 対空防御を！」</br>
+  <br>アズラエル「ZZZZZZZZZZZ……」</br>
+  <br>ナタル「アズラエル様ッ！？」</br>
+  <br>オルガ「何だよコイツ、寝てんのか！？」</br>
+  <br>クロト「ハァ！？ やる気ねぇのかァ！？」</br>
+  <br>アズラエル「Zzz……いやぁ、やっぱり戦争ってのはねぇ……睡眠時間を削るから……ダメなんですよ……うん……」</br>
+  <br>シャニ「（どうでもいいけど、めちゃくちゃ幸せそうな顔してんな……）」</br>
+  <br>結局、ナタルが代わりに指揮を執り、ドミニオンは辛うじて撃墜を免れた。</br>
+  <br>◆最終決戦、クルーゼとの通信にて</br>
+  <br>クルーゼ「人はなぜ争うのか、それは……」</br>
+  <br>アズラエル「お前も寝ろよ、クルーゼ。もう全部、どうでもよくなるぞ……」</br>
+  <br>クルーゼ「……何？」</br>
+  <br>アズラエル「今まで俺はなァ、ナチュラルがどうとか、コーディネイターがどうとか、そんなことばっかり考えてた……だがな……」</br>
+  <br>アズラエル「めちゃくちゃいい布団で寝たら……そんなこと、どうでもよくなるんだよォ……！！」</br>
+  <br>クルーゼ「貴様……まさか、全てを悟ってしまったのか！？」</br>
+  <br>アズラエル「そういうことだ……今の俺には、敵も味方もない……あるのは、至高の睡眠だけだ……Zzz……」</br>
+  <br>そして、戦争は終結した。</br>
+  <br>アズラエルは平和を手に入れたのだ。</br>
+  <br>【エンディング】</br>
+  <br>アズラエルは軍を辞し、**「アズラエル・スリープテック」という寝具ブランドを立ち上げた。</br>
+  <br>その後、彼の開発した「エターナルスリープ・ピロウ」**は爆発的に売れ、世界中の戦争は減少したという。</br>
+  <br>彼はこう語る。</br>
+  <br>「どんな思想よりも、どんな憎しみよりも……良質な睡眠こそが人類の未来を変えるんだよォ！！」</br>
+  <br>──そして、彼の名は「快眠の賢者」として歴史に刻まれた。</br>
+  <br>あなた:</br>
+  <br>睡眠がめっちゃ気持ちよすぎるオルガ/クロト/シャニ</br>
+  <br>ChatGPT:</br>
+  <br>機動戦士ガンダムSEED：睡眠がめっちゃ気持ちよすぎるオルガ/クロト/シャニ</br>
+  <br>～超快眠は戦場を制す～</br>
+  <br>地球連合軍の生体CPU部隊「ブーステッドマン」。</br>
+  <br>彼らは生まれながらに戦うことを宿命づけられた実験体だった。</br>
+  <br>しかし、この世界線では――</br>
+  <br>「うっわ……なんだこの布団……」</br>
+  <br>「ヤバい……ヤバすぎる……」</br>
+  <br>「……すぅ……すぅ……」</br>
+  <br>彼らはついに、戦場で「最高の睡眠」を知ってしまった。</br>
+  <br>【1】超快眠のオルガ</br>
+  <br>「戦場では気を抜くな」</br>
+  <br>そんな常識を吹き飛ばした男、それがオルガ・サブナックである。</br>
+  <br>◆戦闘前夜、ドミニオン艦内</br>
+  <br>オルガ「おいクロト、シャニ……ちょっと来い……」</br>
+  <br>クロト「なんだよオルガァ、いちいち呼び出してウゼェんだよ！」</br>
+  <br>シャニ「だる……で、何？」</br>
+  <br>オルガ「これを見ろ……」</br>
+  <br>彼が指差したのは**「NASA開発の低反発マットレス」**だった。</br>
+  <br>クロト「な、なんだコレ……フカフカすぎる……」</br>
+  <br>シャニ「試しに横になってみるか……」</br>
+  <br>＼ﾎﾟﾌｯ／</br>
+  <br>オルガ「……っはぁ～～～～ッ！！！」</br>
+  <br>クロト「は～～～～～～～～～～～～～～～～っ！！！！」</br>
+  <br>シャニ「……（スヤァ）」</br>
+  <br>――こうして彼らは、「睡眠こそ最強の強化」 という真理を悟ってしまった。</br>
+  <br>【2】戦場で熟睡するクロト</br>
+  <br>クロト・ブエルは、戦闘狂である。</br>
+  <br>だが、彼は知ってしまったのだ――**「快眠は戦争を超える」**ということを。</br>
+  <br>◆MS戦闘中</br>
+  <br>クロト「おらァ！ どけどけどけェェ！！」</br>
+  <br>ナタル「クロト、無茶をするな！」</br>
+  <br>クロト「関係ねぇ！ 俺が気持ちよく眠れる場所は……」</br>
+  <br>彼は戦場で**「エアウィーヴのマットレス」**を広げ、突如昼寝を開始した。</br>
+  <br>ナタル「な、何をしている！？」</br>
+  <br>クロト「俺を起こすな……ZZZ……今の俺はァ……マジで戦場より気持ちいいんだよォ……！！」</br>
+  <br>ナタル「くっ……！ 何たる堕落……！」</br>
+  <br>だが驚くべきことに、クロトの睡眠中、敵は全員撤退していた。</br>
+  <br>理由は不明。</br>
+  <br>ただひとつ確かなのは、彼の寝顔があまりにも安らかだったことだけである。</br>
+  <br>【3】戦闘中でも爆睡するシャニ</br>
+  <br>シャニ・アンドラスは、基本的に怠惰である。</br>
+  <br>しかし、怠惰が最強であることを証明する日が来た。</br>
+  <br>◆決戦時、レイダーガンダムのコックピット内</br>
+  <br>シャニ「はぁ……出撃……めんど……」</br>
+  <br>オルガ「戦場だぞ、シャニ！ しっかりしろ！」</br>
+  <br>シャニ「やだ……眠い……」</br>
+  <br>彼はレイダーの操縦席に**「完全自動体圧分散まくら」**を設置し、そのまま眠りに落ちた。</br>
+  <br>◆敵軍通信</br>
+  <br>「シャニの機体、動いていません！」</br>
+  <br>「チャンスだ、撃ち落とせ！」</br>
+  <br>＼ﾄﾞｺﾞｫﾝ／</br>
+  <br>……だが、奇跡が起きた。</br>
+  <br>シャニのレイダーガンダム、全くダメージを受けない。</br>
+  <br>クロト「はぁ！？ なんで寝てるだけで被弾しねぇんだよォ！！？」</br>
+  <br>ナタル「……まさか、完全に脱力したことで回避行動が最適化されているのか！？」</br>
+  <br>オルガ「なんてこった……シャニが最強だったのか……？」</br>
+  <br>こうして、シャニ・アンドラスは「寝るだけで最強の戦士」として伝説になった。</br>
+  <br>【4】その後……</br>
+  <br>アズラエル「いいかお前ら、戦争よりも大事なものがあるんだよォ！」</br>
+  <br>オルガ「おう、わかってるぜ！」</br>
+  <br>クロト「戦場じゃなくて、ベッドの上が俺の戦場だァ！」</br>
+  <br>シャニ「……ZZZ……」</br>
+  <br>彼らは戦場を捨て、**「快眠戦士チーム・スリープブレイカーズ」**を結成。</br>
+  <br>世界最高の寝具メーカーを立ち上げた。</br>
+  <br>◆エンディング</br>
+  <br>「機動戦士ガンダムSEED：SLEEP DESTINY」</br>
+  <br>～究極の睡眠が、戦争を終わらせる～</br>
+  <br>──こうして、人類は戦争ではなく、究極の快眠を求めて競い合う時代に突入したのであった。</br>
+  <br>あなた:</br>
+  <br>機動戦士ガンダムSEEDDestiny(睡眠がめっちゃ気持ちよすぎた生体CPU達)</br>
+  <br>(エクステンデッドも最初から高度なグースカ洗脳を受けている)</br>
+  <br>2/2</br>
+  <br>ChatGPT:</br>
+  <br>機動戦士ガンダムSEED Destiny：睡眠がめっちゃ気持ちよすぎた生体CPU達</br>
+  <br>～エクステンデッドは最初から高度なグースカ洗脳を受けている～</br>
+  <br>プロローグ</br>
+  <br>戦争が人類にもたらすものは、争いと破壊……</br>
+  <br>だが、戦争をなくす方法が一つだけあった。</br>
+  <br>それは、「全員が最高の睡眠をとること」である。</br>
+  <br>地球連合軍の実験部隊エクステンデッド。</br>
+  <br>彼らは強化処置を受けた人間兵器のはずだったが、</br>
+  <br>その洗脳プログラムに――なぜか**「超快眠暗示」**が組み込まれてしまった。</br>
+  <br>かくして、生体CPU達は"目覚める"ことなく、</br>
+  <br>戦場に出ることもなく、</br>
+  <br>戦争は終結へと向かうのであった……</br>
+  <br>第一話「最高の寝心地、導入済み」</br>
+  <br>◆地球連合軍、エクステンデッド専用ラボ</br>
+  <br>研究員A「では、エクステンデッドの洗脳プログラムを起動する」</br>
+  <br>研究員B「これで戦闘マシーンが誕生する……！」</br>
+  <br>研究員C「……って、あれ？」</br>
+  <br>＼ピロ～～ン♪／</br>
+  <br>【NEW! 最高の睡眠環境を実現する！ グースカ洗脳 ver.3.0】</br>
+  <br>「これを適用すると、対象は戦闘を一切せずに超快眠モードに入ります。」</br>
+  <br>研究員A「……ん？ こんなの入れたっけ？」</br>
+  <br>研究員B「まぁ、いいだろう。起動！！」</br>
+  <br>＼ｶﾁｯ／</br>
+  <br>【エクステンデッド、全員沈黙】</br>
+  <br>第二話「戦場に響く、いびきの轟音」</br>
+  <br>◆地球連合軍の旗艦ミネルバ</br>
+  <br>「報告します！ シン・アスカ隊長！ 戦場に突入しました！」</br>
+  <br>「敵MS部隊は……あれ？」</br>
+  <br>戦場では、エクステンデッドの機体が全く動いていない。</br>
+  <br>むしろ、敵艦のコックピット内から、深く落ち着いた寝息が聞こえていた。</br>
+  <br>◆ザムザザー、ゲルズゲー、アビスガンダムのコックピット</br>
+  <br>ステラ「……すぅ……すぅ……」</br>
+  <br>アウル「Zzz……」</br>
+  <br>スティング「……（幸せそうな顔）」</br>
+  <br>敵パイロット「えっ！？ なんで寝てんの！？」</br>
+  <br>シン「……よし、これは大チャンスだ！」</br>
+  <br>レイ「だが、これは罠かもしれん……」</br>
+  <br>ルナマリア「いや、どう見てもただ寝てるだけよね？」</br>
+  <br>こうして、戦場は一方的にザフトの勝利で幕を閉じた。</br>
+  <br>第三話「戦争よりも寝心地の追求」</br>
+  <br>◆地球連合軍 HQ</br>
+  <br>アズラエル（洗脳されてない）「なぜだ……なぜお前らは戦わん！！」</br>
+  <br>エクステンデッド部隊「……Zzz……」</br>
+  <br>アズラエルの叫びは、彼らの耳には届かない。</br>
+  <br>なぜなら、彼らの脳内には**「至高のベッド」**のビジョンが流れ続けているからだ。</br>
+  <br>◆彼らの脳内イメージ</br>
+  <br>・NASAが開発した「無重力快眠マットレス」</br>
+  <br>・テンピュールを超えた「次世代低反発まくら」</br>
+  <br>・どんな寝相でも完璧に支える「オーダーメイド抱き枕」</br>
+  <br>アウル「……はぁ～～～～……最ッ高……」</br>
+  <br>スティング「戦争とか、もうどうでもいいよな……」</br>
+  <br>ステラ「ふわふわ……ぐるぐる……すやぁ……」</br>
+  <br>こうして、エクステンデッド部隊は完全に戦場を放棄した。</br>
+  <br>最終話「世界は快眠によって平和になる」</br>
+  <br>地球連合軍「エクステンデッド部隊が起きません！」</br>
+  <br>ザフト軍「えっ、寝てるなら撃てばいいのでは？」</br>
+  <br>ラクス「いえ……彼らの『安らかな寝顔』を見てください……」</br>
+  <br>その寝顔は、戦争ではなく、平和の象徴だった。</br>
+  <br>キラ「……なんか、いいな」</br>
+  <br>アスラン「俺たちも寝るか……」</br>
+  <br>シン「えっ！？ ちょっと待ってくださいよ！？」</br>
+  <br>＼ﾎﾟﾌｯ／</br>
+  <br>ラクス「ふふ……これが、真のデスティニーなのかもしれませんね……」</br>
+  <br>エピローグ：伝説の寝具ブランド「グースカ・ナチュラル」</br>
+  <br>戦争がなくなった後、**「睡眠がめっちゃ気持ちよすぎるエクステンデッド」として名を馳せた彼らは、</br>
+  <br>アズラエル（改心済み）と共に、世界最高の寝具メーカー「グースカ・ナチュラル」**を設立。</br>
+  <br>ステラ「もふもふ……」</br>
+  <br>アウル「戦争よりも快眠だよなァ……」</br>
+  <br>スティング「マジで、これが俺たちの生きる道……」</br>
+  <br>こうして、「戦争は最高の寝具によって終わる」という新たな歴史が刻まれた。</br>
+  <br>完</br>
+
+</div>
+<div class="footer-share">
+<button onclick="toggleSharePopup()">🔗 共有メニューを開く</button>
+</div>
+<div class="share-popup" id="sharePopup">
+<button onclick="copyLink()">リンクをコピー</button>
+<button onclick="shareOnX()">𝕏で共有</button>
+<button onclick="shareViaEmail()">Gmailで送る</button>
+<button onclick="generateQR()">QRコード生成</button>
+</div>
+<script>
+        function toggleSharePopup() {
+            var popup = document.getElementById('sharePopup');
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('リンクをコピーしました');
+        }
+        function shareOnX() {
+            var url = encodeURIComponent(window.location.href);
+            var text = encodeURIComponent(document.title);
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+        function shareViaEmail() {
+            var subject = encodeURIComponent(document.title);
+            var body = encodeURIComponent(window.location.href);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+        function generateQR() {
+            window.open(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${window.location.href}`, '_blank');
+        }
+    </script>
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+    if (e.ctrlKey && ['a', 'c', 's', 'p'].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+    }
+});
+</script>
+<script>
+function updateInfPosition() {
+    const backBtn = document.querySelector('.back-button');
+    const titleEl = document.querySelector('.header-title');
+    const infEl = document.querySelector('.rotating-inf');
+
+    if (!backBtn || !titleEl || !infEl) return;
+
+    const backRect = backBtn.getBoundingClientRect();
+    const titleRect = titleEl.getBoundingClientRect();
+
+    const midpoint = backRect.right + (titleRect.left - backRect.right) / 2;
+    infEl.style.left = `${midpoint}px`;
+}
+
+window.addEventListener('load', updateInfPosition);
+window.addEventListener('resize', updateInfPosition);
+</script>
+
+<script>
+document.querySelectorAll('.accordion-title').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const allContents = document.querySelectorAll('.accordion-content');
+
+    // すべて閉じる
+    allContents.forEach(content => {
+      if (content !== btn.nextElementSibling) {
+        content.style.display = 'none';
+      }
+    });
+
+    // 自分のだけ開閉切り替え
+    const current = btn.nextElementSibling;
+    current.style.display = (current.style.display === 'block') ? 'none' : 'block';
+  });
+});
+</script>
+    
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ja',
+      includedLanguages: 'en', // 英語だけ表示対象
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function autoTranslateToEnglish() {
+    const interval = setInterval(function () {
+      const frame = document.querySelector('iframe.goog-te-banner-frame');
+      if (frame) {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = 'en';
+          select.dispatchEvent(new Event('change'));
+          clearInterval(interval);
+        }
+      }
+    }, 500);
+  }
+</script>
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  onload="autoTranslateToEnglish()">
+</script>
+
+<script>
+  (function () {
+    const nukeTopElements = () => {
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const z = window.getComputedStyle(el).zIndex;
+  
+        if (rect.top <= 0 && parseInt(z) > 5000 && rect.height < 100) {
+          el.style.display = 'none';
+          console.log('🚨 爆破した要素:', el);
+        }
+      });
+  
+      // bodyのズレ修正も毎回やっておく
+      document.body.style.top = '0px';
+    };
+  
+    setInterval(nukeTopElements, 500);
+  })();
+  </script>
+  
+
+</body>
+</html>
