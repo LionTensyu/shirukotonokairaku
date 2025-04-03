@@ -160,6 +160,12 @@
   font-family: 'MS PGothic', sans-serif;
 }
 
+timer_button
+{
+      font-size: 24px;
+      padding: 10px 30px;
+}
+
     </style>
     </head>
     <body>
@@ -182,6 +188,48 @@
       </div>      
     </div>
 <div class="content">
+
+  <button onclick="playChime()">TV風時報</button>
+  <script>
+    function playTone(freq, duration, when, isFade = false) {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+  
+      osc.frequency.value = freq;
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+  
+      const start = ctx.currentTime + when;
+      const end = start + duration / 1000;
+  
+      // フェードアウト処理（最後の音だけ）
+      if (isFade) {
+        gain.gain.setValueAtTime(1, start);
+        gain.gain.linearRampToValueAtTime(0, end);
+      }
+  
+      osc.start(start);
+      osc.stop(end);
+    }
+  
+    function playChime() {
+      const intervals = [0, 1, 2, 3]; // 秒単位
+      const freqs = [500, 500, 500, 1000]; // 最後だけ高め
+      const durations = [0.2, 0.2, 0.2, 3]; // 最後だけ長め
+  
+      intervals.forEach((delay, i) => {
+        const isLast = (i === intervals.length - 1);
+        playTone(freqs[i], durations[i] * 1000, delay, isLast);
+      });
+    }
+  </script>  
+
+  <audio controls>
+    <source src="../contents/kobetu/physical_rei.mp3" type="audio/mpeg">
+    お使いのブラウザはaudio要素に対応していません。
+  </audio>
+
   <div class="img-lyrics-container">
     <img src="../contents/kobetu/rei.webp" style="width:100%; max-width:500px;">
     
@@ -233,13 +281,6 @@
     風神(かぜ)のごとく 駆け抜けろ
     きんぽう少女！ふぃじかるれい！
   </div>  </div>
-
-
-  <audio controls>
-    <source src="../contents/kobetu/physical_rei.mp3" type="audio/mpeg">
-    お使いのブラウザはaudio要素に対応していません。
-  </audio>
-
 
     <div class="accordion">
         <button class="accordion-title">▼ 前編</button>
