@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ダミーノ</title>
+<link href="../favicon/favicon.ico" rel="icon"/>
+<style>
+    body {
+        background-color: #000000;
+        color: #00ffff;
+        font-family: "MS PGothic", sans-serif;
+        margin: 0;
+        padding-bottom: 100px;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #000000;
+        border-bottom: 2px solid #00ffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+    .header-title {
+        font-size: 24px;
+        color: #00ffff;
+        margin-right: 0;
+    }
+    .back-button {
+    background: #000;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "MS PGothic", sans-serif;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.back-button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ffff, #0ff, #00ffff, #0ff);
+    z-index: -1;
+    background-size: 400%;
+    filter: blur(4px);
+    opacity: 0;
+}
+
+    .content {
+        margin: 80px 20px 20px 20px;
+        white-space: normal; 
+        border: 1px solid #00ffff;
+        padding: 20px;
+    }
+    .footer-share {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        border-top: 1px solid #66ffff;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        z-index: 1001;
+        box-shadow: 0 -2px 5px rgba(0, 255, 255, 0.2);
+    }
+    .footer-share button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    .share-popup {
+        display: none;
+        position: fixed;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        border: 1px solid #00ffff;
+        padding: 10px;
+        z-index: 1002;
+    }
+    .share-popup button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 5px 10px;
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .accordion {
+  margin: 10px 0;
+  border: 1px solid #00ffff;
+}
+
+.accordion-title {
+  width: 100%;
+  background-color: #000;
+  color: #00ffff;
+  font-size: 1em;
+  font-family: "MS PGothic", sans-serif;
+  padding: 12px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+.accordion-title:hover {
+  background-color: #002222;
+}
+
+.accordion-content {
+  display: none;
+  padding: 12px 16px;
+  background-color: #101010;
+  border-top: 1px solid #00ffff;
+}
+
+.code-block {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  font-family: monospace;
+  font-size: 0.9em;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  margin: 0.5em 0;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+/* 浮かぶ言語切り替えボタン */
+.floating-lang-button {
+  position: fixed;
+  top: 400px;
+  right: 0px;
+  z-index: 10;
+  font-family: 'Sawarabi Mincho', serif;
+  background-color: rgba(18, 18, 18, 0.6);
+  color: #66ffff;
+  padding: 5x;
+  box-shadow: 0 0 10px #66ffff88;
+  border-radius: 5px;
+  animation: glowBlink 1.5s infinite alternate;
+}
+.floating-lang-button::after {
+  content: "一度Launguageを押さないと戻せませんよ。";
+  position: absolute;
+  bottom: 50px;
+  right: 5px;
+  color: #66ffff;
+  font-size: 0.7em;
+}
+
+.floating-lang-button select {
+  background-color: transparent;
+  border: 1px solid #66ffff;
+  color: #66ffff;
+  font-size: 0.9em;
+  font-family: 'Sawarabi Mincho', serif;
+}
+
+
+
+    .rotating-inf {
+        animation: rotateInf 60s linear infinite;
+    }
+    @keyframes rotateInf {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @media screen and (max-width: 660px) {
+        .header-title{
+            font-size: 18px;
+            position: absolute;
+            right: 0;
+        }
+    }
+    
+/* Google翻訳バー非表示 + bodyズレ補正 */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+.goog-logo-link,
+.goog-te-gadget {
+  display: none !important;
+}
+body .goog-te-banner-frame * {
+  color: #000 !important;
+  font-size: 0 !important;
+}
+
+</style>
+    </head>
+    <div class="rotating-inf" style="
+    position: fixed;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    color: #00ffff;
+    z-index: 1001;
+    font-family: 'MS PGothic', sans-serif;">
+  ∮
+</div>
+<div class="header">
+  <button class="back-button cyber-button" onclick="location.href='../index.html'">← トップに戻る</button>
+
+     <div class="header-title">
+        <span class="title-top">ダミーノ</span><br/>
+        <span class="title-bottom">ダミーノ</span>
+      </div>      
+    </div>
+<div class="content">
+
+
+
+    <div class="accordion">
+        <button class="accordion-title">▼ 前編</button>
+        <div class="accordion-content">
+
+
+        </div>
+      </div>
+      
+      <div class="accordion">
+        <button class="accordion-title">▼ 後編</button>
+        <div class="accordion-content">
+
+          
+
+        </div>
+      </div>
+
+      <!-- 言語切り替えボタン -->
+<div class="floating-lang-button">
+  <select onchange="changeLanguage(this.value)">
+    <option value="">🌐 Language</option>
+    <option value="ja">日本語</option>
+    <option value="en">English</option>
+  </select>
+</div>
+
+</div>
+<div class="footer-share">
+<button onclick="toggleSharePopup()">🔗 共有メニューを開く</button>
+</div>
+<div class="share-popup" id="sharePopup">
+<button onclick="copyLink()">リンクをコピー</button>
+<button onclick="shareOnX()">𝕏で共有</button>
+<button onclick="shareViaEmail()">Gmailで送る</button>
+<button onclick="generateQR()">QRコード生成</button>
+</div>
+<script>
+        function toggleSharePopup() {
+            var popup = document.getElementById('sharePopup');
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('リンクをコピーしました');
+        }
+        function shareOnX() {
+            var url = encodeURIComponent(window.location.href);
+            var text = encodeURIComponent(document.title);
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+        function shareViaEmail() {
+            var subject = encodeURIComponent(document.title);
+            var body = encodeURIComponent(window.location.href);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+        function generateQR() {
+            window.open(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${window.location.href}`, '_blank');
+        }
+    </script>
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+    if (e.ctrlKey && ['a', 'c', 's', 'p'].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+    }
+});
+</script>
+<script>
+function updateInfPosition() {
+    const backBtn = document.querySelector('.back-button');
+    const titleEl = document.querySelector('.header-title');
+    const infEl = document.querySelector('.rotating-inf');
+
+    if (!backBtn || !titleEl || !infEl) return;
+
+    const backRect = backBtn.getBoundingClientRect();
+    const titleRect = titleEl.getBoundingClientRect();
+
+    const midpoint = backRect.right + (titleRect.left - backRect.right) / 2;
+    infEl.style.left = `${midpoint}px`;
+}
+
+window.addEventListener('load', updateInfPosition);
+window.addEventListener('resize', updateInfPosition);
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const accordions = document.querySelectorAll(".accordion-title");
+  
+    accordions.forEach(title => {
+      title.addEventListener("click", function() {
+        const allContents = document.querySelectorAll(".accordion-content");
+  
+        // 他を閉じる
+        allContents.forEach(content => {
+          if (content !== this.nextElementSibling) {
+            content.style.display = "none";
+          }
+        });
+  
+        // 自分の開閉
+        const content = this.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        content.style.display = isVisible ? "none" : "block";
+  
+        // スクロール（開いたときだけ）
+        if (!isVisible) {
+          setTimeout(() => {
+            this.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 100);
+        }
+      });
+    });
+  });
+  </script>
+  
+
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ja',
+      includedLanguages: 'en', // 英語だけ表示対象
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function autoTranslateToEnglish() {
+    const interval = setInterval(function () {
+      const frame = document.querySelector('iframe.goog-te-banner-frame');
+      if (frame) {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = 'en';
+          select.dispatchEvent(new Event('change'));
+          clearInterval(interval);
+        }
+      }
+    }, 500);
+  }
+</script>
+
+<script>
+  (function () {
+    const nukeTopElements = () => {
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const z = window.getComputedStyle(el).zIndex;
+  
+        if (rect.top <= 0 && parseInt(z) > 5000 && rect.height < 100) {
+          el.style.display = 'none';
+          console.log('🚨 爆破した要素:', el);
+        }
+      });
+  
+      // bodyのズレ修正も毎回やっておく
+      document.body.style.top = '0px';
+    };
+  
+    setInterval(nukeTopElements, 500);
+  })();
+  </script>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const content = document.querySelector(".content");
+    if (!content) return;
+  
+    // innerHTMLを一旦扱う（brで行構成されてるため）
+    let html = content.innerHTML;
+  
+    // 各行ごとにばらす（</br>区切りで仮想的な1行として扱う）
+    let lines = html.split(/<br\s*\/?>/i);
+  
+    lines = lines.map(line => {
+      const trimmed = line.trim();
+  
+      // それっぽいコード行判定（=があり、末尾が; か ) の行）
+      if (/^[\w\d_]+\s*=\s*.*[;)]$/.test(trimmed)) {
+        return `<pre class="code-block">${trimmed}</pre>`;
+      } else {
+        return trimmed;
+      }
+    });
+  
+    // 変換後に<br>を戻す（preタグ含んだ状態で）
+    content.innerHTML = lines.join("<br>");
+  });
+  </script>
+  
+
+
+<!-- Google翻訳ウィジェット（隠してる） -->
+<div id="google_translate_element" style="display: none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ja',
+      includedLanguages: 'ja,en',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function changeLanguage(lang) {
+    document.documentElement.setAttribute('lang', lang);
+
+    const applyTranslation = () => {
+      const combo = document.querySelector(".goog-te-combo");
+      if (combo) {
+        combo.value = lang;
+        combo.dispatchEvent(new Event("change"));
+        return true;
+      }
+      return false;
+    };
+
+    let tries = 0;
+    const interval = setInterval(() => {
+      if (applyTranslation() || tries++ > 30) {
+        clearInterval(interval);
+      }
+    }, 500);
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<script>
+function initializeAccordionListeners() {
+  const accordions = document.querySelectorAll(".accordion-title");
+
+  accordions.forEach(title => {
+    if (title._accordionInitialized) return; // 重複防止
+
+    const handler = function () {
+      const allContents = document.querySelectorAll(".accordion-content");
+      allContents.forEach(content => {
+        if (content !== this.nextElementSibling) {
+          content.style.display = "none";
+        }
+      });
+
+      const content = this.nextElementSibling;
+      const isVisible = content.style.display === "block";
+      content.style.display = isVisible ? "none" : "block";
+
+      if (!isVisible) {
+        setTimeout(() => {
+          this.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      }
+    };
+
+    title.addEventListener("click", handler);
+    title._accordionInitialized = true;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initializeAccordionListeners);
+setInterval(initializeAccordionListeners, 2000); // 2秒ごとに再バインド
+</script>
+
+</body>
+</html>
