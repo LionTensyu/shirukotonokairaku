@@ -36,33 +36,13 @@
         margin-right: 0;
     }
     .back-button {
-    background: #000;
-    color: #00ffff;
-    border: 1px solid #00ffff;
-    padding: 8px 12px;
-    font-size: 16px;
-    cursor: pointer;
-    font-family: "MS PGothic", sans-serif;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: color 0.3s ease;
-}
-
-.back-button::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #00ffff, #0ff, #00ffff, #0ff);
-    z-index: -1;
-    background-size: 400%;
-    filter: blur(4px);
-    opacity: 0;
-}
-
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        font-size: 16px;
+        cursor: pointer;
+    }
     .content {
         margin: 80px 20px 20px 20px;
         white-space: normal; 
@@ -137,21 +117,7 @@
   padding: 12px 16px;
   background-color: #101010;
   border-top: 1px solid #00ffff;
-}
-
-.code-block {
-  background-color: #1e1e1e;
-  color: #dcdcdc;
-  font-family: monospace;
-  font-size: 0.9em;
-  padding: 0.4em 0.8em;
-  border-radius: 5px;
-  margin: 0.5em 0;
-  white-space: pre-wrap;
-  line-height: 1.5;
-}
-
-
+}   
     .rotating-inf {
         animation: rotateInf 60s linear infinite;
     }
@@ -180,8 +146,7 @@
   ∮
 </div>
 <div class="header">
-  <button class="back-button cyber-button" onclick="location.href='../index.html'">← トップに戻る</button>
-
+    <button onclick="location.href='../index.html'">← トップに戻る</button>
      <div class="header-title">
         <span class="title-top">ダミーノ</span><br/>
         <span class="title-bottom">ダミーノ</span>
@@ -302,8 +267,7 @@ window.addEventListener('resize', updateInfPosition);
     });
   });
   </script>
-  
-
+    
 <div id="google_translate_element" style="display:none;"></div>
 
 <script type="text/javascript">
@@ -356,33 +320,6 @@ window.addEventListener('resize', updateInfPosition);
   
     setInterval(nukeTopElements, 500);
   })();
-  </script>
-
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const content = document.querySelector(".content");
-    if (!content) return;
-  
-    // innerHTMLを一旦扱う（brで行構成されてるため）
-    let html = content.innerHTML;
-  
-    // 各行ごとにばらす（</br>区切りで仮想的な1行として扱う）
-    let lines = html.split(/<br\s*\/?>/i);
-  
-    lines = lines.map(line => {
-      const trimmed = line.trim();
-  
-      // それっぽいコード行判定（=があり、末尾が; か ) の行）
-      if (/^[\w\d_]+\s*=\s*.*[;)]$/.test(trimmed)) {
-        return `<pre class="code-block">${trimmed}</pre>`;
-      } else {
-        return trimmed;
-      }
-    });
-  
-    // 変換後に<br>を戻す（preタグ含んだ状態で）
-    content.innerHTML = lines.join("<br>");
-  });
   </script>
   
 

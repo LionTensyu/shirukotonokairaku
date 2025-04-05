@@ -24,9 +24,9 @@ MANS-IN-DENSE-TRAIN,gachi,midt/midt,がちなやつ,オリジナル,
 激ヤバ甘々仮面ライダーハッピーエンド,yaba,,激ヤバシリーズ,,特撮
 激ヤバ甘桃太郎,yaba,,激ヤバシリーズ,童話,
 ,,,,,
-ROM=Écru,usomarvel,rom,ウソMARVELレーベル,オリジナル,
-Meridiax/Acupuncher,usomarvel,meridiax,ウソMARVELレーベル,オリジナル,
-Mr.Bifidus/Floral,usomarvel,bifidus,ウソMARVELレーベル,オリジナル,
+ROM=Écru,usomarvel,rom,ウソMARVELレーベル,洋画,
+Meridiax/Acupuncher,usomarvel,meridiax,ウソMARVELレーベル,洋画,
+Mr.Bifidus/Floral,usomarvel,bifidus,ウソMARVELレーベル,洋画,
 Sweetener,usomarvel,sweetener,ウソMARVELレーベル,,オリジナル
 EditorZero,usomarvel,editor,ウソMARVELレーベル,,オリジナル
 Whim/EchoHeart,usomarvel,whim,ウソMARVELレーベル,,オリジナル
@@ -82,3 +82,4 @@ CRクラシック,tanpen,あ,短編集,,クラシック
 新MARVELヒーロー『MOMOTAROU』,tanpen,gijiroku/marvels_momotaro,短編集,企画議事録,
 社怪人シリーズ,tanpen,syakaijin,短編集,オリジナル,
 ウソ病気シリーズ,tanpen,uso_byouki,短編集,オリジナル,
+音声テスト,tanpen,dammy_v,短編集,テスト,
