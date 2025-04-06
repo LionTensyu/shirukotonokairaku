@@ -118,7 +118,7 @@
   background-color: #101010;
   border-top: 1px solid #00ffff;
 }
-   
+
     .rotating-inf {
         animation: rotateInf 60s linear infinite;
     }
@@ -135,6 +135,7 @@
     }
     </style>
     </head>
+  <body>
     <div class="rotating-inf" style="
     position: fixed;
     top: -10px;
@@ -155,61 +156,25 @@
     </div>
 <div class="content">
 
-  <p id="line">▶ クリックで進む</p>
 
 
-  <script>
-    const lines = [
-      { text: "クラウド変換器、起動まで残り60秒。", pitch: 0.5, rate: 0.7 },
-      { text: "読めないから変換しますよ", pitch: 0.5, rate: 0.6 },
-      { text: "エラー！もう一度変換しますよ", pitch: 0.5, rate: 0.6 },
-      { text: "完璧なんてなかった。", pitch: 1.0, rate: 1.0 }
-    ];
-  
-    let voices = [];
-    let index = 0;
-  
-    function initVoices() {
-      voices = speechSynthesis.getVoices().filter(v => v.lang === 'ja-JP');
-      if (!voices.length) {
-        console.warn("日本語音声が取得できませんでした");
-      }
-    }
-  
-    window.addEventListener("load", () => {
-      speechSynthesis.onvoiceschanged = initVoices;
-      initVoices(); // 念のため即時実行
-  
-      const lineEl = document.getElementById("line");
-      if (!lineEl) return;
-  
-      lineEl.addEventListener("click", () => {
-        if (!voices.length) {
-          alert("音声がまだ読み込まれていません！");
-          return;
-        }
-        if (index >= lines.length) return;
-  
-        const l = lines[index];
-        const u = new SpeechSynthesisUtterance(l.text);
-        u.voice = voices[0];
-        u.lang = 'ja-JP';
-        u.pitch = l.pitch;
-        u.rate = l.rate;
-  
-        lineEl.innerText = l.text;
-        speechSynthesis.cancel();
-        speechSynthesis.speak(u);
-        index++;
-      });
-    });
-  </script>
-  
+  <script src="speakClient.js"></script>
+  <div id="audio"></div>
+
+  <button onclick="speak('heh', {voice:'en' ,   amplitude: 100, pitch: 199, speed: 100 })">▶ へぇボタン</button>
+  <button onclick="speak('Syuu sei Shi te ya ru!', { amplitude: 100, pitch: 50, speed: 170 })">▶ 修正してやる！</button>
+  <button onclick=
+  "speak('Voku no Omoi Dee , minahr san mo key Key o bo e ga a ru to o moi math , ping pong pan pon to chime nara shi te , gekou no jikan to nali mashi tah wasulemono no nai yoh knee gekou shi ma show , , koh re ga iwayoulu teiji houw saw depth', { amplitude: 100, pitch: 30, speed: 130 })">▶ 僕の思い出</button>
+  <button onclick=
+  "speak('mohh neh. , aho kah toh , bakar kah toh , , o maerah na , haku go jyuu en be key go toh key deh foo dan keyteh nai yohshino yah knee keyten janee yoh , vo keh gah', { amplitude: 100, pitch: 1, speed: 130 })">▶ もうね、アホかとバカかと</button>
+  <button onclick="speak('GHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', { amplitude: 100, pitch: 200, speed: 130 })">▶ ギャアアアアアアアアアアアアア</button>
+  <button onclick="speak('aaaaaaaaaaah! nan teh ! nan teh kotowo!', { amplitude: 100, pitch: 150, speed: 130 })">▶ アァッ！なんて！なんてことを！</button>
+
+
 
     <div class="accordion">
         <button class="accordion-title">▼ 前編</button>
         <div class="accordion-content">
-
 
         </div>
       </div>
@@ -370,6 +335,17 @@ window.addEventListener('resize', updateInfPosition);
   
     setInterval(nukeTopElements, 500);
   })();
+  </script>
+  
+  <script>
+    // 強制的にAudioContextをresumeする
+    document.body.addEventListener('click', () => {
+      if (ctx && ctx.state === 'suspended') {
+        ctx.resume().then(() => {
+          console.log("🔊 AudioContext resumed manually.");
+        });
+      }
+    }, { once: true });
   </script>
   
 
