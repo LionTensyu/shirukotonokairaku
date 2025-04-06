@@ -1316,5 +1316,16 @@ window.addEventListener('resize', updateInfPosition);
   })();
   </script>
 
+<script>
+  // 強制的にAudioContextをresumeする
+  document.body.addEventListener('click', () => {
+    if (ctx && ctx.state === 'suspended') {
+      ctx.resume().then(() => {
+        console.log("🔊 AudioContext resumed manually.");
+      });
+    }
+  }, { once: true });
+</script>
+
 </body>
 </html>
