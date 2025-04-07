@@ -134,6 +134,7 @@
     }
     </style>
     </head>
+    <body>
     <div class="rotating-inf" style="
     position: fixed;
     top: -10px;
@@ -154,7 +155,52 @@
     </div>
 <div class="content">
 
+  <button onclick="playCashRegisterChime()">会計</button>
 
+<script>
+function playCashRegisterChime() {
+  const ctx = new (window.AudioContext || window.webkitAudioContext)();
+
+  // ガチャガチャのつもり
+  const osc1 = ctx.createOscillator();
+  const gain1 = ctx.createGain();
+  osc1.type = "sawtooth";
+  osc1.frequency.setValueAtTime(20, ctx.currentTime);
+  gain1.gain.setValueAtTime(0.6, ctx.currentTime);
+  gain1.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 1);
+  osc1.connect(gain1).connect(ctx.destination);
+  osc1.start();
+  osc1.stop(ctx.currentTime + 0.2);
+  
+  // ちーん
+  const delay = 0.25;
+  const osc3 = ctx.createOscillator();
+  const gain3 = ctx.createGain();
+  osc3.type = "triangle";
+  osc3.frequency.setValueAtTime(1750, ctx.currentTime + delay);
+  gain3.gain.setValueAtTime(0.4, ctx.currentTime + delay);
+  gain3.gain.exponentialRampToValueAtTime(0.02, ctx.currentTime + delay + 1);
+  osc3.connect(gain3).connect(ctx.destination);
+  osc3.start(ctx.currentTime + delay);
+  osc3.stop(ctx.currentTime + delay + 1);
+
+  // ちーん2
+  const delay2 = 0.27;
+  const osc4 = ctx.createOscillator();
+  const gain4 = ctx.createGain();
+  osc4.type = "triangle";
+  osc4.frequency.setValueAtTime(1780, ctx.currentTime + delay2);
+  gain4.gain.setValueAtTime(0.4, ctx.currentTime + delay2);
+  gain4.gain.exponentialRampToValueAtTime(0.02, ctx.currentTime + delay2 + 1);
+  osc4.connect(gain4).connect(ctx.destination);
+  osc4.start(ctx.currentTime + delay2);
+  osc4.stop(ctx.currentTime + delay2 + 1);
+
+
+}
+
+
+  </script>
 
   <br>プロンプト</br>
   <br>《「レアメタル・ガンマン」(ハードボイルドなガンマン、しかし使っている銃弾がすべて現実に存在する所謂”レアメタル”と呼ばれているものばかり。(超格好良くキメて撃ってる隣でﾁｰﾝという音と共に今消費した額が公表される(最後にどこからともなくｶﾞﾁｬｶﾞﾁｬﾁｰﾝという音がし、その音と共に今回の消費合計額が出る))(本人も最後に金額に絶望する))》</br>
@@ -1015,6 +1061,16 @@ document.querySelectorAll('.accordion-title').forEach(btn => {
   })();
   </script>
   
+  <script>
+    // 強制的にAudioContextをresumeする
+    document.body.addEventListener('click', () => {
+      if (ctx && ctx.state === 'suspended') {
+        ctx.resume().then(() => {
+          console.log("🔊 AudioContext resumed manually.");
+        });
+      }
+    }, { once: true });
+  </script>
 
 </body>
 </html>
