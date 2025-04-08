@@ -117,7 +117,36 @@
   padding: 12px 16px;
   background-color: #101010;
   border-top: 1px solid #00ffff;
-}   
+}
+
+.back-button {
+    background: #000;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "MS PGothic", sans-serif;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.back-button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ffff, #0ff, #00ffff, #0ff);
+    z-index: -1;
+    background-size: 400%;
+    filter: blur(4px);
+    opacity: 0;
+}
+
     .rotating-inf {
         animation: rotateInf 60s linear infinite;
     }
@@ -147,7 +176,7 @@
   ∮
 </div>
 <div class="header">
-    <button onclick="location.href='../index.html'">← トップに戻る</button>
+  <button class="back-button cyber-button" onclick="location.href='../index.html'">← トップに戻る</button>
      <div class="header-title">
         <span class="title-top">ダミーノ</span><br/>
         <span class="title-bottom">ダミーノ</span>

@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>ダミーノ</title>
+<title>ていきあつのせいにして</title>
 <link href="../favicon/favicon.ico" rel="icon"/>
 <style>
     body {
@@ -146,7 +146,30 @@
     filter: blur(4px);
     opacity: 0;
 }
+.img-lyrics-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* スマホ対応 */
+  margin-bottom: 20px;
+}
 
+.lyrics-box {
+  max-height: 300px;       /* 高さを制限 */
+  overflow-y: auto;        /* 垂直スクロールを有効化 */
+  padding-right: 10px;     /* スクロールバーに被らないように余白 */
+  background-color: #101010;
+  color: #00ffff;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 14px;
+  max-width: 400px;
+  white-space: pre-wrap;
+  line-height: 1;
+  font-family: 'MS PGothic', sans-serif;
+}
     .rotating-inf {
         animation: rotateInf 60s linear infinite;
     }
@@ -178,32 +201,50 @@
 <div class="header">
   <button class="back-button cyber-button" onclick="location.href='../index.html'">← トップに戻る</button>
      <div class="header-title">
-        <span class="title-top">ダミーノ</span><br/>
-        <span class="title-bottom">ダミーノ</span>
+        <span class="title-top">ていきあつの</span><br/>
+        <span class="title-bottom">せいにして</span>
       </div>      
     </div>
 <div class="content">
 
+  <audio controls>
+    <source src="../contents/utamono/teikiatu.mp3" type="audio/mpeg">
+    お使いのブラウザはaudio要素に対応していません。
+  </audio>
 
+  <div class="img-lyrics-container">
+    <img src="../contents/utamono/teikiatu.webp" style="width:100%; max-width:500px;">
+    
+    <div class="lyrics-box">
+      <br>「ていきあつのせいにして」</br>
+      <br>（作詞：ChatGPT）</br>
+      <br>1番</br>
+      <br>きょうは　あさから　くもりぞら</br>
+      <br>おひさま　かくれて　ためいきひとつ</br>
+      <br>まどのそとでは　かぜのこえ</br>
+      <br>こころのなかも　しずかに　ゆれてる</br>
+      <br>サビ</br>
+      <br>ていきあつのせいにして</br>
+      <br>ちょっと　なみだ　こぼしてもいいかな</br>
+      <br>がんばらなくちゃって　おもうけど</br>
+      <br>きょうは　すこし　やすんでも　いいよね</br>
+      <br>2番</br>
+      <br>ともだちからの　メッセージ</br>
+      <br>「なんだか　きょうは　やるきでないな」</br>
+      <br>それをみて　なんだか　ほっとして</br>
+      <br>わたしも　「おなじだよ」って　こたえた</br>
+      <br>サビ</br>
+      <br>ていきあつのせいにして</br>
+      <br>こころのコート　ぬいでみたなら</br>
+      <br>やさしいきもちが　ふわっとして</br>
+      <br>あしたは　きっと　あるける　きがする</br>
+      <br>アウトロ</br>
+      <br>くもりのひには　くもりのままの</br>
+      <br>じぶんを　だいじに　してみよう</br>
+      <br>ていきあつのせいにして</br>
+      <br>すこし　ゆっくり　いこうね</br>
+  </div>  </div>
 
-    <div class="accordion">
-        <button class="accordion-title">▼ 前編</button>
-        <div class="accordion-content">
-
-
-        </div>
-      </div>
-      
-      <div class="accordion">
-        <button class="accordion-title">▼ 後編</button>
-        <div class="accordion-content">
-
-          
-
-        </div>
-      </div>
-
-      
 
 </div>
 <div class="footer-share">
@@ -296,8 +337,9 @@ window.addEventListener('resize', updateInfPosition);
       });
     });
   });
-  </script>
-    
+  </script>  
+  
+
 <div id="google_translate_element" style="display:none;"></div>
 
 <script type="text/javascript">
