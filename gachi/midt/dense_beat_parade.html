@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DENSE BEAT PARADE</title>
+<link href="../favicon/favicon.ico" rel="icon"/>
+<style>
+    body {
+        background-color: #000000;
+        color: #00ffff;
+        font-family: "MS PGothic", sans-serif;
+        margin: 0;
+        padding-bottom: 100px;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #000000;
+        border-bottom: 2px solid #00ffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+    .header-title {
+        font-size: 24px;
+        color: #00ffff;
+        margin-right: 0;
+    }
+    .back-button {
+    background: #000;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "MS PGothic", sans-serif;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.back-button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ffff, #0ff, #00ffff, #0ff);
+    z-index: -1;
+    background-size: 400%;
+    filter: blur(4px);
+    opacity: 0;
+}
+
+.content {
+    margin: 80px 20px 20px 20px;
+    white-space: normal; 
+    border: 1px solid #00ffff;
+    padding: 20px;
+
+    /* ここから追加 */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+    .footer-share {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #1a1a1a;
+        border-top: 1px solid #66ffff;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        z-index: 1001;
+        box-shadow: 0 -2px 5px rgba(0, 255, 255, 0.2);
+    }
+    .footer-share button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    .share-popup {
+        display: none;
+        position: fixed;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        border: 1px solid #00ffff;
+        padding: 10px;
+        z-index: 1002;
+    }
+    .share-popup button {
+        background: none;
+        color: #00ffff;
+        border: 1px solid #00ffff;
+        padding: 5px 10px;
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .accordion {
+  margin: 10px 0;
+  border: 1px solid #00ffff;
+}
+
+.accordion-title {
+  background-color: #000;
+  color: #00ffff;
+  font-size: 1em;
+  padding: 12px;
+  cursor: pointer;
+  border: 1px solid #00ffff;
+  text-align: center;
+}
+
+.accordion-title:hover {
+  background-color: #002222;
+}
+
+.accordion-content {
+  display: none;
+  padding: 12px 16px;
+  background-color: #101010;
+  border-top: 1px solid #00ffff;
+}
+
+.accordion-content.open {
+  max-height: 300px; /* 十分に広い想定値 */
+  padding: 12px 16px;
+}
+
+.code-block {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  font-family: monospace;
+  font-size: 0.9em;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  margin: 0.5em 0;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.verse2-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.verse2-center {
+  max-width: 400px;
+  text-align: center;
+}
+
+.accordion-left,
+.accordion-right {
+  width: 280px;
+}
+
+
+    .rotating-inf {
+        animation: rotateInf 60s linear infinite;
+    }
+    @keyframes rotateInf {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @media screen and (max-width: 660px) {
+        .header-title{
+            font-size: 18px;
+            position: absolute;
+            right: 0;
+        }
+    }
+    </style>
+    </head>
+    <body>
+    <div class="rotating-inf" style="
+    position: fixed;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 60px;
+    color: #00ffff;
+    z-index: 1001;
+    font-family: 'MS PGothic', sans-serif;">
+  ∮
+</div>
+<div class="header">
+  <button class="back-button cyber-button" onclick="location.href='../index.html'">← トップに戻る</button>
+
+     <div class="header-title">
+        <span class="title-bottom">DENSE BEAT PARADE</span>
+      </div>      
+    </div>
+<div class="content">
+
+
+  <audio controls>
+    <source src="dense_beat_parade.mp3" type="audio/mpeg">
+    お使いのブラウザはaudio要素に対応していません。
+  </audio>
+
+  <br>DENSE BEAT PARADE</br>
+  <br></br>
+  <br>Verse:</br>
+  <br>朝が来るたび命を賭ける</br>
+  <br>壁に詰まった無数の影</br>
+  <br>押し寄せる圧、流される意志</br>
+  <br>誰が勝者で 誰が敗者か</br>
+  <br></br>
+  <br>Pre-Chorus:</br>
+  <br>カジュウかけられ 崩れそうな</br>
+  <br>ルールを　ブチ壊せ</br>
+  <br>日常に　オシツブサレ</br>
+  <br>デルカナカミガ</br>
+  <br>ナカニオリルカ</br>
+  <br></br>
+  <br>Chorus:</br>
+  <br>We are the DENSE BEAT PARADE</br>
+  <br>ホロビルナ──ここはサイゼンセン</br>
+  <br>シンゾウが叫ぶ「オクレルナ」</br>
+  <br>Get on! Get on! this crazy line!!</br>
+  <br></br>
+  <br>Verse 2:</br>
+  <br>Pushin’ through bodies, breathin’ like fire</br>
+  <br>Clock hits 8:15 — the floor’s gettin’ tighter</br>
+
+  <div class="verse2-wrapper">
+    <div class="accordion accordion-left">
+      <div class="accordion-title">↓顕現推敲</div>
+      <div class="accordion-content">
+        <p>パスも重荷も　掻き消えていき</p>
+        <p>顕現推敲　神名が來たるか</p>
+        <p>あがくか、突き進むか？</p>
+        <p>──身の程を識れ、突き落とすぞ</p>
+
+      </div>
+    </div>
+  
+    <div class="verse2-center">
+      <br>パスモオモニモ　カキキエテイキ</br>
+      <br>ケンゲンスイコウ　カマナガキタルカ？</br>
+      <br>Struggle, go ― to cut Ikarus?</br>
+      <br>Pit a Purge.</br>
+    </div>
+  
+    <div class="accordion accordion-right">
+      <div class="accordion-title">IC神↓</div>
+      <div class="accordion-content">
+        <p>PASMO 重 nimoca き消え 定期券</p>
+        <p>現Suica+ICOCA manaca(ガ) </p>
+          <p>Kitaﾙca</p>
+        <p>SUGOCA go TOIKAﾙｽ PiTaPa</p>
+      </div>
+    </div>
+  </div>  
+
+  <br></br>
+  <br>Pre-Chorus 2:</br>
+  <br>Crackin’ bones, broken phones, still movin’ forward</br>
+  <br>このマンイン、ダッシュツは許されない</br>
+  <br>No pause, no prayer, no space to cry</br>
+  <br>Pressure’s god, and silence screams</br>
+  <br>We ride this beast of shattered dreams</br>
+  <br></br>
+  <br>Chorus:</br>
+  <br>We are the DENSE BEAT PARADE</br>
+  <br>ウケイレロ──ここはサイゼンセン</br>
+  <br>フクマクが叫ぶ「オクレルナ」</br>
+  <br>Get on! Get on! this dying line!!</br>
+  <br></br>
+  <br>Pre-Chorus:</br>
+  <br>圧に潰され 崩れそうな</br>
+  <br>ショウキを　ブチ壊せ</br>
+  <br>戦場で　カミカザルナ</br>
+  <br>ノレルヤツノミ</br>
+  <br>コノヨデノカミ</br>
+  <br></br>
+  <br>Chorus:</br>
+  <br>We are the DENSE BEAT PARADE</br>
+  <br>アラガウカ──ここはサイゼンセン</br>
+  <br>ロッカンが叫ぶ「オクレルナ」</br>
+  <br>Get on! Get on! this crazy line!!</br>
+  <br></br>
+  <br>Bridge:</br>
+  <br>デルカナカミガ……</br>
+  <br>デルカナカミガ……</br>
+  <br>デルカナカミガ　ダシテノコルカ？</br>
+  <br>Get on! Get on! Get on the PRESSURE!</br>
+  <br>Get on! Get on! Ride the sacrifice!</br>
+  <br>Get up! Get up! ボーダー越えてススメ！</br>
+  <br>This is the FINAL IMPACT——</br>
+  <br>ノッて、吐いて、叫べ──────！！</br>
+  <br></br>
+  <br>Chorus:</br>
+  <br>We are the DENSE BEAT PARADE</br>
+  <br>ノリクルエ──ここはサイゼンセン</br>
+  <br>ショウカキが叫ぶ「オクレルナ」</br>
+  <br>Get on! Get on! this crazy line!!</br>
+  <br></br>
+  <br>FinalChorus:</br>
+  <br>We are the DENSE BEAT PARADE</br>
+  <br>ニチジョウデ──ここはサイゼンセン</br>
+  <br>ゼンゾウモツが叫ぶ「オクレルナ」</br>
+  <br>Get on! Get on! this final ride!!!</br>
+
+      
+
+</div>
+<div class="footer-share">
+<button onclick="toggleSharePopup()">🔗 共有メニューを開く</button>
+</div>
+<div class="share-popup" id="sharePopup">
+<button onclick="copyLink()">リンクをコピー</button>
+<button onclick="shareOnX()">𝕏で共有</button>
+<button onclick="shareViaEmail()">Gmailで送る</button>
+<button onclick="generateQR()">QRコード生成</button>
+</div>
+<script>
+        function toggleSharePopup() {
+            var popup = document.getElementById('sharePopup');
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+        }
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            alert('リンクをコピーしました');
+        }
+        function shareOnX() {
+            var url = encodeURIComponent(window.location.href);
+            var text = encodeURIComponent(document.title);
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+        function shareViaEmail() {
+            var subject = encodeURIComponent(document.title);
+            var body = encodeURIComponent(window.location.href);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+        function generateQR() {
+            window.open(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${window.location.href}`, '_blank');
+        }
+    </script>
+<script>
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+    if (e.ctrlKey && ['a', 'c', 's', 'p'].includes(e.key.toLowerCase())) {
+        e.preventDefault();
+    }
+});
+</script>
+<script>
+function updateInfPosition() {
+    const backBtn = document.querySelector('.back-button');
+    const titleEl = document.querySelector('.header-title');
+    const infEl = document.querySelector('.rotating-inf');
+
+    if (!backBtn || !titleEl || !infEl) return;
+
+    const backRect = backBtn.getBoundingClientRect();
+    const titleRect = titleEl.getBoundingClientRect();
+
+    const midpoint = backRect.right + (titleRect.left - backRect.right) / 2;
+    infEl.style.left = `${midpoint}px`;
+}
+
+window.addEventListener('load', updateInfPosition);
+window.addEventListener('resize', updateInfPosition);
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const titles = document.querySelectorAll(".accordion-title");
+
+    titles.forEach((title) => {
+      title.addEventListener("click", function () {
+        const content = title.nextElementSibling;
+        const isOpen = content.style.display === "block";
+
+        // 閉じる他の全部
+        document.querySelectorAll(".accordion-content").forEach((c) => {
+          c.style.display = "none";
+        });
+
+        // 開く
+        if (!isOpen) {
+          content.style.display = "block";
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+  
+
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ja',
+      includedLanguages: 'en', // 英語だけ表示対象
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function autoTranslateToEnglish() {
+    const interval = setInterval(function () {
+      const frame = document.querySelector('iframe.goog-te-banner-frame');
+      if (frame) {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = 'en';
+          select.dispatchEvent(new Event('change'));
+          clearInterval(interval);
+        }
+      }
+    }, 500);
+  }
+</script>
+
+<script type="text/javascript"
+  src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  onload="autoTranslateToEnglish()">
+</script>
+
+<script>
+  (function () {
+    const nukeTopElements = () => {
+      const elements = document.body.querySelectorAll('*');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const z = window.getComputedStyle(el).zIndex;
+  
+        if (rect.top <= 0 && parseInt(z) > 5000 && rect.height < 100) {
+          el.style.display = 'none';
+          console.log('🚨 爆破した要素:', el);
+        }
+      });
+  
+      // bodyのズレ修正も毎回やっておく
+      document.body.style.top = '0px';
+    };
+  
+    setInterval(nukeTopElements, 500);
+  })();
+  </script>
+  
+  <div class="counter-wrapper" style="display: none;">
+    <script language="javascript" src="//counter1.fc2.com/counter.php?id=40284491&amp;main=1"></script>
+    <noscript><img class="counter" src="//counter1.fc2.com/counter_img.php?id=40284491&amp;main=1"/></noscript>
+  </div>
+  
+</body>
+</html>
